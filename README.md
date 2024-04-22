@@ -3,14 +3,15 @@ Este projeto tem como propósito fornecer aos pais recursos e orientações prá
 
 ## Alunos integrantes da equipe
 * Artur Bomtempo Colen
+* Daniella Emily Cornelio da Silva
 * Davi Gonçalves Ayres Lanna
-* ⁠⁠Julia Rodrigues Cronenberger
-* Letícia Paulinelli Costa Marini
-* Lucas Alves Berão
-* Pedro Henrique Félix Dos Santos
+* Julia Rodrigues Cronenberger
+* Leticia Paulinelli Costa Marini
+* ⁠Lucas Alves Berão
+* Pedro Henrique Félix Dos Santos
 
 ## Professores responsáveis
-* Gustavo Martins 
+* Gustavo Henrique Borges Martins
 * Wesley Dias Maciel
 
 ## Instruções de utilização
