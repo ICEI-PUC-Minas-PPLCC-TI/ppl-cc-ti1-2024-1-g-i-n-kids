@@ -13,7 +13,7 @@ codigo/  (essa pasta aqui)
 │
 ├── assets/
 │   ├── css/
-│   │   ├── styles.css
+│   │   ├── style.css
 │   │   └── (outros arquivos .css)
 │   │
 │   ├── js/
@@ -21,12 +21,8 @@ codigo/  (essa pasta aqui)
 │   │   └── (outros arquivos .js)
 │   │
 │   ├── images/
-│   │   ├── logo.png
-│   │   └── (outras imagens)
-│   │
-│   └── fonts/
-│       ├── font1.ttf
-│       └── (outras fontes)
+│      ├── logo.png
+│      └── (outras imagens)
 │
 ├── pages/
 │   ├── about.html
