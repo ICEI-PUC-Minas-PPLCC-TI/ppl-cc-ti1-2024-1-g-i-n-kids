@@ -1,1 +1,5 @@
-console.log('JavaScript da página de editar rotina');
+console.log('JavaScript for editing routine page');
+
+function editRoutine() {
+     
+}
