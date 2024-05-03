@@ -1,1 +1,67 @@
+main{
+    padding: 4vw;
+}
+
+main #sobre-nos{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+main #sobre-nos div{
+    width: 100vw;
+}
+
+main #sobre-nos #conteudo{
+    width: 100%;
+}
+
+main #sobre-nos #conteudo #texto{
+    font-size: 18px;
+    color: #828282;
+}
+
+main #sobre-nos #imagem-sobre{
+    text-align: end;
+}
+
+main #sobre-nos #imagem-sobre img{
+    width: 80%;
+}
+
 /* === Media Queries === */
+@media screen and (max-width: 779px) {
+    main #sobre-nos{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    main #sobre-nos #conteudo #texto{
+        font-size: 16px;
+    }
+
+    main #sobre-nos #conteudo #texto{
+        margin: 0 4vw;
+    }
+
+    main #sobre-nos #imagem-sobre{
+        text-align: center;
+    }
+
+    main #sobre-nos #imagem-sobre img{
+        width: 60%;
+        margin-top: 5vh;
+    }
+}
+
+@media screen and (max-width: 504px) {
+    main #sobre-nos #conteudo #texto{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 367px) {
+    main #sobre-nos #imagem-sobre img{
+        width: 80%;
+    } 
+}
