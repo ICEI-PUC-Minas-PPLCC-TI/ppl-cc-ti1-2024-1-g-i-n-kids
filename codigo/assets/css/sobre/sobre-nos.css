@@ -2,6 +2,7 @@ main{
     padding: 4vw;
 }
 
+/* === Seção sobre nós === */
 main #sobre-nos{
     height: 70vh;
     display: flex;
@@ -29,9 +30,59 @@ main #sobre-nos #imagem-sobre img{
     width: 80%;
 }
 
+/* === Seção da equipe === */
+main #equipe{
+    margin-top: 6vh;
+}
+
+main #equipe #integrantes-equipe{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+main #equipe #integrantes-equipe .integrante{
+    width: 170px;
+}
+
+main #equipe #integrantes-equipe .integrante img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+main #equipe #integrantes-equipe .integrante .informacoes-integrante{
+    margin-top: 2vh;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: .5em .7em;
+    background-color: var(--white-color);
+}
+
+main #equipe #integrantes-equipe .integrante .informacoes-integrante .nome{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+main #equipe #integrantes-equipe .integrante .informacoes-integrante .nome:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main #equipe #integrantes-equipe .integrante .informacoes-integrante .cargo{
+    font-size: 14px;
+}
+
 /* === Media Queries === */
+@media screen and (max-width: 1290px) {
+    main #equipe #integrantes-equipe .integrante{
+        margin-bottom: 2vh;
+    }
+}
+
 @media screen and (max-width: 779px) {
     main #sobre-nos{
+        margin-top: 4vh;
         text-align: center;
         flex-direction: column;
     }
@@ -55,6 +106,10 @@ main #sobre-nos #imagem-sobre img{
 }
 
 @media screen and (max-width: 504px) {
+    main #sobre-nos{
+        margin-top: 6vh;
+    }
+    
     main #sobre-nos #conteudo #texto{
         font-size: 14px;
     }
