@@ -32,7 +32,6 @@ main #sobre-nos #imagem-sobre img{
 /* === Media Queries === */
 @media screen and (max-width: 779px) {
     main #sobre-nos{
-        margin-top: 4vh;
         text-align: center;
         flex-direction: column;
     }
@@ -56,10 +55,6 @@ main #sobre-nos #imagem-sobre img{
 }
 
 @media screen and (max-width: 504px) {
-    main #sobre-nos{
-        margin-top: 6vh;
-    }
-    
     main #sobre-nos #conteudo #texto{
         font-size: 14px;
     }
