@@ -82,7 +82,9 @@ main #equipe #integrantes-equipe .integrante .informacoes-integrante .cargo{
 
 @media screen and (max-width: 779px) {
     main #sobre-nos{
+        height: auto;
         margin-top: 4vh;
+        margin-bottom: 10vh;
         text-align: center;
         flex-direction: column;
     }
@@ -102,6 +104,20 @@ main #equipe #integrantes-equipe .integrante .informacoes-integrante .cargo{
     main #sobre-nos #imagem-sobre img{
         width: 60%;
         margin-top: 5vh;
+    }
+
+    main .titulo{
+        text-align: center;
+    }
+
+    main #equipe .titulo{
+        margin-bottom: 2vh;
+    }
+}
+
+@media screen and (max-width: 529px) {
+    main #equipe #integrantes-equipe .integrante{
+        margin-bottom: 5vh;
     }
 }
 
