@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar postagem | I&N KIDS</title>
+    <title>Criar postagem | I&N KIDS</title>
     <!-- === Favicon === -->
     <link rel="icon" type="image/svg+xml" href="../../assets/images/logo.png">
     <!-- === Font Awesome === -->
@@ -37,7 +37,16 @@
     </header>
     <!-- === Page Content === -->
     <main>
-        <h3>Página de editar postagem</h3>
+        <h2 id="titulo">Editar postagem</h2>
+        <div id="form-container">
+            <form>
+                <input type="text" name="tituloPostagem" placeholder="Digite o título da postagem">
+                <input type="text" name="nomeAutor" placeholder="Digite o nome do autor da postagem">
+                <input type="text" name="linkImagem" placeholder="Insira o link da imagem">
+                <textarea name="textoPostagem" placeholder="Digite o texto da postagem"></textarea>
+                <button class="button">Salvar informações</button>
+            </form>
+        </div>
     </main>
     <!-- === Footer === -->
     <footer>
@@ -72,6 +81,6 @@
     <script src="../../assets/js/jquery/jquery-3.7.1.min.js"></script>
     <!-- === JS Files === -->
     <script src="../../assets/js/menu.js"></script>
-    <script src="../../assets/js/postagens/editar-postagem.js"></script>
+    <script src="../../assets/js/postagens/criar-postagem.js"></script>
 </body>
 </html>
