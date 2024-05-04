@@ -40,11 +40,11 @@
         <h2 id="titulo">Editar postagem</h2>
         <div id="form-container">
             <form>
-                <input type="text" name="tituloPostagem" placeholder="Digite o título da postagem">
-                <input type="text" name="nomeAutor" placeholder="Digite o nome do autor da postagem">
-                <input type="text" name="linkImagem" placeholder="Insira o link da imagem">
-                <textarea name="textoPostagem" placeholder="Digite o texto da postagem"></textarea>
-                <button class="button">Salvar informações</button>
+                <input type="text" name="titulo-postagem" minlength="5" placeholder="Digite o título da postagem" required>
+                <input type="text" name="nome-autor" id="nome-autor" placeholder="Digite o nome do autor da postagem" required>
+                <input type="text" name="link-imagem" id="link-imagem" placeholder="Insira o link da imagem" required>
+                <textarea name="texto-postagem" minlength="100" placeholder="Digite o texto da postagem" required></textarea>
+                <button class="button">Publicar</button>
             </form>
         </div>
     </main>
@@ -82,5 +82,6 @@
     <!-- === JS Files === -->
     <script src="../../assets/js/menu.js"></script>
     <script src="../../assets/js/postagens/criar-postagem.js"></script>
+    <script src="../../assets/js/postagens/mascaras-formulario/mascaras-postagem.js"></script>
 </body>
 </html>
