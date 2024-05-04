@@ -23,7 +23,7 @@ a{
 }
 
 main{
-	min-height: 100vh;
+	min-height: 60vh;
 }
 
 a:link{
@@ -64,8 +64,9 @@ a:visited{
 /* === Button === */
 .button{
 	background-color: var(--orange-color);
+	border-radius: 5px;
 	padding: .7em 1.5em;
-	text-transform: uppercase;
+	transition: ease all .5s;
 }
 
 .button:hover{
@@ -123,7 +124,7 @@ footer{
     display: flex;
 	justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 7vh;
+    margin-top: 10vh;
     background-color: var(--lilac-color);
     padding: 60px 10%;
 }

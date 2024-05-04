@@ -1,1 +1,79 @@
+main #titulo{
+    margin-top: 8vh;
+    text-align: center;
+}
+
+main #form-container{
+    display: flex;
+    justify-content: center;
+}
+
+main #form-container form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #form-container input, textarea{
+    margin: .5em 0;
+    padding: 1em;
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
+}
+
+main #form-container input::placeholder, textarea::placeholder{
+    opacity: .7;
+}
+
+main #form-container input{
+    width: 60%;
+    height: 6vh;
+}
+
+main #form-container textarea{
+    width: 60%;
+    height: 20vh;
+}
+
+main #form-container .button{
+    margin-top: 4vh;
+    width: 27%;
+}
+
 /* === Media Queries === */
+@media screen and (max-width: 1108px) {
+    main #form-container form{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 797px) {
+    main #form-container form{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    main #form-container form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 557px) {
+    main #form-container input, main #form-container textarea{
+        width: 80%;
+        font-size: 14px;
+    }
+
+    main #form-container .button{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 348px) {
+    main #form-container .button{
+        width: 40%;
+    }
+}
