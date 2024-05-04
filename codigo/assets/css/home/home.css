@@ -1,3 +1,8 @@
+.button{
+    height: 8vh;
+    text-transform: uppercase;
+}
+
 /* === Home === */
 main{
     min-height: auto;
@@ -51,5 +56,9 @@ footer{
 @media screen and (max-width: 486px) {
     main #content{
         width: 70%;
+    }
+
+    .button{
+        height: 6vh;
     }
 }

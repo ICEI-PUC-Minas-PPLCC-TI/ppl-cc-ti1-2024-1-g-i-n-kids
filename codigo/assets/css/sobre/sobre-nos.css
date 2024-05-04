@@ -75,6 +75,10 @@ main #equipe #integrantes-equipe .integrante .informacoes-integrante .cargo{
     font-size: 14px;
 }
 
+footer{
+    margin-top: 7vh;
+}
+
 /* === Media Queries === */
 @media screen and (max-width: 1290px) {
     main #equipe #integrantes-equipe .integrante{
