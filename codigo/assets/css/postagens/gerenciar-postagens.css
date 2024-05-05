@@ -1,1 +1,90 @@
+main #titulo{
+    margin: 8vh 0;
+    text-align: center;
+}
+
+main #postagens{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+}
+
+main #postagens .card{
+    --bs-card-border-width: 0;
+    margin: 5vh auto 0 auto;
+}
+
+main #postagens .card .card-img-top{
+    border-radius: 10px;
+}
+
+main #postagens .card .card-title{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+main #postagens .card .card-body{
+    padding: 1vh 0 1vh .5vw;
+    background-color: var(--bg-color);
+}
+
+main #postagens .card .card-body .icons{
+    display: flex;
+    align-items: center;
+}
+
+main #postagens .card .card-body i{
+    cursor: pointer;
+}
+
+main #postagens .card .card-body i.delete{
+    font-size: 20px;
+    margin-right: .7vw;
+    color: #c63637;
+}
+
+main #postagens .card .card-body i.edit{
+    color: #42ab49;
+}
+
 /* === Media Queries === */
+@media screen and (max-width: 1203px) {
+    main #postagens{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 931px) {
+    main #postagens{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main #postagens .card .card-body i.delete{
+        margin-right: 1vw;
+    }
+}
+
+@media screen and (max-width: 608px) {
+    main #postagens{
+        grid-template-columns: 1fr;
+    }
+
+    main #postagens .card:first-child{
+        margin: 0 auto;
+    }
+
+    main #postagens .card .card-body i.delete{
+        font-size: 26px;
+        margin-right: 3vw;
+    }
+
+    main #postagens .card .card-body i.edit{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 315px) {
+    main #postagens .card .card-img-top{
+        width: 270px;
+    }
+}
