@@ -1,1 +1,135 @@
+main{
+    margin: 8vh 0;
+    display: flex;
+    justify-content: center;
+}
+
+main #formulario{
+    width: 40vw;
+    border-radius: 10px;
+    padding: 7vh 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--yellow-color);
+}
+
+main #formulario #titulo-formulario{
+    font-size: 1.7em;
+    margin-bottom: 4vh;
+}
+
+main #formulario form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #formulario form input{
+    width: 27vw;
+    margin: .5em 0;
+    border-radius: 10px;
+    padding: .5em 1em;
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
+}
+
+main #formulario form input::placeholder{
+    opacity: .5;
+}
+
+main #formulario form .button{
+    width: 45%;
+    margin-top: 4vh;
+}
+
+main #texto-termos{
+    font-size: .9em;
+    margin-top: 6vh;
+    text-align: center;
+}
+
+main #texto-termos a{
+    color: #b46c00;
+}
+
+main #texto-termos a:hover{
+    text-decoration: underline;
+}
+
 /* === Media Queries === */
+@media screen and (max-width: 1098px) {
+    main #formulario{
+        width: 60vw;
+    }
+
+    main #formulario form input{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 823px) {
+    main #formulario #titulo-formulario{
+        font-size: 1.5em;
+    }
+
+    main #formulario form .button{
+        font-size: 14px;
+    }
+
+    main #texto-termos{
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    main #formulario{
+        width: 75vw;
+    }
+
+    main #formulario #titulo-formulario{
+        font-size: 1.4em;
+    }
+
+    main #formulario form input{
+        width: 60vw;
+    }
+
+    main #texto-termos{
+        font-size: .75em;
+    }
+}
+
+@media screen and (max-width: 452px) {
+    main #formulario{
+        width: 85vw;
+    }
+
+    main #formulario #titulo-formulario{
+        font-size: 1.2em;
+    }
+
+    main #formulario form input{
+        font-size: 14px;
+        width: 65vw;
+    }
+
+    main #formulario form .button{
+        width: 55%;
+    }
+
+    main #texto-termos{
+        font-size: .7em;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    main #formulario form input{
+        font-size: 13px;
+    }
+
+    main #formulario form .button{
+        font-size: 13px;
+    }
+}
