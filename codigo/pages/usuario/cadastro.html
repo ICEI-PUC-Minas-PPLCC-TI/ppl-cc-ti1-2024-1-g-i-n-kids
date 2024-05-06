@@ -37,7 +37,20 @@
     </header>
     <!-- === Page Content === -->
     <main>
-        <h3>Página de cadastro</h3>
+        <div id="formulario">
+            <h3 id="titulo-formulario">Cadastrar</h3>
+            <form>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
+                <input type="tel" name="telefone" id="telefone" placeholder="Digite sua telefone" required>
+                <input type="email" name="email" id="email" placeholder="Digite seu email" minlength="10" required>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha" minlength="8" required>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Digite sua senha novamente" minlength="8" required>
+                <button class="button">Cadastrar</button>
+            </form>
+            <p id="texto-termos">
+                Apertando em cadastrar, você esta de acordo com os nosso <a href="#">Termos de Serviço</a> e <a href="">Politica de Privacidade</a>.
+            </p>
+        </div>
     </main>
     <!-- === Footer === -->
     <footer>
@@ -73,5 +86,6 @@
     <!-- === JS Files === -->
     <script src="../../assets/js/menu.js"></script>
     <script src="../../assets/js/usuario/cadastro.js"></script>
+    <script src="../../assets/js/usuario/mascaras-formulario/mascaras-cadastro.js"></script>
 </body>
 </html>
