@@ -37,7 +37,24 @@
     </header>
     <!-- === Page Content === -->
     <main>
-        <h3>Página de criação de tarefa</h3>
+        <h3 id="titulo">Criar tarefa</h3>
+        <div id="form-container">
+            <form>
+                <input type="text" name="tituloTarefa" placeholder="Digite o título">
+                <select name="diaSemana">
+                    <option value="" selected disabled >Selecione o dia da semana</option>
+                    <option value="segunda">Segunda-feira</option>
+                    <option value="terca">Terça-feira</option>
+                    <option value="quarta">Quarta-feira</option>
+                    <option value="quinta">Quinta-feira</option>
+                    <option value="sexta">Sexta-feira</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+                </select>
+                <input type="" name="horaTarefa" placeholder="Digite aqui o horario da tarefa">
+                <button class="button">Publicar</button>
+            </form>
+        </div>
     </main>
     <!-- === Footer === -->
     <footer>
