@@ -37,7 +37,16 @@
     </header>
     <!-- === Page Content === -->
     <main>
-        <h3>Página de editar postagem</h3>
+        <h2 id="titulo">Editar postagem</h2>
+        <div id="form-container">
+            <form>
+                <input type="text" name="titulo-postagem" minlength="5" placeholder="Digite o título da postagem" required>
+                <input type="text" name="nome-autor" id="nome-autor" placeholder="Digite o nome do autor da postagem" required>
+                <input type="text" name="link-imagem" id="link-imagem" placeholder="Insira o link da imagem" required>
+                <textarea name="texto-postagem" minlength="100" placeholder="Digite o texto da postagem" required></textarea>
+                <button class="button">Salvar informações</button>
+            </form>
+        </div>
     </main>
     <!-- === Footer === -->
     <footer>
@@ -73,5 +82,6 @@
     <!-- === JS Files === -->
     <script src="../../assets/js/menu.js"></script>
     <script src="../../assets/js/postagens/editar-postagem.js"></script>
+    <script src="../../assets/js/postagens/mascaras-formulario/mascaras-postagem.js"></script>
 </body>
 </html>
