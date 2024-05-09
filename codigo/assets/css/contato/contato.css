@@ -1,4 +1,4 @@
-/* === Media Queries === */
+
 main {
     margin:8vh 0;
     display: flex;
@@ -7,10 +7,12 @@ main {
 .contact-section{
     margin-right: 5vw;
     padding: 6vh 10vw;
+    flex-wrap: wrap;
 }
 
 .contact-section p {
-color: #acabab;
+    color: #acabab;
+    margin-bottom: 2px;
 }
 #titulo-formulario{
     text-align: center;
@@ -28,6 +30,7 @@ main #formulario{
     padding:40px 60px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     
 }
 
@@ -51,9 +54,10 @@ main #formulario textarea{
 
 .contact-section .social-icons {
     display: flex; 
-    justify-content:center; 
-    margin-top:10px;
+    margin-top:20px;
+    flex-wrap: wrap; 
 }
+
  
  .social-icons img { 
     width:20px; 
@@ -61,3 +65,18 @@ main #formulario textarea{
     margin-right :10px;  
  }
 
+/* === Media Queries === */
+@media (max-width: 768px) {
+    main #formulario{
+        width: 100%;
+        padding:20px 30px;
+    }
+    main #formulario form input,
+    main #formulario textarea{
+        width:90%;
+    }
+    .contact-section{
+        margin-right: 0;
+        padding: 3vh 5vw;
+    }
+}
