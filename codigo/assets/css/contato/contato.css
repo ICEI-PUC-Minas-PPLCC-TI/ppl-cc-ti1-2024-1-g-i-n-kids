@@ -66,6 +66,28 @@ main #formulario textarea{
  }
 
 /* === Media Queries === */
+@media (max-width: 1200px) {
+    main #formulario{
+        width: 80%;
+        padding:20px 30px;
+    }
+    main #formulario form input,
+    main #formulario textarea{
+        width:90%;
+    }
+}
+
+@media (max-width: 992px) {
+    main #formulario{
+        width: 90%;
+        padding:20px 30px;
+    }
+    main #formulario form input,
+    main #formulario textarea{
+        width:95%;
+    }
+}
+
 @media (max-width: 768px) {
     main #formulario{
         width: 100%;
@@ -73,7 +95,7 @@ main #formulario textarea{
     }
     main #formulario form input,
     main #formulario textarea{
-        width:90%;
+        width:100%;
     }
     .contact-section{
         margin-right: 0;
