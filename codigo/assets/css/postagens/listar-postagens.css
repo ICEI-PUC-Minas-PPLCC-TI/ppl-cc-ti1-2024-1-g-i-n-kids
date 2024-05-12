@@ -1,1 +1,44 @@
-/* === Media Queries === */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: calc(20% - 16px);
+    margin: 20px;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+}
+
+.card-content p {
+    margin-bottom: 20px;
+}
+
+.card-content a {
+    display: block;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.card-content a:hover {
+    background-color: #0056b3;
+}
