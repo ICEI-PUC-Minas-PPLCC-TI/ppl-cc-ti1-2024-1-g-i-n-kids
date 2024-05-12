@@ -1,13 +1,15 @@
 
 main {
-    margin:8vh 0;
+    margin: 8vh 0;
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
+
 .contact-section{
     margin-right: 5vw;
     padding: 6vh 10vw;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-section p {
@@ -71,6 +73,7 @@ main #formulario textarea{
         width: 80%;
         padding:20px 30px;
     }
+
     main #formulario form input,
     main #formulario textarea{
         width:90%;
@@ -89,16 +92,13 @@ main #formulario textarea{
 }
 
 @media (max-width: 768px) {
-    main #formulario{
-        width: 100%;
-        padding:20px 30px;
+    main{
+        flex-direction: column;
+        align-items: center;
     }
-    main #formulario form input,
-    main #formulario textarea{
-        width:100%;
-    }
-    .contact-section{
-        margin-right: 0;
-        padding: 3vh 5vw;
+
+    main .contact-section{
+        text-align: center;
+        align-items: center;
     }
 }

@@ -16,6 +16,10 @@ main #form-container form{
     align-items: center;
 }
 
+main #form-container form #message{
+    width: 60%;
+}
+
 main #form-container input, textarea{
     margin: .5em 0;
     padding: 1em;
@@ -65,6 +69,10 @@ main #form-container .button{
 }
 
 @media screen and (max-width: 557px) {
+    main #form-container form #message{
+        width: 80%;
+    }
+    
     main #form-container input, main #form-container textarea{
         width: 80%;
         font-size: 14px;
