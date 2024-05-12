@@ -26,6 +26,10 @@ main #formulario form{
     align-items: center;
 }
 
+main #formulario form #message{
+    width: 100%;
+}
+
 main #formulario form input{
     width: 27vw;
     margin: .5em 0;
