@@ -7,8 +7,10 @@
      display: flex;
      justify-content: space-around;
      font-size: 1rem;
-     overflow-x: auto;
+     overflow-x: scroll;
      padding: 0 8px;
+     scrollbar-width: thin;
+     scrollbar-color: var(--green-color) var(--white-color);
  } 
 
  main table tr {
@@ -58,16 +60,12 @@
  main table tr button {
       background: none;
  }
-     
- main table tr .tarefas .excluir {
+ 
+ main table tr .tarefas .excluir i {
      position: absolute;
      top: -8px;
-     right: 0px;
- }
-
- main table tr .tarefas .excluir img {
-     width: 20px;
-     height: 21px;
+     right: -8px;
+     font-size: 18px;
  }
 
 /* === Media Queries === */
@@ -96,12 +94,15 @@
       main table tr .tarefas {
           padding: 6px 3px;
           font: 0.5rem;
+          font-size: 15;
       }
 
-      main table tr .tarefas .excluir img {
-          width: 15px;
-          height: 16px;
-      }
+      main table tr .tarefas .excluir i {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 893px) {
@@ -111,7 +112,7 @@
      
       main table tr {
            gap: 5px;
-           padding: 4px 0;
+           padding: 4px 20px;
       }
 
       main table tr .infoRotina {
@@ -134,4 +135,8 @@
       main table tr td.tarefas {
           padding: 8px 5px;
       }
+
+      main table tr .tarefas .excluir i {
+        font-size: 14px;
+    }
 }
