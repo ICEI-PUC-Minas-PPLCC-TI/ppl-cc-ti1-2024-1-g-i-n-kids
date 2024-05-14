@@ -42,3 +42,16 @@
 .card-content a:hover {
     background-color: #0056b3;
 }
+.button2{
+	background-color: var(--orange-color);
+	border-radius: 5px;
+	padding: .7em 1.5em;
+	transition: ease all .5s;
+    text-align: center;
+    
+}
+
+.button2:hover{
+	background-color: var(--white-color);
+	color: var(--orange-color)
+}
