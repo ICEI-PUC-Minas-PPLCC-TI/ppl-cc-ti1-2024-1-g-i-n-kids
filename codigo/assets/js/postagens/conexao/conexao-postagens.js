@@ -62,14 +62,13 @@ function deletePost(id, updateFunction) {
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage('Postagem removida com sucesso', 'success');
-
+            location.reload();
+            
             if (updateFunction) {
                 updateFunction();
             }
         })
         .catch(error => {
             console.error('Erro ao remover postagem via JSON Server:', error);
-            displayMessage('Erro ao remover postagem', 'danger');
         });
 }
