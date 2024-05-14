@@ -8,10 +8,10 @@ window.onload = function() {
             let postagem = data.find(post => post.id === parseInt(editPostId));
 
             if (postagem) {
-                document.getElementsByName('tituloPostagem')[0].placeholder = postagem.titulo;
-                document.getElementsByName('nomeAutor')[0].placeholder = postagem.autor;
-                document.getElementsByName('linkImagem')[0].placeholder = postagem.link_imagem;
-                document.getElementsByName('textoPostagem')[0].placeholder = postagem.descricao;
+                document.getElementsByName('tituloPostagem')[0].value = postagem.titulo;
+                document.getElementsByName('nomeAutor')[0].value = postagem.autor;
+                document.getElementsByName('linkImagem')[0].value = postagem.link_imagem;
+                document.getElementsByName('textoPostagem')[0].value = postagem.descricao;
             }
             else {
                 console.error('Postagem não encontrada');
