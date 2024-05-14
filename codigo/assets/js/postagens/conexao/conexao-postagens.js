@@ -1,4 +1,4 @@
-const apiUrl = 'https://8fa78851-9cf6-4898-b273-45dcca3a4f7b-00-26gxsfmuhia9y.spock.replit.dev/postagens';
+const apiUrl = 'SEU_LINK';
 
 function createPost(post, updateFunction) {
     fetch(apiUrl, {
@@ -62,14 +62,13 @@ function deletePost(id, updateFunction) {
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage('Postagem removida com sucesso', 'success');
-
+            location.reload();
+            
             if (updateFunction) {
                 updateFunction();
             }
         })
         .catch(error => {
             console.error('Erro ao remover postagem via JSON Server:', error);
-            displayMessage('Erro ao remover postagem', 'danger');
         });
 }

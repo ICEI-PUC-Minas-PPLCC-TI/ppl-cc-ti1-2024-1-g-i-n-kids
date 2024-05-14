@@ -16,6 +16,9 @@ main #postagens .card{
 
 main #postagens .card .card-img-top{
     border-radius: 10px;
+    width: 288px;
+    height: 192px;
+    object-fit: cover;
 }
 
 main #postagens .card .card-title{
