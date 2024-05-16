@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/contato/contato.css">
 </head>
-<body>
+<body onload="init()">
     <!-- === Header === -->
     <header>
         <a href="../../index.html">
@@ -55,7 +55,7 @@
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome" minlength="10" required>
                 <input type="email" name="email" id="email" placeholder="Digite seu melhor email" minlength="10" required>
                 <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" minlength="10" required></textarea>
-                <button class="button">Enviar</button>
+                <button class="button" id="btnCadastrarContato">Enviar</button>
             </form>
         </div>
     </main>
