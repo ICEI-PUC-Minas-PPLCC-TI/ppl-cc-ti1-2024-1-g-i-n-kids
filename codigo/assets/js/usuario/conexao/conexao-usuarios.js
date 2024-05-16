@@ -1,4 +1,4 @@
-const apiUrl = 'SEU_LINK';
+const apiUrl = 'https://49811605-de2a-4be2-b239-2034ce67d44e-00-1h9849jbz6qk1.spock.replit.dev/usuarios';
 
 function createUser(user, updateFunction) {
     fetch(apiUrl, {

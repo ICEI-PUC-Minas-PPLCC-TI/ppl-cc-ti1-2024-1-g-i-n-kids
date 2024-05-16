@@ -6,25 +6,32 @@ readPost(data => {
 });
 
 function listPosts() {
-    let divPostagens = document.getElementById('postagens');
+    let divPostagens = document.querySelector('#container #postagens');
+    let mensagemAviso = document.querySelector('main #container h5');
 
     divPostagens.innerHTML = '';
+    mensagemAviso.innerHTML = '';
 
-    for (let i = 0; i < db.length; i++) {
-        const post = db[i];
-
-        divPostagens.innerHTML += `
-            <div class="card" style="width: 18rem;" data-id="${post.id}">
-                <h3 class="card-title">${post.titulo}</h3>
-                <img class="card-img-top" src="${post.link_imagem}" alt="Imagem da postagem">
-                <div class="card-body">
-                    <div class="icons">
-                        <i class="fa-regular fa-rectangle-xmark delete"></i>
-                        <a href="./editar-postagem.html"><i class="fa-solid fa-pen edit"></i></a>
+    if (db.length > 0) {
+        for (let i = 0; i < db.length; i++) {
+            const post = db[i];
+    
+            divPostagens.innerHTML += `
+                <div class="card" style="width: 18rem;" data-id="${post.id}">
+                    <h3 class="card-title">${post.titulo}</h3>
+                    <img class="card-img-top" src="${post.link_imagem}" alt="Imagem da postagem">
+                    <div class="card-body">
+                        <div class="icons">
+                            <i class="fa-regular fa-rectangle-xmark delete"></i>
+                            <a href="./editar-postagem.html"><i class="fa-solid fa-pen edit"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
+            `;
+        }
+    }
+    else {
+        mensagemAviso.innerHTML = 'Ainda não há postagens cadastradas';
     }
 
     init();

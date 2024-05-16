@@ -1,4 +1,4 @@
-const apiUrl = 'https://ce3395c9-25de-4a0b-b424-b185712a3f0b-00-2lonqb416sl47.picard.replit.dev/postagens';
+const apiUrl = 'https://49dd28ab-09e8-4ea8-8821-f809d96b3f78-00-38p61bxaux1od.spock.repl.co/postagens';
 
 function createPost(post, updateFunction) {
     fetch(apiUrl, {
