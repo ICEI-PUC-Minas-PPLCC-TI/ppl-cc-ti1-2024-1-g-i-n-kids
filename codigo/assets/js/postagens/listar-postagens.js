@@ -3,7 +3,7 @@ readPosts(data => {
     db = data;
     listPosts();
 });
-function listContacts() {
+function listPosts() {
     let divpostagens = document.getElementById('postagens');
 
     divpostagens.innerHTML = '';
