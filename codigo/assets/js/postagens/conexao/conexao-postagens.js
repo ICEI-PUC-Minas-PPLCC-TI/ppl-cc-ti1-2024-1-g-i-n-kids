@@ -1,4 +1,4 @@
-const apiUrl = 'SEU_LINK';
+const apiUrl = 'https://ce3395c9-25de-4a0b-b424-b185712a3f0b-00-2lonqb416sl47.picard.replit.dev/postagens';
 
 function createPost(post, updateFunction) {
     fetch(apiUrl, {
