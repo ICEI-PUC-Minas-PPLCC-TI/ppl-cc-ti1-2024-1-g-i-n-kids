@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/usuario/cadastro.css">
 </head>
-<body>
+<body onload="init()">
     <!-- === Header === -->
     <header>
         <a href="../../index.html">
@@ -46,7 +46,7 @@
                 <input type="email" name="email" id="email" placeholder="Digite seu email" minlength="10" required>
                 <input type="password" name="password" id="password" placeholder="Digite sua senha" minlength="8" required>
                 <input type="password" name="confirm-password" id="confirm-password" placeholder="Digite sua senha novamente" minlength="8" required>
-                <button class="button">Cadastrar</button>
+                <button class="button" id="botao-cadastro">Cadastrar</button>
             </form>
             <p id="texto-termos">
                 Apertando em cadastrar, você esta de acordo com os nosso <a href="#">Termos de Serviço</a> e <a href="">Politica de Privacidade</a>.
@@ -86,9 +86,9 @@
     <script src="../../assets/js/jquery/jquery-3.7.1.min.js"></script>
     <!-- === JS Files === -->
     <script src="../../assets/js/menu.js"></script>
-    <script src="../../assets/js/usuario/cadastro.js"></script>
     <script src="../../assets/js/usuario/mascaras-formulario/mascaras-cadastro.js"></script>
     <script src="../../assets/js/mensagem-aviso.js"></script>
     <script src="../../assets/js/usuario/conexao/conexao-usuarios.js"></script>
+    <script src="../../assets/js/usuario/cadastro.js"></script>
 </body>
 </html>
