@@ -9,6 +9,11 @@ main #postagens{
     flex-wrap: wrap;
 }
 
+main #container h5{
+    color: var(--orange-color);
+    text-align: center;
+}
+
 main #postagens .card{
     --bs-card-border-width: 0;
     margin: 5vh auto 0 auto;

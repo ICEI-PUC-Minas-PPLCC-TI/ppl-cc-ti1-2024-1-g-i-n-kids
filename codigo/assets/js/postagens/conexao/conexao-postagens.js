@@ -1,4 +1,4 @@
-const apiUrl = 'SEU_LINK';
+const apiUrl = 'https://49dd28ab-09e8-4ea8-8821-f809d96b3f78-00-38p61bxaux1od.spock.repl.co/postagens';
 
 function createPost(post, updateFunction) {
     fetch(apiUrl, {
