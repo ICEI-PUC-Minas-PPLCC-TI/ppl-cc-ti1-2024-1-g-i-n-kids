@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotina | I&N KIDS</title>
+    <title>Editar rotina | I&N KIDS</title>
     <!-- === Favicon === -->
     <link rel="icon" type="image/svg+xml" href="../../assets/images/logo.png">
     <!-- === Font Awesome === -->
@@ -37,7 +37,122 @@
     </header>
     <!-- === Page Content === -->
     <main>
-        <h3>Página de exibição da rotina</h3>
+        <h3 id="titulo">Rotina</h3>
+        <table>
+            <tr>
+                <th class="infoRotina">HORÁRIO</th>
+                <th class="dia">SEGUNDA</th>
+                <th class="dia">TERÇA</th>
+                <th class="dia">QUARTA</th>
+                <th class="dia">QUINTA</th>
+                <th class="dia">SEXTA</th>
+                <th class="dia">SABÁDO</th>
+                <th class="dia">DOMINGO</th>
+                <th class="editar">
+                    <a href="editar-rotina.html" class="link-editar">
+                        <button type="button" class="btn btn-editar">Editar</button>
+                    </a>
+                </th>
+                
+            </tr>
+            <tr>
+                <td class="infoRotina">06:00</td>
+                <td class="tarefas">
+                    <p>Acordar as crianças</p>
+                </td>
+                <td class="tarefas">
+                    <p>Acordar as crianças</p>
+                </td>
+                <td class="tarefas">
+                    <p>Acordar as crianças</p>
+                </td>
+                <td class="tarefas">
+                    <p>Acordar as crianças</p>
+                </td>
+                <td class="tarefas">
+                    <p>Acordar as crianças</p>
+                </td>
+                <td class="tarefas">
+                    <p>Limpar a casa</p>
+                </td>
+                <td class="tarefas">
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="infoRotina">07:00</td>
+                <td class="tarefas">
+                    <p>Preparar o café</p>
+                </td>
+                <td class="tarefas">
+                    <p>Preparar o café</p>
+                </td>
+                <td class="tarefas">
+                    <p>Preparar o café</p>
+                </td>
+                <td class="tarefas">
+                    <p>Preparar o café</p>
+                </td>
+                <td class="tarefas">
+                    <p>Preparar o café</p>
+                </td>
+                <td class="tarefas">
+                    <p>Limpar a casa</p>
+                </td>
+                <td class="tarefas">
+                    <p>Acordar</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="infoRotina">07:20</td>
+                <td class="tarefas">
+                    <p>Levar para a escola</p>
+                </td>
+                <td class="tarefas">
+                    <p>Levar para a escola</p>
+                </td>
+                <td class="tarefas">
+                    <p>Levar para a escola</p>
+                </td>
+                <td class="tarefas">
+                    <p>Levar para a escola</p>
+                </td>
+                <td class="tarefas">
+                    <p>Levar para a escola</p>
+                </td>
+                <td class="tarefas">
+                    <p>Limpar a casa</p>
+                </td>
+                <td class="tarefas">
+                    <p>Banho familiar</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="infoRotina">08:00</td>
+                <td class="tarefas">
+                    <p>Ir para o trabalho</p>
+                </td>
+                <td class="tarefas">
+                    <p>Ir para o trabalho</p>
+                </td>
+                <td class="tarefas">
+                    <p>Ir para o trabalho</p>
+                </td>
+                <td class="tarefas">
+                    <p>Ir para o trabalho</p>
+                </td>
+                <td class="tarefas">
+                    <p>Ir para o trabalho</p>
+                </td>
+                <td class="tarefas">
+                    <p>Limpar a casa</p>
+                </td>
+                <td class="tarefas">
+                    <p>Ir para a igreja</p>
+                </td>
+            </tr>
+            
+        </table>
     </main>
     <!-- === Footer === -->
     <footer>
@@ -72,7 +187,7 @@
     <script src="../../assets/js/jquery/jquery-3.7.1.min.js"></script>
     <!-- === JS Files === -->
     <script src="../../assets/js/menu.js"></script>
-    <script src="../../assets/js/rotina/exibir-rotina.js"></script>
+    <script src="../../assets/js/rotina/editar-rotina.js"></script>
     <script src="../../assets/js/rotina/conexao/conexao-tarefas.js"></script>
 </body>
 </html>
