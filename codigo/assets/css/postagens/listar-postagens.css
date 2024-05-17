@@ -1,3 +1,9 @@
+#postagens{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -10,6 +16,7 @@
     border: 5px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
+    margin: 5vh auto 0 auto;
 }
 
 .card img {
@@ -55,8 +62,26 @@
 	background-color: var(--white-color);
 	color: lightblue;
 }
-.botões{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* === Media Queries === */
+@media screen and (max-width: 1203px) {
+    main #postagens{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 931px) {
+    main #postagens{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 608px) {
+    main #postagens{
+        grid-template-columns: 1fr;
+    }
+
+    main #postagens .card:first-child{
+        margin: 0 auto;
+    }
 }
