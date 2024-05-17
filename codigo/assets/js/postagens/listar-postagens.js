@@ -14,10 +14,10 @@ function listPosts() {
             divpostagens.innerHTML += `<div class="card-container">
             <div class="card">
               <a href="#">
-                <h3>${post.titulo}</h3>
-                <img src="${post.link_imagem}" alt="Imagem Card" />
+                <h3 class="card-title">${post.titulo}</h3>
+                <img src="${post.link_imagem}" alt="Imagem Card">
                 <div class="card-content">
-                  <h3>Descrição</h3>
+                  <h3 class ="card-description">${post.desricao}</h3>
                   <p>Descrição</p>
                 </div>
               </a>
