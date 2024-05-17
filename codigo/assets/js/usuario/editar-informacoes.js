@@ -1,6 +1,7 @@
 window.onload = function() {
     let userId = localStorage.getItem('userId');
-    let btnEditar = document.getElementById('editar-Infos');
+    let btnEditarDadosUsuario = document.getElementById('editar-Infos');
+    btnExcluirConta = document.getElementById('excluir-conta');
     let formularioEdicaoUsuario = document.querySelector('form');
 
 
@@ -17,7 +18,7 @@ window.onload = function() {
         alert('Você precisa fazer login para acessar página!');
     }
 
-    btnEditar.addEventListener('click', (e) => {
+    btnEditarDadosUsuario.addEventListener('click', (e) => {
         let campoNome = document.getElementById('nome').value;
         let campoTelefone = document.getElementById('telefone').value;
         let campoEmail = document.getElementById('email').value;
@@ -46,5 +47,13 @@ window.onload = function() {
         updateUser(parseInt(userId), usuario);
 
         formularioEdicaoUsuario.reset();
+    });
+
+    btnExcluirConta.addEventListener('click', () => {
+        deleteUser(parseInt(userId), () => {
+            localStorage.removeItem('userId');
+            alert('Conta excluída com sucesso.');
+            window.location.replace('../../index.html');
+        });
     });
 }

@@ -56,7 +56,7 @@ function updateUser(id, user, updateFunction) {
         });
 }
 
-function deleteTask(id, updateFunction) {
+function deleteUser(id, updateFunction) {
     fetch(`${apiUrl}/${id}`, {
         method: 'DELETE',
     })
