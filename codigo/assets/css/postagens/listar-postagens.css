@@ -4,6 +4,15 @@
     flex-wrap: wrap;
 }
 
+#Site-Topo{
+    display: flex;
+}
+.titulo-site{
+    float: left;
+}
+.searchform{
+    float: right;
+}
 .card-container {
     display: flex;
     flex-wrap: wrap;
