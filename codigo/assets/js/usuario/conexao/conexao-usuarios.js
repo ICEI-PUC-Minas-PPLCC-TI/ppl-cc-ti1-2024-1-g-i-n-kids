@@ -1,4 +1,4 @@
-const apiUrl = 'https://49811605-de2a-4be2-b239-2034ce67d44e-00-1h9849jbz6qk1.spock.replit.dev/usuarios';
+const apiUrl = 'https://8fa78851-9cf6-4898-b273-45dcca3a4f7b-00-26gxsfmuhia9y.spock.repl.co/usuarios';
 
 function createUser(user, updateFunction) {
     fetch(apiUrl, {
@@ -22,7 +22,7 @@ function createUser(user, updateFunction) {
         });
 }
 
-function readUser(processData) {
+function readUsers(processData) {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
