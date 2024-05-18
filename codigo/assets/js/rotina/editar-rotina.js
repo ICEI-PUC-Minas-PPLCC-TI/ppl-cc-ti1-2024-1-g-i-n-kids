@@ -118,11 +118,9 @@ function init() {
      for (let i = 0; i < btnDelete.length; i++) {
           btnDelete[i].addEventListener('click', function() {
                let button = this;
-               console.log(button.id);
                let taskId = button.id;
-               console.log(taskId);
+
                deleteTask(parseInt(taskId));
-               window.location.reload();
           });
      }
 }
