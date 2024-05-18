@@ -1,4 +1,4 @@
-const apiUrl = 'SEU_LINK';
+const apiUrl = 'https://83d2580e-ec7d-4bdf-935e-e970d653694e-00-33flpwk5c3pc0.picard.replit.dev/contatos';
 
 function createContact(contact, updateFunction) {
     fetch(apiUrl, {
