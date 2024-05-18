@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/rotina/editar-rotina.css">
 </head>
-<body>
+<body onload="init()">
     <!-- === Header === -->
     <header>
         <a href="../../index.html">
@@ -38,235 +38,17 @@
     <!-- === Page Content === -->
     <main>
         <h3 id="titulo">Editar rotina</h3>
-        <table>
-        <table>
+        <table id="tableTarefas">
             <tr>
                 <th class="infoRotina">HORÁRIO</th>
+                <th class="dia">DOMINGO</th>
                 <th class="dia">SEGUNDA</th>
                 <th class="dia">TERÇA</th>
                 <th class="dia">QUARTA</th>
                 <th class="dia">QUINTA</th>
                 <th class="dia">SEXTA</th>
                 <th class="dia">SABÁDO</th>
-                <th class="dia">DOMINGO</th>
-            </tr>
-            <tr>
-                <td class="infoRotina">06:00</td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Acordar as crianças</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Acordar as crianças</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Acordar as crianças</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Acordar as crianças</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Acordar as crianças</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Limpar a casa</p>
-                </td>
-                <td class="tarefas">
-                    <p></p>
-                </td>
-            </tr>
-            <tr>
-                <td class="infoRotina">07:00</td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Preparar o café</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Preparar o café</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Preparar o café</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Preparar o café</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Preparar o café</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Limpar a casa</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Acordar</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="infoRotina">07:20</td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Levar para a escola</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Levar para a escola</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Levar para a escola</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Levar para a escola</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Levar para a escola</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Limpar a casa</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Banho familiar</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="infoRotina">08:00</td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Ir para o trabalho</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Ir para o trabalho</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Ir para o trabalho</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Ir para o trabalho</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Ir para o trabalho</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Limpar a casa</p>
-                </td>
-                <td class="tarefas">
-                    <button class="excluir">
-                        <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>Ir para a igreja</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="infoRotina"></td>
-                <td class="adicionar">
-                    <button onclick="window.location.href = './criar-tarefa.html'">
-                        <img src="../../assets/images/rotina/botao.png" alt="botão para adiconar tarefa">
-                    </button>
-                </td>
-                <td class="adicionar">
-                    <button onclick="window.location.href = './criar-tarefa.html'">
-                        <img src="../../assets/images/rotina/botao.png" alt="botão para adiconar tarefa">
-                    </button>
-                </td>
-                <td class="adicionar">
-                    <button onclick="window.location.href = './criar-tarefa.html'">
-                        <img src="../../assets/images/rotina/botao.png" alt="botão para adiconar tarefa">
-                    </button>
-                </td>
-                <td class="adicionar">
-                    <button onclick="window.location.href = './criar-tarefa.html'">
-                        <img src="../../assets/images/rotina/botao.png" alt="botão para adiconar tarefa">
-                    </button>
-                </td>
-                <td class="adicionar">
-                    <button onclick="window.location.href = './criar-tarefa.html'">
-                        <img src="../../assets/images/rotina/botao.png" alt="botão para adiconar tarefa">
-                    </button>
-                </td>
-                <td class="adicionar">
-                    <button onclick="window.location.href = './criar-tarefa.html'">
-                        <img src="../../assets/images/rotina/botao.png" alt="botão para adiconar tarefa">
-                    </button>
-                </td>
-                <td class="adicionar">
-                    <button>
-                        <button onclick="window.location.href = './criar-tarefa.html'">
-                        <img src="../../assets/images/rotina/botao.png" alt="botão para adiconar tarefa">
-                    </button>
-                    </button>
-                </td>
-            </tr>
+            </tr> 
         </table>
     </main>
     <!-- === Footer === -->
@@ -302,7 +84,8 @@
     <script src="../../assets/js/jquery/jquery-3.7.1.min.js"></script>
     <!-- === JS Files === -->
     <script src="../../assets/js/menu.js"></script>
-    <script src="../../assets/js/rotina/editar-rotina.js"></script>
+    <script src="../../assets/js/mensagem-aviso.js"></script>
     <script src="../../assets/js/rotina/conexao/conexao-tarefas.js"></script>
+    <script src="../../assets/js/rotina/editar-rotina.js"></script>
 </body>
 </html>

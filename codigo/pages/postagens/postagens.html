@@ -56,33 +56,17 @@
     </header>
     <!-- === Page Content === -->
     <main>
-      <h3>Atividades</h3>
+      <div id="Site-Topo">
+        <div class="titulo-site">
+          <h2>Atividades</h2>
+        </div>
+        <form class="searchform">
+          <input type="text" id="searchInput" placeholder="Digite o filtro desejado...">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
       <hr />
       <div id="postagens">
-        <div class="card-container">
-          <div class="card">
-            <a href="#">
-              <h3>Título</h3>
-              <img src="img-postagem.jpeg" alt="Imagem Card" />
-              <div class="card-content">
-                <h3>Autor</h3>
-                <p>Descrição</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="botões">
-        <a href="criar-postagem.html"
-          ><button class="button2" id="btnCadastrarPostagem">
-            Criar Postagem
-          </button></a
-        >
-        <a href="editar-postagem.html"
-          ><button class="button2" id="btnCadastrarPostagem">
-            Editar Postagem
-          </button></a
-        >
       </div>
     </main>
     <!-- === Footer === -->
@@ -127,7 +111,7 @@
     <script src="../../assets/js/jquery/jquery-3.7.1.min.js"></script>
     <!-- === JS Files === -->
     <script src="../../assets/js/menu.js"></script>
-    <script src="../../assets/js/postagens/listar-postagens.js"></script>
     <script src="../../assets/js/postagens/conexao/conexao-postagens.js"></script>
+    <script src="../../assets/js/postagens/listar-postagens.js"></script>
   </body>
 </html>

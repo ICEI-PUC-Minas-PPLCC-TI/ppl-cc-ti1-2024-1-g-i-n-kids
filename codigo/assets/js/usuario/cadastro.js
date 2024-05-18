@@ -1,3 +1,10 @@
+let db = [];
+
+readUsers(data => {
+    db = data;
+    init();
+});
+
 function init() {
     let formularioCadastro = document.querySelector('form');
     let botaoCadastro = document.getElementById('botao-cadastro');
@@ -18,6 +25,13 @@ function init() {
 
         if (campoPassword !== campoConfirmPassword) {
             displayMessage('As senhas não se coincidem.', 'warning');
+            return;
+        }
+
+        const usuarioEncontrado = db.find(user => user.email === campoEmail);
+
+        if (usuarioEncontrado) {
+            displayMessage('O e-mail informado já está cadastrado.', 'warning');
             return;
         }
         
