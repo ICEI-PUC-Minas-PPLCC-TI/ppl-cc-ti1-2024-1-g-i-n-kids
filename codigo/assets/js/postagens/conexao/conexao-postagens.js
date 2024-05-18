@@ -1,4 +1,4 @@
-const apiUrl = 'https://49dd28ab-09e8-4ea8-8821-f809d96b3f78-00-38p61bxaux1od.spock.repl.co/postagens';
+const apiUrl = 'https://8fa78851-9cf6-4898-b273-45dcca3a4f7b-00-26gxsfmuhia9y.spock.repl.co/postagens';
 
 function createPost(post, updateFunction) {
     fetch(apiUrl, {
@@ -44,8 +44,6 @@ function updatePost(id, post, updateFunction) {
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage('Postagem alterada com sucesso', 'success');
-
             if (updateFunction) {
                 updateFunction();
             }
