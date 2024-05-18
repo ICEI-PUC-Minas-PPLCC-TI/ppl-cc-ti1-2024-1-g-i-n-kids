@@ -1,9 +1,11 @@
 var db = [];
-readPosts(data => {
+
+
+readPost(data => {
     db = data;
     listPosts();
 });
-function listContacts() {
+function listPosts() {
     let divpostagens = document.getElementById('postagens');
 
     divpostagens.innerHTML = '';
@@ -11,17 +13,16 @@ function listContacts() {
     for (let i = 0; i < db.length; i++) {
         const post = db[i];
 
-            divpostagens.innerHTML += `<div class="card-container">
-            <div class="card">
-              <a href="#">
-                <h3>${post.titulo}</h3>
-                <img src="${post.link_imagem}" alt="Imagem Card" />
-                <div class="card-content">
-                  <h3>Descrição</h3>
-                  <p>Descrição</p>
-                </div>
-              </a>
-            </div>
-          </div>`;
+            divpostagens.innerHTML += `
+                                        <div class="card" style="width: 18rem;">
+                                          
+                                          <img class="card-img-top" src="${post.link_imagem}" alt="Imagem da Postagem 1">
+                                          <div class="card-body">
+                                            <div class="descricao">
+                                              <h3 class="card-title">${post.titulo}</h3>
+                                              <h5 class="autor">${post.autor}
+                                            </div>
+                                          </div>
+                                        </div>`;
         }
     }
