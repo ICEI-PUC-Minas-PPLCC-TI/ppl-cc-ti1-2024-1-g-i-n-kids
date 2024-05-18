@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/rotina/criar-tarefa.css">
 </head>
-<body>
+<body onload="init()">
     <!-- === Header === -->
     <header>
         <a href="../../index.html">
@@ -41,18 +41,19 @@
         <div id="form-container">
             <form>
                 <div id="message" class="col-sm-10"></div>
-                <input type="text" name="tituloTarefa" placeholder="Digite o título">
-                <select name="diaSemana">
-                    <option value="" selected disabled >Selecione o dia da semana</option>
-                    <option value="segunda">Segunda-feira</option>
-                    <option value="terca">Terça-feira</option>
-                    <option value="quarta">Quarta-feira</option>
-                    <option value="quinta">Quinta-feira</option>
-                    <option value="sexta">Sexta-feira</option>
-                    <option value="sabado">Sábado</option>
-                    <option value="domingo">Domingo</option>
+                <input type="text" name="tituloTarefa" placeholder="Digite o título" id="tituloTarefa" minlength="5">
+                <select name="diaSemana" id="diaDaSemana" required>
+                    <option value="" selected disabled>Selecione o dia da semana</option>
+                    <option value="Domingo">Domingo</option>
+                    <option value="Segunda-feira">Segunda-feira</option>
+                    <option value="Terça-feira">Terça-feira</option>
+                    <option value="Quarta-feira">Quarta-feira</option>
+                    <option value="Quinta-feira">Quinta-feira</option>
+                    <option value="Sexta-feira">Sexta-feira</option>
+                    <option value="Sabado">Sábado</option>
                 </select>
-                <select name="horaTarefa">
+
+                <select name="horaTarefa" required id="horaTarefa">
                     <option value="" selected disabled >Selecione o horário da tarefa</option>
                     <option value="00:00">00:00</option>
                     <option value="01:00">01:00</option>
@@ -79,7 +80,7 @@
                     <option value="22:00">22:00</option>
                     <option value="23:00">23:00</option>
                 </select>
-                <button class="button">Publicar</button>
+                <button class="button" id="btnSalvarTarefa">Publicar</button>
             </form>
         </div>
     </main>
