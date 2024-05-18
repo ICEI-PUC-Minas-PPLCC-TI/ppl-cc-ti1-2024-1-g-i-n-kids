@@ -1,18 +1,34 @@
-#postagens{
+#postagens {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     flex-wrap: wrap;
 }
 
-#Site-Topo{
+#Site-Topo {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
 }
-.titulo-site{
-    float: left;
+
+.searchform button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
 }
-.searchform{
-    float: right;
+
+.searchform button:hover {
+    background-color: darkorange;
 }
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -58,39 +74,40 @@
 .card-content a:hover {
     background-color: #0056b3;
 }
-.button2{
-	background-color: lightblue;
-	border-radius: 5px;
-	padding: .7em 1.5em;
-	transition: ease all .5s;
+
+.button2 {
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: .7em 1.5em;
+    transition: ease all .5s;
     text-align: center;
     margin-right: 10px;
 }
 
-.button2:hover{
-	background-color: var(--white-color);
-	color: lightblue;
+.button2:hover {
+    background-color: var(--white-color);
+    color: lightblue;
 }
 
 /* === Media Queries === */
 @media screen and (max-width: 1203px) {
-    main #postagens{
+    main #postagens {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 931px) {
-    main #postagens{
+    main #postagens {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 608px) {
-    main #postagens{
+    main #postagens {
         grid-template-columns: 1fr;
     }
 
-    main #postagens .card:first-child{
+    main #postagens .card:first-child {
         margin: 0 auto;
     }
 }
