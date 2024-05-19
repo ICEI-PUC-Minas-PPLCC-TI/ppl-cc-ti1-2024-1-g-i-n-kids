@@ -1,4 +1,4 @@
-const apiUrl = 'SEU_LINK';
+const apiUrl = 'https://fd82fe4e-b086-4508-a383-5cf053cd0d34-00-1858kb5a5e0ky.worf.replit.dev/tarefas';
 
 function createTask(task, updateFunction) {
     fetch(apiUrl, {

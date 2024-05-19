@@ -34,6 +34,57 @@ function listTarefas() {
           }
      });
 
+     grupoHorastarefas.map((tarefas, index_array) => {
+          const linhatarefas = tableTarefas.insertRow();
+          const horaCell = linhatarefas.insertCell();
+          horaCell.className = 'infoRotina';
+          horaCell.innerHTML = tarefas[0].horario;
+        for (let index = 0; index < 7; index++) {
+             const tarefa = tarefas.find(t => t.dia_semana === index);
+
+             const adicionarCell = linhatarefas.insertCell(index + 1);
+             adicionarCell.className = 'tarefas';
+
+             if (!tarefa) {
+                  adicionarCell.innerHTML += `<p></p>`;
+                  continue;
+             }
+
+             adicionarCell.innerHTML += `
+                  <button class="excluir" id=${tarefa.id}>
+                       <i class="fa-solid fa-trash" style="color: #d80032;"></i>
+                  </button>
+                  <p>${tarefa.titulo}</p>
+             `;
+        }
+   });
+    
+   grupoHorastarefas.map((tarefas, index_array) => {
+     const linhatarefas = tableTarefas.insertRow();
+     const horaCell = linhatarefas.insertCell();
+     horaCell.className = 'infoRotina';
+     horaCell.innerHTML = tarefas[0].horario;
+   for (let index = 0; index < 7; index++) {
+        const tarefa = tarefas.find(t => t.dia_semana === index);
+
+        const adicionarCell = linhatarefas.insertCell(index + 1);
+        adicionarCell.className = 'tarefas';
+
+        if (!tarefa) {
+             adicionarCell.innerHTML += `<p></p>`;
+             continue;
+        }
+
+        adicionarCell.innerHTML += `
+             <button class="excluir" id=${tarefa.id}>
+                  <i class="fa-solid fa-trash" style="color: #d80032;"></i>
+             </button>
+             <p>${tarefa.titulo}</p>
+        `;
+   }
+});
+
+
      const linhaButtons = tableTarefas.insertRow();
 
      const buttonCell = linhaButtons.insertCell(0);
