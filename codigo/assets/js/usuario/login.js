@@ -23,7 +23,6 @@ function verificarUsuario() {
         const usuarioEncontrado = db.find(usuario => usuario.email === campoEmail && usuario.senha === campoSenha);
 
         if (usuarioEncontrado) {
-            displayMessage('Login realizado com sucesso!', 'success');
             localStorage.setItem('userId', usuarioEncontrado.id);
             window.location.replace('./editar-informacoes.html');
         }

@@ -32,6 +32,21 @@ window.onload = function() {
             return;
         }
 
+        if (campoNome.trim().length < 10) {
+            displayMessage('O nome do usuário deve ter pelo menos 10 caracteres.', 'warning');
+            return;
+        }
+
+        if (campoTelefone.length !== 15) {
+            displayMessage('Insira um número de telefone válido com DDD (formato: (XX) XXXXX-XXXX).', 'warning');
+            return;
+        }
+
+        if (campoSenha.trim().length < 8) {
+            displayMessage('A senha deve conter pelo menos 8 caracteres.', 'warning');
+            return;
+        }
+
         if (campoSenha !== campoConfirmarSenha) {
             displayMessage('As senhas não se coincidem.', 'warning');
             return;
@@ -47,6 +62,12 @@ window.onload = function() {
         updateUser(parseInt(userId), usuario);
 
         formularioEdicaoUsuario.reset();
+
+        document.getElementById('nome').value = usuario.nome;
+        document.getElementById('telefone').value = usuario.telefone;
+        document.getElementById('email').value = usuario.email;
+
+        displayMessage('Informações do usuário alterados com sucesso.', 'success');
     });
 
     btnExcluirConta.addEventListener('click', () => {
