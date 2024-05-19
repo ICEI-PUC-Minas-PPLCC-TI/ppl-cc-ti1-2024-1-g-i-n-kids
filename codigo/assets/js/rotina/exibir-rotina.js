@@ -1,17 +1,14 @@
 var db = [];
 readTask(data => {
      db = data;
-     listTarefas()
+     listTarefas();
 });
 
 function listTarefas() {
-     //pego o dado
      const grupoHorastarefas = ordenaArrayTarefas(db);
-     console.log(grupoHorastarefas)
-     //crio o html pelo js
+
      let tableTarefas = document.getElementById('tableTarefas');
 
-     //ira exibir as tarefas em ordem, primeiro pelo grupo de horas depois pelo tarefa correnpondente a data
      grupoHorastarefas.map((tarefas) => {
             const linhatarefas = tableTarefas.insertRow();
             const horaCell = linhatarefas.insertCell();
@@ -24,7 +21,7 @@ function listTarefas() {
                adicionarCell.className = 'tarefas';
 
                if (!tarefa) {
-                    adicionarCell.innerHTML += <p></p>;
+                    adicionarCell.innerHTML +=` <p></p>`;
                     continue;
                }
 
@@ -37,10 +34,8 @@ function listTarefas() {
 
 function ordenaArrayTarefas(db) {
 
-     // crio um array para poder gerar valores a partir de suas posições 
      const diasSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sabado'];
 
-     // crio uma nova coleçao de objetos mudando o nome do dia da semana para uma posição do array (ex se for segunda o index sera 1)
      const tarefasIndexDiaSemana = db.map((tarefa) => {
           return {
                id: tarefa.id,
@@ -50,10 +45,9 @@ function ordenaArrayTarefas(db) {
           };
      });
 
-     //ordeno a tarefa a partir da hora
      const tarefasOrdenadas = tarefasIndexDiaSemana.sort((anterior, posterior) => {
-          const horanterior = new Date(1970-1-1,T$,{anterior,horario});
-          const horaposterior = new Date(1970-1-1,T$,{posterior,horario});
+          const horanterior   = new Date(`1970-01-01T${anterior.horario}`);
+          const horaposterior = new Date(`1970-01-01T${posterior.horario}`);
 
           if (horanterior < horaposterior) {
                return -1;
@@ -64,7 +58,6 @@ function ordenaArrayTarefas(db) {
           }
      });
 
-     //agrupo as tarefas com horas iguais, isso se torna um array de array
      const gruposHoras = [];
      let grupoAtual = [];
      let horaAtual = null;
@@ -83,7 +76,6 @@ function ordenaArrayTarefas(db) {
           gruposHoras.push(grupoAtual);
      }
 
-     //orderna os grupos de horas para ficaram ordenados
      gruposHoras.forEach(grupo => {
           grupo.sort((tarefa1, tarefa2) => {
                const diaSemana1 = tarefa1.dia_semana;
