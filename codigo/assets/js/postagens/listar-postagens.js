@@ -1,10 +1,10 @@
 var db = [];
 
-
 readPost(data => {
     db = data;
     listPosts();
 });
+
 function listPosts() {
     let divpostagens = document.getElementById('postagens');
 
