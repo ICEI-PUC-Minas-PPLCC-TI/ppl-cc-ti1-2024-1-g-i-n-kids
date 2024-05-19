@@ -1,1 +1,57 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #titulo{
+    margin-top: 8vh;
+    text-align: center;
+}
+
+main #content{
+    width: 50%;
+    min-height: 80vh;
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main #content img{
+    width: 100%;
+    object-fit: cover;
+}
+
+main #content #autor{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 8vh 0 4vh 0;
+}
+
+main #content #autor span{
+    color: var(--orange-color);
+}
+
+main #content #descricao{
+    text-align: justify;
+}
+
+main #content #mais{
+    text-align: center;
+}
+
+main #content #ver-mais{
+    font-size: .9em;
+    margin-top: 10vh;
+    text-transform: uppercase;
+    color: var(--orange-color);
+    text-align: center;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+main #content #ver-mais:hover{
+    text-decoration: underline;
+}
+
 /* === Media Queries === */

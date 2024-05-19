@@ -44,8 +44,6 @@ function updateUser(id, user, updateFunction) {
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage('Dados do usuário alterados com sucesso', 'success');
-
             if (updateFunction) {
                 updateFunction();
             }
