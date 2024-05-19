@@ -15,4 +15,35 @@ Este projeto tem como propósito fornecer aos pais recursos e orientações prá
 * Wesley Dias Maciel
 
 ## Instruções de utilização
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+### 1. Acessar e rodar a API JSON Server para testar o projeto
+* Crie uma conta e faça login no [Repl.it](https://replit.com/~)
+* Acesse [este link](https://replit.com/@ArturColen/IandNKidsServer) para ver o JSON Server do projeto e clique no botão `Fork`
+* Após fazer isso, o JSON Server da I&N KIDS será copiado para o espaço com seus projetos do Repl.it e aparecerá uma tela com o código
+* Clique em `Run` e aguarde até que o servidor esteja em execução (aparecerá uma mensagem no console, escrit "JSON Server is running")
+
+### 2. Alterar as URLS de conexão presentes no projeto
+* Depois que a API estiver em execução (passo 1), você terá acesso à quatro rotas, nas quais estará a base de dados (JSON) do projeto. Para acessar cada uma dessas rotas, você pode clicar nas reticências que aparecerão no canto superior da tela em execução. Lá terá o link de acesso da API, copie-o e insira cada uma das rotas ao final da URL para acessar cada uma das bases de dados. Deverá ficar assim:
+
+```bash
+link_da_api/usuarios
+link_da_api/postagens
+link_da_api/tarefas
+link_da_api/contatos
+```
+* Por final, basta abrir a pasta do código do projeto, ir em cada um dos quatro arquivos de conexão e alterar a `apiUrl` para a URL referente à parte do código. Ficará assim:
+```bash
+assets/js/usuario/conexao/conexao-usuarios.js
+const apiUrl = 'link_da_api/usuarios';
+
+assets/js/postagens/conexao/conexao-postagens.js
+const apiUrl = 'link_da_api/postagens';
+
+assets/js/rotina/conexao/conexao-tarefas.js
+const apiUrl = 'link_da_api/tarefas';
+
+assets/js/contato/conexao-contato.js
+const apiUrl = 'link_da_api/contats';
+```
+
+### 3. Testar o projeto
+Após realoizar os passos anteriores, já é possível testar o projeto. Verifique se a API está em execução no Repl.it, abra a página HTML que deseja executar e faça os testes necessários.
