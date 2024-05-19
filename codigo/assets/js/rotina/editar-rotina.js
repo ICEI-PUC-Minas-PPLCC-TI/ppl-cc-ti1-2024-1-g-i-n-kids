@@ -1,4 +1,5 @@
 var db = [];
+
 readTask(data => {
      db = data;
      listTarefas();
@@ -121,6 +122,10 @@ function init() {
                let taskId = button.id;
 
                deleteTask(parseInt(taskId));
+
+               setTimeout(() => {
+                    location.reload();
+                }, 5000);
           });
      }
 }

@@ -1,4 +1,8 @@
- main #titulo{
+main #message{
+    margin: 0 auto;
+}
+
+main #titulo{
      margin-top: 8vh;
      text-align: center;
  }
@@ -138,5 +142,11 @@
 
       main table tr .tarefas .excluir i {
         font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    main #message{
+        margin: 0 4vw;
     }
 }

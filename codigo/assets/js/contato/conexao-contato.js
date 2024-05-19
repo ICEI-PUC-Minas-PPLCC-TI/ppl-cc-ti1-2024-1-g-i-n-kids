@@ -1,4 +1,4 @@
-const apiUrl = 'https://83d2580e-ec7d-4bdf-935e-e970d653694e-00-33flpwk5c3pc0.picard.replit.dev/contatos';
+const apiUrl = 'https://8fa78851-9cf6-4898-b273-45dcca3a4f7b-00-26gxsfmuhia9y.spock.repl.co/contatos';
 
 function createContact(contact, updateFunction) {
     fetch(apiUrl, {

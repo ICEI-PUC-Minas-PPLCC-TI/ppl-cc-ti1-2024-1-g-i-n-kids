@@ -1,4 +1,4 @@
-const apiUrl = 'SEU_LINK';
+const apiUrl = 'https://8fa78851-9cf6-4898-b273-45dcca3a4f7b-00-26gxsfmuhia9y.spock.repl.co/tarefas';
 
 function createTask(task, updateFunction) {
     fetch(apiUrl, {
@@ -62,7 +62,7 @@ function deleteTask(id, updateFunction) {
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage('Tarefa removida com sucesso', 'success');
+            displayMessage('Tarefa removida com sucesso', 'primary');
 
             if (updateFunction) {
                 updateFunction();

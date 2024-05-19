@@ -23,6 +23,21 @@ function init() {
             return;
         }
 
+        if (campoNome.trim().length < 10) {
+            displayMessage('O nome do usuário deve ter pelo menos 10 caracteres.', 'warning');
+            return;
+        }
+
+        if (campoTelefone.length !== 15) {
+            displayMessage('Insira um número de telefone válido com DDD (formato: (XX) XXXXX-XXXX).', 'warning');
+            return;
+        }
+
+        if (campoPassword.trim().length < 8) {
+            displayMessage('A senha deve conter pelo menos 8 caracteres.', 'warning');
+            return;
+        }
+
         if (campoPassword !== campoConfirmPassword) {
             displayMessage('As senhas não se coincidem.', 'warning');
             return;
