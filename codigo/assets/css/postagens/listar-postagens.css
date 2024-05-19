@@ -1,92 +1,64 @@
-#postagens {
+#postagens{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     flex-wrap: wrap;
 }
 
-#Site-Topo {
+#site-topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 4em 2em 2em 2em;
 }
 
-.searchform button {
-    background-color: orange;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.searchform button:hover {
-    background-color: darkorange;
-}
-
-.card-container {
+.searchform{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+}
+
+#site-topo input {
+    width: 20vw;
+    margin-right: 1em;
+    border-radius: 10px;
+    padding: .7em 1em;
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
 }
 
 .card {
-    width: calc(20% - 16px);
     margin: 20px;
-    border: 5px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
+    border: 0;
     margin: 5vh auto 0 auto;
+    transition: ease all .5s;
+}
+
+.card:hover {
+    background-color: var(--white-color);
+    transform: translateY(-10px);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .3); 
 }
 
 .card img {
-    width: 100%;
-    height: auto;
+    width: 288px;
+    height: 192px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.card-content {
-    padding: 20px;
+.card .card-body {
+    padding: 1.2em .6em;
 }
 
-.card-content h3 {
-    margin-top: 0;
+.card .card-title {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.card-content p {
-    margin-bottom: 20px;
-}
-
-.card-content a {
-    display: block;
-    text-align: center;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 0;
-    border-radius: 5px;
-}
-
-.card-content a:hover {
-    background-color: #0056b3;
-}
-
-.button2 {
-    background-color: lightblue;
-    border-radius: 5px;
-    padding: .7em 1.5em;
-    transition: ease all .5s;
-    text-align: center;
-    margin-right: 10px;
-}
-
-.button2:hover {
-    background-color: var(--white-color);
-    color: lightblue;
+.card .autor {
+    font-size: 16px;
+    font-weight: normal;
+    color: #454545;
 }
 
 /* === Media Queries === */
@@ -94,20 +66,61 @@
     main #postagens {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    #site-topo input{
+        width: 25vw;
+    }
 }
 
 @media screen and (max-width: 931px) {
     main #postagens {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    #site-topo input{
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #site-topo input {
+        width: 40vw;
+    } 
 }
 
 @media screen and (max-width: 608px) {
+    #site-topo {
+        flex-direction: column;
+    }
+
+    #site-topo input {
+        margin-right: 0;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .titulo-site h2{
+        font-size: 30px;
+    }
+
+    .searchform {
+        margin: 2vh 0 4vh 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .searchform button {
+        width: 20vw;
+        margin-top: 2vh;
+        font-size: 14px;
+
+    }
+
     main #postagens {
         grid-template-columns: 1fr;
     }
 
-    main #postagens .card:first-child {
+    main #postagens .card:first-child{
         margin: 0 auto;
     }
 }
