@@ -42,11 +42,6 @@ window.onload = function() {
             return;
         }
 
-        if (campoLinkImagem.trim() && !isValidURL(campoLinkImagem.trim())) {
-            displayMessage('Insira um link de imagem válido.', 'warning');
-            return;
-        }
-
         if (campoTextoPostagem.trim().length < 100) {
             displayMessage('O texto da postagem deve ter pelo menos 100 caracteres.', 'warning');
             return;
