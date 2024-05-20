@@ -49,4 +49,4 @@ const apiUrl = 'link_da_api/contats';
 ```
 
 ### 3. Testar o projeto
-Após realoizar os passos anteriores, já é possível testar o projeto. Verifique se a API está em execução no Repl.it, abra a página HTML que deseja executar e faça os testes necessários.
+Após realizar os passos anteriores, já é possível testar o projeto. Verifique se a API está em execução no Repl.it, abra a página HTML que deseja executar e faça os testes necessários.
