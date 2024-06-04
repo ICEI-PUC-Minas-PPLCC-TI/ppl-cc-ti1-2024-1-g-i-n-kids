@@ -1,6 +1,6 @@
 var db = [];
 
-readPost(data => {
+readPost((data) => {
     db = data;
     listPosts();
 });

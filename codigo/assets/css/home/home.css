@@ -1,64 +1,64 @@
-.button{
+.button {
     height: 8vh;
     text-transform: uppercase;
 }
 
 /* === Home === */
-main{
+main {
     min-height: auto;
 }
 
-main #image{
+main #image {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main #image img{
+main #image img {
     width: 100%;
     height: 90vh;
     object-fit: cover;
-    opacity: .5;
+    opacity: 0.5;
 }
 
-main #content{
+main #content {
     width: 50%;
     text-align: center;
     position: absolute;
 }
 
-main #content h1{
+main #content h1 {
     font-size: 50px;
     margin-bottom: 4vh;
     color: var(--white-color);
     text-shadow: 2px 2px 4px var(--orange-color);
 }
 
-main #content p{
+main #content p {
     margin-bottom: 4vh;
     font-size: 18px;
     text-shadow: 2px 2px 4px var(--white-color);
 }
 
 /* === Footer === */
-footer{
+footer {
     margin-top: 0;
 }
 
 /* === Media Queries === */
 @media screen and (max-width: 779px) {
-    main #content p{
+    main #content p {
         font-size: 16px;
     }
 }
 
 @media screen and (max-width: 486px) {
-    main #content{
+    main #content {
         width: 70%;
     }
 
-    .button{
+    .button {
         height: 6vh;
     }
 }

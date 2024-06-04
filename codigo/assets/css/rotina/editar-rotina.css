@@ -1,107 +1,104 @@
-main #message{
+main #message {
     margin: 0 auto;
 }
 
-main #titulo{
-     margin-top: 8vh;
-     text-align: center;
- }
+main #titulo {
+    margin-top: 8vh;
+    text-align: center;
+}
 
- main table {
-     display: flex;
-     justify-content: space-around;
-     font-size: 1rem;
-     overflow-x: scroll;
-     padding: 0 8px;
-     scrollbar-width: thin;
-     scrollbar-color: var(--green-color) var(--white-color);
- } 
+main table {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    overflow-x: scroll;
+    padding: 0 8px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--green-color) var(--white-color);
+}
 
- main table tr {
-     display: flex;
-     align-items: center;
-     gap: 17px;
-     padding: 10px 0;
- }
+main table tr {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 10px 0;
+}
 
- main table tr .infoRotina {
-     width: 115px;    
-     display: flex;
-     align-items: start;
- }
- 
- main table tr .dia {
-     padding: 14px 24px;
-     background-color: var(--green-color);
- }
+main table tr .infoRotina {
+    width: 115px;
+    display: flex;
+    align-items: start;
+}
 
- main table tr :not(.dia),
- main table tr :not(.infoRotina) {
-     margin-bottom: 17px;
- }
- 
- main table tr th:not(.infoRotina),
- main table tr td:not(.infoRotina)
-  {
-     width: 130px;
-     height: 55px  ;
-     text-align: center;
-     border-radius: 8px;
- }
+main table tr .dia {
+    padding: 14px 24px;
+    background-color: var(--green-color);
+}
 
- main table tr .tarefas{
-     display: flex;
-     justify-content: start;
-     font-size: 0.6rem;
-     padding: 15px 15px;
-     border: solid 1px #E0E0E0;
-     background-color: var(--white-color);
-     color: #828282;
-     position: relative;
- }
- 
- 
- main table tr button {
-      background: none;
- }
- 
- main table tr .tarefas .excluir i {
-     position: absolute;
-     top: -8px;
-     right: -8px;
-     font-size: 18px;
- }
+main table tr :not(.dia),
+main table tr :not(.infoRotina) {
+    margin-bottom: 17px;
+}
+
+main table tr th:not(.infoRotina),
+main table tr td:not(.infoRotina) {
+    width: 130px;
+    height: 55px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+main table tr .tarefas {
+    display: flex;
+    justify-content: start;
+    font-size: 0.6rem;
+    padding: 15px 15px;
+    border: solid 1px #e0e0e0;
+    background-color: var(--white-color);
+    color: #828282;
+    position: relative;
+}
+
+main table tr button {
+    background: none;
+}
+
+main table tr .tarefas .excluir i {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 18px;
+}
 
 /* === Media Queries === */
 
 @media only screen and (max-width: 1165px) {
-     main table {
-          font-size: 0.7rem;
-      } 
-     
-      main table tr {
-           gap: 10px;
-           padding: 8px 0;
-      }
+    main table {
+        font-size: 0.7rem;
+    }
 
-      main table tr .infoRotina {
-          width: 90px;
-      }
+    main table tr {
+        gap: 10px;
+        padding: 8px 0;
+    }
 
-      main table tr th:not(.infoRotina),
-      main table tr td:not(.infoRotina)
-       {
-          width: 100px;
-          height: 40px;
-      }
+    main table tr .infoRotina {
+        width: 90px;
+    }
 
-      main table tr .tarefas {
-          padding: 6px 3px;
-          font: 0.5rem;
-          font-size: 15;
-      }
+    main table tr th:not(.infoRotina),
+    main table tr td:not(.infoRotina) {
+        width: 100px;
+        height: 40px;
+    }
 
-      main table tr .tarefas .excluir i {
+    main table tr .tarefas {
+        padding: 6px 3px;
+        font: 0.5rem;
+        font-size: 15;
+    }
+
+    main table tr .tarefas .excluir i {
         position: absolute;
         top: -5px;
         right: -5px;
@@ -110,43 +107,42 @@ main #titulo{
 }
 
 @media only screen and (max-width: 893px) {
-     main table {
-          font-size: 0.6rem;
-      } 
-     
-      main table tr {
-           gap: 5px;
-           padding: 4px 20px;
-      }
+    main table {
+        font-size: 0.6rem;
+    }
 
-      main table tr .infoRotina {
-          width: 70px;
-      }
+    main table tr {
+        gap: 5px;
+        padding: 4px 20px;
+    }
 
-      main table tr th:not(.infoRotina),
-      main table tr td:not(.infoRotina)
-       {
-          text-align: center;
-          padding: 15px 0;
-          width: 80px;
-          height: 40px;
-      }
+    main table tr .infoRotina {
+        width: 70px;
+    }
 
-      main table tr td.tarefas {
-          padding: 8px 5px;
-      }
+    main table tr th:not(.infoRotina),
+    main table tr td:not(.infoRotina) {
+        text-align: center;
+        padding: 15px 0;
+        width: 80px;
+        height: 40px;
+    }
 
-      main table tr td.tarefas {
-          padding: 8px 5px;
-      }
+    main table tr td.tarefas {
+        padding: 8px 5px;
+    }
 
-      main table tr .tarefas .excluir i {
+    main table tr td.tarefas {
+        padding: 8px 5px;
+    }
+
+    main table tr .tarefas .excluir i {
         font-size: 14px;
     }
 }
 
 @media only screen and (max-width: 576px) {
-    main #message{
+    main #message {
         margin: 0 4vw;
     }
 }

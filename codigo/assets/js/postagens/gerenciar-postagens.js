@@ -1,6 +1,6 @@
 var db = [];
 
-readPost(data => {
+readPost((data) => {
     db = data;
     listPosts();
 });
@@ -15,7 +15,7 @@ function listPosts() {
     if (db.length > 0) {
         for (let i = 0; i < db.length; i++) {
             const post = db[i];
-    
+
             divPostagens.innerHTML += `
                 <div class="card" style="width: 18rem;" data-id="${post.id}">
                     <h3 class="card-title">${post.titulo}</h3>
@@ -29,8 +29,7 @@ function listPosts() {
                 </div>
             `;
         }
-    }
-    else {
+    } else {
         mensagemAviso.innerHTML = 'Ainda não há postagens cadastradas';
     }
 
@@ -42,7 +41,7 @@ function init() {
     let btnEdit = document.getElementsByClassName('edit');
 
     for (let i = 0; i < btnDelete.length; i++) {
-        btnDelete[i].addEventListener('click', function() {
+        btnDelete[i].addEventListener('click', function () {
             let card = this.closest('.card');
             let cardId = card.dataset.id;
 
@@ -51,7 +50,7 @@ function init() {
     }
 
     for (let i = 0; i < btnEdit.length; i++) {
-        btnEdit[i].addEventListener('click', function() {
+        btnEdit[i].addEventListener('click', function () {
             let card = this.closest('.card');
             let cardId = card.dataset.id;
 

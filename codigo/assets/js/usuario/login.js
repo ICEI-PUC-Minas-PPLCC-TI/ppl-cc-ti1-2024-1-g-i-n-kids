@@ -1,6 +1,6 @@
 let db = [];
 
-readUsers(data => {
+readUsers((data) => {
     db = data;
     verificarUsuario();
 });
@@ -20,13 +20,15 @@ function verificarUsuario() {
             return;
         }
 
-        const usuarioEncontrado = db.find(usuario => usuario.email === campoEmail && usuario.senha === campoSenha);
+        const usuarioEncontrado = db.find(
+            (usuario) =>
+                usuario.email === campoEmail && usuario.senha === campoSenha
+        );
 
         if (usuarioEncontrado) {
             localStorage.setItem('userId', usuarioEncontrado.id);
             window.location.replace('./editar-informacoes.html');
-        }
-        else {
+        } else {
             displayMessage('Email ou senha incorretos.', 'danger');
         }
     });

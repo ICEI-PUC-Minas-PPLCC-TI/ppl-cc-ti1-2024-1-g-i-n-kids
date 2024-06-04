@@ -1,15 +1,15 @@
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main #titulo{
+main #titulo {
     margin-top: 8vh;
     text-align: center;
 }
 
-main #content{
+main #content {
     width: 50%;
     min-height: 80vh;
     margin-top: 7vh;
@@ -17,31 +17,31 @@ main #content{
     flex-direction: column;
 }
 
-main #content img{
+main #content img {
     width: 100%;
     object-fit: cover;
 }
 
-main #content #autor{
+main #content #autor {
     font-size: 16px;
     font-weight: 600;
     margin: 8vh 0 4vh 0;
 }
 
-main #content #autor span{
+main #content #autor span {
     color: var(--orange-color);
 }
 
-main #content #descricao{
+main #content #descricao {
     text-align: justify;
 }
 
-main #content #mais{
+main #content #mais {
     text-align: center;
 }
 
-main #content #ver-mais{
-    font-size: .9em;
+main #content #ver-mais {
+    font-size: 0.9em;
     margin-top: 10vh;
     text-transform: uppercase;
     color: var(--orange-color);
@@ -50,7 +50,7 @@ main #content #ver-mais{
     cursor: pointer;
 }
 
-main #content #ver-mais:hover{
+main #content #ver-mais:hover {
     text-decoration: underline;
 }
 

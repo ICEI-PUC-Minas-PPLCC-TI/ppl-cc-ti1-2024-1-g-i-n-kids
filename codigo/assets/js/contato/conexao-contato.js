@@ -1,4 +1,5 @@
-const apiUrl = 'https://8fa78851-9cf6-4898-b273-45dcca3a4f7b-00-26gxsfmuhia9y.spock.repl.co/contatos';
+const apiUrl =
+    'https://8fa78851-9cf6-4898-b273-45dcca3a4f7b-00-26gxsfmuhia9y.spock.repl.co/contatos';
 
 function createContact(contact, updateFunction) {
     fetch(apiUrl, {
@@ -8,16 +9,22 @@ function createContact(contact, updateFunction) {
         },
         body: JSON.stringify(contact),
     })
-        .then(response => response.json())
-        .then(data => {
-            displayMessage('Solicitação de contato enviada com sucesso', 'success');
+        .then((response) => response.json())
+        .then((data) => {
+            displayMessage(
+                'Solicitação de contato enviada com sucesso',
+                'success'
+            );
 
             if (updateFunction) {
                 updateFunction();
             }
         })
-        .catch(error => {
-            console.error('Erro ao enviar solicitação de contato via JSON Server:', error);
+        .catch((error) => {
+            console.error(
+                'Erro ao enviar solicitação de contato via JSON Server:',
+                error
+            );
             displayMessage('Erro ao enviar solicitação de contato', 'danger');
         });
 }

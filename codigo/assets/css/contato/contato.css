@@ -1,11 +1,10 @@
-
 main {
     margin: 8vh 0;
     display: flex;
     justify-content: center;
 }
 
-.contact-section{
+.contact-section {
     margin-right: 5vw;
     padding: 6vh 10vw;
     display: flex;
@@ -16,88 +15,86 @@ main {
     color: #acabab;
     margin-bottom: 2px;
 }
-#titulo-formulario{
+#titulo-formulario {
     text-align: center;
     font-size: 30px;
 }
 
-#formulario h3{
-     margin-bottom:40px;
+#formulario h3 {
+    margin-bottom: 40px;
 }
-   
-main #formulario{
+
+main #formulario {
     background-color: #fee69e;
     width: 600px;
     border-radius: 7px;
-    padding:40px 60px;
+    padding: 40px 60px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
 }
 
-main #formulario form{
+main #formulario form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 main #formulario form input,
-main #formulario textarea{
-    background-color:#f4f2ee;;
+main #formulario textarea {
+    background-color: #f4f2ee;
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 10px;
-    width:80%;
+    width: 80%;
     box-shadow: 0px 1px 1px;
     border: none;
-    color:#565656;
-    padding-left :15px ;
+    color: #565656;
+    padding-left: 15px;
 }
 
 .contact-section .social-icons {
-    display: flex; 
-    margin-top:20px;
-    flex-wrap: wrap; 
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
- 
- .social-icons img { 
-    width:20px; 
-    height:auto; 
-    margin-right :10px;  
- }
+.social-icons img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
 
 /* === Media Queries === */
 @media (max-width: 1200px) {
-    main #formulario{
+    main #formulario {
         width: 80%;
-        padding:20px 30px;
+        padding: 20px 30px;
     }
 
     main #formulario form input,
-    main #formulario textarea{
-        width:90%;
+    main #formulario textarea {
+        width: 90%;
     }
 }
 
 @media (max-width: 992px) {
-    main #formulario{
+    main #formulario {
         width: 90%;
-        padding:20px 30px;
+        padding: 20px 30px;
     }
     main #formulario form input,
-    main #formulario textarea{
-        width:95%;
+    main #formulario textarea {
+        width: 95%;
     }
 }
 
 @media (max-width: 768px) {
-    main{
+    main {
         flex-direction: column;
         align-items: center;
     }
 
-    main .contact-section{
+    main .contact-section {
         text-align: center;
         align-items: center;
     }

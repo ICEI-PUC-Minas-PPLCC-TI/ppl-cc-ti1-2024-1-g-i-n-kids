@@ -1,20 +1,18 @@
-window.onload = function() {
+window.onload = function () {
     let userId = localStorage.getItem('userId');
     let btnEditarDadosUsuario = document.getElementById('editar-Infos');
     btnExcluirConta = document.getElementById('excluir-conta');
     let formularioEdicaoUsuario = document.querySelector('form');
 
-
     if (userId) {
-        readUsers(data => {
-            let usuario = data.find(user => user.id === parseInt(userId));
+        readUsers((data) => {
+            let usuario = data.find((user) => user.id === parseInt(userId));
 
             document.getElementById('nome').value = usuario.nome;
             document.getElementById('telefone').value = usuario.telefone;
             document.getElementById('email').value = usuario.email;
         });
-    }
-    else {
+    } else {
         alert('Você precisa fazer login para acessar página!');
     }
 
@@ -23,7 +21,8 @@ window.onload = function() {
         let campoTelefone = document.getElementById('telefone').value;
         let campoEmail = document.getElementById('email').value;
         let campoSenha = document.getElementById('password').value;
-        let campoConfirmarSenha = document.getElementById('confirm-password').value;
+        let campoConfirmarSenha =
+            document.getElementById('confirm-password').value;
 
         e.preventDefault();
 
@@ -33,17 +32,26 @@ window.onload = function() {
         }
 
         if (campoNome.trim().length < 10) {
-            displayMessage('O nome do usuário deve ter pelo menos 10 caracteres.', 'warning');
+            displayMessage(
+                'O nome do usuário deve ter pelo menos 10 caracteres.',
+                'warning'
+            );
             return;
         }
 
         if (campoTelefone.length !== 15) {
-            displayMessage('Insira um número de telefone válido com DDD (formato: (XX) XXXXX-XXXX).', 'warning');
+            displayMessage(
+                'Insira um número de telefone válido com DDD (formato: (XX) XXXXX-XXXX).',
+                'warning'
+            );
             return;
         }
 
         if (campoSenha.trim().length < 8) {
-            displayMessage('A senha deve conter pelo menos 8 caracteres.', 'warning');
+            displayMessage(
+                'A senha deve conter pelo menos 8 caracteres.',
+                'warning'
+            );
             return;
         }
 
@@ -56,8 +64,8 @@ window.onload = function() {
             nome: campoNome,
             telefone: campoTelefone,
             email: campoEmail,
-            senha: campoSenha
-        }
+            senha: campoSenha,
+        };
 
         updateUser(parseInt(userId), usuario);
 
@@ -67,7 +75,10 @@ window.onload = function() {
         document.getElementById('telefone').value = usuario.telefone;
         document.getElementById('email').value = usuario.email;
 
-        displayMessage('Informações do usuário alterados com sucesso.', 'success');
+        displayMessage(
+            'Informações do usuário alterados com sucesso.',
+            'success'
+        );
     });
 
     btnExcluirConta.addEventListener('click', () => {
@@ -77,4 +88,4 @@ window.onload = function() {
             window.location.replace('../../index.html');
         });
     });
-}
+};

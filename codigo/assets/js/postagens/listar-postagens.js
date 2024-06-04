@@ -1,6 +1,6 @@
 var db = [];
 
-readPost(data => {
+readPost((data) => {
     db = data;
     listPosts();
 });
@@ -14,7 +14,11 @@ function listPosts() {
     for (let i = 0; i < db.length; i++) {
         const post = db[i];
 
-        if (post.titulo.includes(filtroTema) || post.descricao.includes(filtroTema) || filtroTema == '') {
+        if (
+            post.titulo.includes(filtroTema) ||
+            post.descricao.includes(filtroTema) ||
+            filtroTema == ''
+        ) {
             divpostagens.innerHTML += `
                                         <a href="./detalhes-postagem.html">
                                             <div class="card" style="width: 18rem;">
@@ -32,7 +36,9 @@ function listPosts() {
     }
 }
 
-document.getElementById('search-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    listPosts();
-});
+document
+    .getElementById('search-form')
+    .addEventListener('submit', function (event) {
+        event.preventDefault();
+        listPosts();
+    });
