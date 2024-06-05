@@ -1,7 +1,11 @@
 const apiUrl = 'https://iandn-kids-server.vercel.app/posts';
 
 function findAllPosts(processData) {
-    fetch(apiUrl)
+    fetch(apiUrl, {
+        headers: {
+            Authorization: 'Bearer gPqH84KLJz5SjcP',
+        },
+    })
         .then((response) => response.json())
         .then((data) => {
             processData(data.Posts);
@@ -13,7 +17,11 @@ function findAllPosts(processData) {
 }
 
 function findPostById(postId, processData) {
-    fetch(`${apiUrl}/search/${postId}`)
+    fetch(`${apiUrl}/search/${postId}`, {
+        headers: {
+            Authorization: 'Bearer gPqH84KLJz5SjcP',
+        },
+    })
         .then((response) => response.json())
         .then((data) => {
             processData(data.Post);
@@ -32,6 +40,7 @@ function createPost(post, updateFunction) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            Authorization: 'Bearer gPqH84KLJz5SjcP',
         },
         body: JSON.stringify(post),
     })
@@ -54,6 +63,7 @@ function updatePost(id, post, updateFunction) {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
+            Authorization: 'Bearer gPqH84KLJz5SjcP',
         },
         body: JSON.stringify(post),
     })
@@ -72,6 +82,9 @@ function updatePost(id, post, updateFunction) {
 function deletePost(id, updateFunction) {
     fetch(`${apiUrl}/${id}`, {
         method: 'DELETE',
+        headers: {
+            Authorization: 'Bearer gPqH84KLJz5SjcP',
+        },
     })
         .then((response) => response.json())
         .then((data) => {

@@ -1,11 +1,11 @@
-const apiUrl =
-    'https://8fa78851-9cf6-4898-b273-45dcca3a4f7b-00-26gxsfmuhia9y.spock.repl.co/contatos';
+const apiUrl = 'https://iandn-kids-server.vercel.app/contacts/';
 
 function createContact(contact, updateFunction) {
     fetch(apiUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            Authorization: 'Bearer gPqH84KLJz5SjcP',
         },
         body: JSON.stringify(contact),
     })
@@ -22,7 +22,7 @@ function createContact(contact, updateFunction) {
         })
         .catch((error) => {
             console.error(
-                'Erro ao enviar solicitação de contato via JSON Server:',
+                'Erro ao enviar solicitação de contato para a API:',
                 error
             );
             displayMessage('Erro ao enviar solicitação de contato', 'danger');

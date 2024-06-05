@@ -23,9 +23,9 @@ function init() {
         }
 
         const tarefa = {
-            titulo: tituloTarefa,
-            dia_semana: diaDaSemana,
-            horario: horaTarefa,
+            title: tituloTarefa,
+            weekDay: diaDaSemana,
+            time: horaTarefa,
         };
 
         createTask(tarefa);

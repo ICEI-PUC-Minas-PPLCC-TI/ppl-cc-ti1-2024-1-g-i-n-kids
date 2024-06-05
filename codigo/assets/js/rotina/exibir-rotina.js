@@ -1,5 +1,6 @@
 var db = [];
-readTask((data) => {
+
+findAllTasks((data) => {
     db = data;
     listTarefas();
 });
@@ -13,9 +14,9 @@ function listTarefas() {
         const linhatarefas = tableTarefas.insertRow();
         const horaCell = linhatarefas.insertCell();
         horaCell.className = 'infoRotina';
-        horaCell.innerHTML = tarefas[0].horario;
+        horaCell.innerHTML = tarefas[0].time;
         for (let index = 0; index < 7; index++) {
-            const tarefa = tarefas.find((t) => t.dia_semana === index);
+            const tarefa = tarefas.find((t) => t.weekDay === index);
 
             const adicionarCell = linhatarefas.insertCell(index + 1);
             adicionarCell.className = 'tarefas';
@@ -26,7 +27,7 @@ function listTarefas() {
             }
 
             adicionarCell.innerHTML += `
-                    <p>${tarefa.titulo}</p>
+                    <p>${tarefa.title}</p>
                `;
         }
     });
@@ -45,17 +46,17 @@ function ordenaArrayTarefas(db) {
 
     const tarefasIndexDiaSemana = db.map((tarefa) => {
         return {
-            id: tarefa.id,
-            titulo: tarefa.titulo,
-            dia_semana: diasSemana.indexOf(tarefa.dia_semana),
-            horario: tarefa.horario,
+            _id: tarefa._id,
+            title: tarefa.title,
+            weekDay: diasSemana.indexOf(tarefa.weekDay),
+            time: tarefa.time,
         };
     });
 
     const tarefasOrdenadas = tarefasIndexDiaSemana.sort(
         (anterior, posterior) => {
-            const horanterior = new Date(`1970-01-01T${anterior.horario}`);
-            const horaposterior = new Date(`1970-01-01T${posterior.horario}`);
+            const horanterior = new Date(`1970-01-01T${anterior.time}`);
+            const horaposterior = new Date(`1970-01-01T${posterior.time}`);
 
             if (horanterior < horaposterior) {
                 return -1;
@@ -72,13 +73,13 @@ function ordenaArrayTarefas(db) {
     let horaAtual = null;
 
     for (const tarefa of tarefasOrdenadas) {
-        if (horaAtual === null || tarefa.horario === horaAtual) {
+        if (horaAtual === null || tarefa.time === horaAtual) {
             grupoAtual.push(tarefa);
         } else {
             gruposHoras.push(grupoAtual);
             grupoAtual = [tarefa];
         }
-        horaAtual = tarefa.horario;
+        horaAtual = tarefa.time;
     }
 
     if (grupoAtual.length > 0) {
@@ -87,8 +88,8 @@ function ordenaArrayTarefas(db) {
 
     gruposHoras.forEach((grupo) => {
         grupo.sort((tarefa1, tarefa2) => {
-            const diaSemana1 = tarefa1.dia_semana;
-            const diaSemana2 = tarefa2.dia_semana;
+            const diaSemana1 = tarefa1.weekDay;
+            const diaSemana2 = tarefa2.weekDay;
 
             if (diaSemana1 < diaSemana2) {
                 return -1;

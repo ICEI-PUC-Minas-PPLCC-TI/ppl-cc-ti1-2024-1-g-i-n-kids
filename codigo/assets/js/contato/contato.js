@@ -31,9 +31,9 @@ function init() {
         }
 
         let contatos = {
-            nome_usuario: campoNome,
+            username: campoNome,
             email: campoEmail,
-            mensagem: campoMensagem,
+            message: campoMensagem,
         };
 
         createContact(contatos);
