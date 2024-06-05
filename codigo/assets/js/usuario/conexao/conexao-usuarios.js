@@ -1,5 +1,34 @@
-const apiUrl =
-    'https://8fa78851-9cf6-4898-b273-45dcca3a4f7b-00-26gxsfmuhia9y.spock.repl.co/usuarios';
+const apiUrl = 'https://iandn-kids-server.vercel.app/users';
+
+function findAllUsers(processData) {
+    fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            processData(data.Users);
+        })
+        .catch((error) => {
+            console.error(
+                'Erro ao encontrar usuários cadastrados na API:',
+                error
+            );
+            displayMessage('Erro ao encontrar usuários cadastrados', 'danger');
+        });
+}
+
+function findUserById(userId, processData) {
+    fetch(`${apiUrl}/search/${userId}`)
+        .then((response) => response.json())
+        .then((data) => {
+            processData(data.User);
+        })
+        .catch((error) => {
+            console.error(
+                'Erro ao encontrar usuário cadastrado na API:',
+                error
+            );
+            displayMessage('Erro ao encontrar usuário', 'danger');
+        });
+}
 
 function createUser(user, updateFunction) {
     fetch(apiUrl, {
@@ -12,29 +41,13 @@ function createUser(user, updateFunction) {
         .then((response) => response.json())
         .then((data) => {
             displayMessage('Usuário cadastrado com sucesso', 'success');
-
             if (updateFunction) {
                 updateFunction();
             }
         })
         .catch((error) => {
-            console.error('Erro ao cadastrar usuário via JSON Server:', error);
+            console.error('Erro ao cadastrar usuário na API:', error);
             displayMessage('Erro ao cadastrar usuário', 'danger');
-        });
-}
-
-function readUsers(processData) {
-    fetch(apiUrl)
-        .then((response) => response.json())
-        .then((data) => {
-            processData(data);
-        })
-        .catch((error) => {
-            console.error(
-                'Erro ao encontrar usuário cadastrado no JSON Server:',
-                error
-            );
-            displayMessage('Erro ao encontrar usuário cadastrado', 'danger');
         });
 }
 
@@ -53,10 +66,7 @@ function updateUser(id, user, updateFunction) {
             }
         })
         .catch((error) => {
-            console.error(
-                'Erro ao alterar dados do usuário via JSON Server:',
-                error
-            );
+            console.error('Erro ao alterar dados do usuário da API:', error);
             displayMessage('Erro ao alterar dados do usuário', 'danger');
         });
 }
@@ -68,13 +78,12 @@ function deleteUser(id, updateFunction) {
         .then((response) => response.json())
         .then((data) => {
             displayMessage('Conta excluída com sucesso', 'success');
-
             if (updateFunction) {
                 updateFunction();
             }
         })
         .catch((error) => {
-            console.error('Erro ao excluir conta via JSON Server:', error);
+            console.error('Erro ao excluir conta da API:', error);
             displayMessage('Erro ao remover conta', 'danger');
         });
 }

@@ -1,6 +1,6 @@
 let db = [];
 
-readUsers((data) => {
+findAllUsers((data) => {
     db = data;
     init();
 });
@@ -48,6 +48,30 @@ function init() {
             return;
         }
 
+        if (!campoPassword.match(/[0-9]/)) {
+            displayMessage(
+                'A senha deve conter pelo menos um número.',
+                'warning'
+            );
+            return;
+        }
+
+        if (!campoPassword.match(/[a-zA-Z]/)) {
+            displayMessage(
+                'A senha deve conter pelo menos uma letra.',
+                'warning'
+            );
+            return;
+        }
+
+        if (!campoPassword.match(/[!@#$%^&*(),.?":{}|<>]/)) {
+            displayMessage(
+                'A senha deve conter pelo menos um caractere especial.',
+                'warning'
+            );
+            return;
+        }
+
         if (campoPassword !== campoConfirmPassword) {
             displayMessage('As senhas não se coincidem.', 'warning');
             return;
@@ -61,10 +85,10 @@ function init() {
         }
 
         let usuario = {
-            nome: campoNome,
-            telefone: campoTelefone,
+            name: campoNome,
+            phone: campoTelefone,
             email: campoEmail,
-            senha: campoPassword,
+            password: campoPassword,
         };
 
         createUser(usuario);

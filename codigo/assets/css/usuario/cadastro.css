@@ -48,6 +48,20 @@ main #formulario form .button {
     margin-top: 4vh;
 }
 
+main #formulario form .div-senha {
+    position: relative;
+}
+
+main #formulario form .div-senha i {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.7;
+    color: var(--orange-color);
+}
+
 main #texto-termos {
     font-size: 0.9em;
     margin-top: 4vh;

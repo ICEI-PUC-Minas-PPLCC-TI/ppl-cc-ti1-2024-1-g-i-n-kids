@@ -19,7 +19,10 @@ function findPostById(postId, processData) {
             processData(data.Post);
         })
         .catch((error) => {
-            console.error('Erro ao encontrar postagem cadastrada na API:', error);
+            console.error(
+                'Erro ao encontrar postagem cadastrada na API:',
+                error
+            );
             displayMessage('Erro ao ler postagem', 'danger');
         });
 }

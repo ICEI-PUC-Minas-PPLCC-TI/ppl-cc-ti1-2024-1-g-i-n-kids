@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Função para obter o parâmetro da query string
     function getQueryParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);
     }
 
-    let postId = getQueryParam('postId'); // Alterado para usar query string
+    let postId = getQueryParam('postId');
 
     if (postId) {
         findPostById(postId, (post) => {

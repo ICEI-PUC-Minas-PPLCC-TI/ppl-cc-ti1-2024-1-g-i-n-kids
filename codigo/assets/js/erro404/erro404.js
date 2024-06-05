@@ -1,3 +1,5 @@
 function init() {
-    window.location.href = './erro404.html';
+    if (!window.location.href.includes('erro404.html')) {
+        window.location.href = './erro404.html';
+    }
 }

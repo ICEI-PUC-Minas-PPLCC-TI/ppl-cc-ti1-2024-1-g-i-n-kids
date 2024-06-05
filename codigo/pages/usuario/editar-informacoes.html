@@ -38,7 +38,7 @@
             <a href="../../index.html">
                 <img
                     src="../../assets/images/logo.png"
-                    alt="Logotipo da I&N  KIDS"
+                    alt="Logotipo da I&N KIDS"
                 />
             </a>
             <nav>
@@ -91,20 +91,26 @@
                         placeholder="Digite seu email"
                         required
                     />
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        placeholder="Digite sua senha"
-                        required
-                    />
-                    <input
-                        type="password"
-                        name="confirm-password"
-                        id="confirm-password"
-                        placeholder="Digite sua senha novamente"
-                        required
-                    />
+                    <div class="div-senha">
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Digite sua senha"
+                            required
+                        />
+                        <i class="fa fa-eye" id="togglePassword"></i>
+                    </div>
+                    <div class="div-senha">
+                        <input
+                            type="password"
+                            name="confirm-password"
+                            id="confirm-password"
+                            placeholder="Digite sua senha novamente"
+                            required
+                        />
+                        <i class="fa fa-eye" id="toggleConfirmPassword"></i>
+                    </div>
                     <button class="button" id="editar-Infos">
                         Salvar Informações
                     </button>
@@ -167,6 +173,7 @@
         <!-- === JS Files === -->
         <script src="../../assets/js/menu.js"></script>
         <script src="../../assets/js/usuario/mascaras-formulario/mascaras-cadastro.js"></script>
+        <script src="../../assets/js/input-senha.js"></script>
         <script src="../../assets/js/mensagem-aviso.js"></script>
         <script src="../../assets/js/usuario/conexao/conexao-usuarios.js"></script>
         <script src="../../assets/js/usuario/editar-informacoes.js"></script>

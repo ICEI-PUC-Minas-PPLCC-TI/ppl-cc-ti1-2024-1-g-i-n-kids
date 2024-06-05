@@ -1,6 +1,6 @@
 let db = [];
 
-readUsers((data) => {
+findAllUsers((data) => {
     db = data;
     verificarUsuario();
 });
@@ -10,10 +10,10 @@ function verificarUsuario() {
     let botaoLogin = document.getElementById('botao-login');
 
     botaoLogin.addEventListener('click', (e) => {
+        e.preventDefault();
+
         let campoEmail = document.getElementById('email').value;
         let campoSenha = document.getElementById('password').value;
-
-        e.preventDefault();
 
         if (!formularioLogin.checkValidity()) {
             displayMessage('Preencha o formulário corretamente.', 'warning');
@@ -22,14 +22,27 @@ function verificarUsuario() {
 
         const usuarioEncontrado = db.find(
             (usuario) =>
-                usuario.email === campoEmail && usuario.senha === campoSenha
+                usuario.email === campoEmail && usuario.password === campoSenha
         );
 
         if (usuarioEncontrado) {
-            localStorage.setItem('userId', usuarioEncontrado.id);
+            localStorage.setItem('userId', usuarioEncontrado._id);
             window.location.replace('./editar-informacoes.html');
         } else {
             displayMessage('Email ou senha incorretos.', 'danger');
         }
     });
 }
+
+document
+    .getElementById('togglePassword')
+    .addEventListener('click', function () {
+        const passwordField = document.getElementById('password');
+        const type =
+            passwordField.getAttribute('type') === 'password'
+                ? 'text'
+                : 'password';
+        passwordField.setAttribute('type', type);
+        this.classList.toggle('fa-eye');
+        this.classList.toggle('fa-eye-slash');
+    });
