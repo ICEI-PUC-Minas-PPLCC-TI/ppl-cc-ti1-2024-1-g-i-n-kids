@@ -1,6 +1,6 @@
 var db = [];
 
-readPost((data) => {
+findAllPosts((data) => {
     db = data;
     listPosts();
 });
@@ -17,9 +17,9 @@ function listPosts() {
             const post = db[i];
 
             divPostagens.innerHTML += `
-                <div class="card" style="width: 18rem;" data-id="${post.id}">
-                    <h3 class="card-title">${post.titulo}</h3>
-                    <img class="card-img-top" src="${post.link_imagem}" alt="Imagem da postagem">
+                <div class="card" style="width: 18rem;" data-id="${post._id}">
+                    <h3 class="card-title">${post.title}</h3>
+                    <img class="card-img-top" src="${post.imageLink}" alt="Imagem da postagem">
                     <div class="card-body">
                         <div class="icons">
                             <i class="fa-regular fa-rectangle-xmark delete"></i>
@@ -45,7 +45,7 @@ function init() {
             let card = this.closest('.card');
             let cardId = card.dataset.id;
 
-            deletePost(parseInt(cardId));
+            deletePost(cardId);
         });
     }
 

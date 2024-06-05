@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/pages/erro404/erro404.html"
+        }
+    ]
+}

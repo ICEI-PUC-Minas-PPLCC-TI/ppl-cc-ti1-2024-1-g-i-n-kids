@@ -24,9 +24,15 @@
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
+main h5 {
+    margin-top: 2vh;
+    color: var(--orange-color);
+    text-align: center;
+}
+
 .card {
     margin: 20px;
-    border: 0;
+    border: 1 px solid #e8e7e7;
     margin: 5vh auto 0 auto;
     transition: ease all 0.5s;
 }
@@ -59,6 +65,7 @@
     font-size: 16px;
     font-weight: normal;
     color: #454545;
+    text-align: left;
 }
 
 /* === Media Queries === */

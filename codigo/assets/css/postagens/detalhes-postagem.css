@@ -10,7 +10,7 @@ main #titulo {
 }
 
 main #content {
-    width: 50%;
+    max-width: 50%;
     min-height: 80vh;
     margin-top: 7vh;
     display: flex;
@@ -33,7 +33,12 @@ main #content #autor span {
 }
 
 main #content #descricao {
+    word-break: break-word;
     text-align: justify;
+}
+
+main #content #descricao p {
+    margin-bottom: 1em; /* Adiciona espaço entre os parágrafos */
 }
 
 main #content #mais {

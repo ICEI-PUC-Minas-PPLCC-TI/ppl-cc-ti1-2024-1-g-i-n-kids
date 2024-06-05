@@ -1,5 +1,28 @@
-const apiUrl =
-    'https://8fa78851-9cf6-4898-b273-45dcca3a4f7b-00-26gxsfmuhia9y.spock.repl.co/postagens';
+const apiUrl = 'https://iandn-kids-server.vercel.app/posts';
+
+function findAllPosts(processData) {
+    fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            processData(data.Posts);
+        })
+        .catch((error) => {
+            console.error('Erro ao ler postagens cadastradas na API:', error);
+            displayMessage('Erro ao ler postagens', 'danger');
+        });
+}
+
+function findPostById(postId, processData) {
+    fetch(`${apiUrl}/search/${postId}`)
+        .then((response) => response.json())
+        .then((data) => {
+            processData(data.Post);
+        })
+        .catch((error) => {
+            console.error('Erro ao encontrar postagem cadastrada na API:', error);
+            displayMessage('Erro ao ler postagem', 'danger');
+        });
+}
 
 function createPost(post, updateFunction) {
     fetch(apiUrl, {
@@ -18,20 +41,8 @@ function createPost(post, updateFunction) {
             }
         })
         .catch((error) => {
-            console.error('Erro ao criar postagem via JSON Server:', error);
+            console.error('Erro ao criar postagem na API:', error);
             displayMessage('Erro ao criar postagem', 'danger');
-        });
-}
-
-function readPost(processData) {
-    fetch(apiUrl)
-        .then((response) => response.json())
-        .then((data) => {
-            processData(data);
-        })
-        .catch((error) => {
-            console.error('Erro ao ler postagens via JSON Server:', error);
-            displayMessage('Erro ao ler postagens', 'danger');
         });
 }
 
@@ -50,7 +61,7 @@ function updatePost(id, post, updateFunction) {
             }
         })
         .catch((error) => {
-            console.error('Erro ao atualizar postagem via JSON Server:', error);
+            console.error('Erro ao atualizar postagem da API:', error);
             displayMessage('Erro ao atualizar postagem', 'danger');
         });
 }
@@ -68,6 +79,6 @@ function deletePost(id, updateFunction) {
             }
         })
         .catch((error) => {
-            console.error('Erro ao remover postagem via JSON Server:', error);
+            console.error('Erro ao remover postagem da API:', error);
         });
 }

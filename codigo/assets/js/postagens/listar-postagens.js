@@ -1,6 +1,6 @@
 var db = [];
 
-readPost((data) => {
+findAllPosts((data) => {
     db = data;
     listPosts();
 });
@@ -15,25 +15,32 @@ function listPosts() {
         const post = db[i];
 
         if (
-            post.titulo.includes(filtroTema) ||
-            post.descricao.includes(filtroTema) ||
-            filtroTema == ''
+            post.title.includes(filtroTema) ||
+            post.content.includes(filtroTema) ||
+            filtroTema === ''
         ) {
             divpostagens.innerHTML += `
-                                        <a href="./detalhes-postagem.html">
-                                            <div class="card" style="width: 18rem;">
-                                                <img class="card-img-top" src="${post.link_imagem}" alt="Imagem da Postagem 1">
-                                                <div class="card-body">
-                                                    <div class="descricao">
-                                                        <h3 class="card-title">${post.titulo}</h3>
-                                                        <h5 class="autor">${post.autor}</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    `;
+                <div class="card" style="width: 18rem;" data-id="${post._id}">
+                    <img class="card-img-top" src="${post.imageLink}" alt="Imagem da Postagem 1">
+                    <div class="card-body">
+                        <div class="descricao">
+                            <h3 class="card-title">${post.title}</h3>
+                            <h5 class="autor">${post.author}</h5>
+                        </div>
+                    </div>
+                </div>
+            `;
         }
     }
+
+    let postCards = document.querySelectorAll('.card');
+    postCards.forEach((card) => {
+        card.addEventListener('click', (event) => {
+            event.preventDefault();
+            let postId = card.getAttribute('data-id');
+            window.location.href = `./detalhes-postagem.html?postId=${postId}`;
+        });
+    });
 }
 
 document

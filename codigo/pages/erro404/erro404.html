@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Postagens | I&N KIDS</title>
+        <title>Página não encontrada | I&N KIDS</title>
         <!-- === Favicon === -->
         <link
             rel="icon"
@@ -29,10 +29,10 @@
         <link rel="stylesheet" href="../../assets/css/style.css" />
         <link
             rel="stylesheet"
-            href="../../assets/css/postagens/listar-postagens.css"
+            href="../../assets/css/erro404/erro404.css"
         />
     </head>
-    <body>
+    <body onload="init()">
         <!-- === Header === -->
         <header>
             <a href="../../index.html">
@@ -45,11 +45,6 @@
                 <a href="../../index.html" onclick="showNavbar()">Home</a>
                 <a href="../postagens/postagens.html" onclick="showNavbar()"
                     >Postagens</a
-                >
-                <a
-                    href="../postagens/criar-postagem.html"
-                    onclick="showNavbar()"
-                    >Criar postagem</a
                 >
                 <a href="../rotina/rotina.html" onclick="showNavbar()"
                     >Rotina</a
@@ -71,23 +66,8 @@
         </header>
         <!-- === Page Content === -->
         <main>
-            <div id="site-topo">
-                <div class="titulo-site">
-                    <h2>Atividades</h2>
-                </div>
-                <form class="searchform" id="search-form">
-                    <input
-                        type="text"
-                        id="filtro-tema"
-                        placeholder="Digite o tema da postagem"
-                    />
-                    <button type="submit" class="button" id="search-button">
-                        Procurar
-                    </button>
-                </form>
-            </div>
-            <h5></h5>
-            <div id="postagens"></div>
+            <h2>Erro 404</h2>
+            <h5>Página não encontrada</h5>
         </main>
         <!-- === Footer === -->
         <footer>
@@ -143,7 +123,6 @@
         <script src="../../assets/js/jquery/jquery-3.7.1.min.js"></script>
         <!-- === JS Files === -->
         <script src="../../assets/js/menu.js"></script>
-        <script src="../../assets/js/postagens/conexao/conexao-postagens.js"></script>
-        <script src="../../assets/js/postagens/listar-postagens.js"></script>
+        <script src="../../assets/js/erro404/erro404.js"></script>
     </body>
 </html>

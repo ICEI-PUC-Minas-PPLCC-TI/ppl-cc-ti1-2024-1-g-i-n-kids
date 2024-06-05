@@ -1,26 +1,38 @@
-var db = [];
+document.addEventListener('DOMContentLoaded', () => {
+    // Função para obter o parâmetro da query string
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
 
-readPost((data) => {
-    db = data;
-    listPosts();
+    let postId = getQueryParam('postId'); // Alterado para usar query string
+
+    if (postId) {
+        findPostById(postId, (post) => {
+            displayPostDetails(post);
+        });
+    }
 });
 
-function listPosts() {
+function displayPostDetails(post) {
     let divpostagens = document.querySelector('main');
 
     divpostagens.innerHTML = '';
 
-    if (db.length > 0) {
-        const post = db[0];
+    if (post) {
+        const content = post.content
+            .split('\n')
+            .map((paragraph) => `<p>${paragraph}</p>`)
+            .join('');
 
-        divpostagens.innerHTML += `
-            <h2 id="titulo">${post.titulo}</h2>
+        divpostagens.innerHTML = `
+            <h2 id="titulo">${post.title}</h2>
             <section id="content">
-                <img src="${post.link_imagem}" alt="Imagem da postagem">
-                <p id="autor">Por <span>${post.autor}</span></p>
-                <p id="descricao">
-                    ${post.descricao}
-                </p>
+                <img src="${post.imageLink}" alt="Imagem da postagem">
+                <p id="autor">Por <span>${post.author}</span></p>
+                <div id="descricao">
+                    ${content}
+                </div>
                 <div id="mais">
                     <a href="./postagens.html"><p id="ver-mais">Ver mais postagens</p></a>
                 </div>

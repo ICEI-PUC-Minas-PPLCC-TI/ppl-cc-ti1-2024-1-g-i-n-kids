@@ -41,10 +41,10 @@ function init() {
         }
 
         let postagem = {
-            titulo: campoTitulo,
-            autor: campoNomeAutor,
-            link_imagem: campoLinkImagem,
-            descricao: campoTextoPostagem,
+            title: campoTitulo,
+            author: campoNomeAutor,
+            content: campoTextoPostagem,
+            imageLink: campoLinkImagem,
         };
 
         createPost(postagem);
