@@ -1,54 +1,69 @@
-function init() {
-    let formularioPostagem = document.querySelector('form');
-    let btnCadastrarPostagem = document.getElementById('btnCadastrarPostagem');
+let userId = localStorage.getItem('userId');
+let modal = document.getElementById('modal');
 
-    btnCadastrarPostagem.addEventListener('click', (e) => {
-        let campoTitulo = document.getElementById('titulo-postagem').value;
-        let campoNomeAutor = document.getElementById('nome-autor').value;
-        let campoLinkImagem = document.getElementById('link-imagem').value;
-        let campoTextoPostagem =
-            document.getElementById('texto-postagem').value;
+if (!userId) {
+    alert('Acesso restrito. Por favor, faça login para continuar.');
+    window.location.replace('../usuario/login.html');
+} else {
+    modal.style.opacity = 1;
 
-        e.preventDefault();
+    function init() {
+        let formularioPostagem = document.querySelector('form');
+        let btnCadastrarPostagem = document.getElementById(
+            'btnCadastrarPostagem'
+        );
 
-        if (!formularioPostagem.checkValidity()) {
-            displayMessage('Preencha o formulário corretamente.', 'warning');
-            return;
-        }
+        btnCadastrarPostagem.addEventListener('click', (e) => {
+            let campoTitulo = document.getElementById('titulo-postagem').value;
+            let campoNomeAutor = document.getElementById('nome-autor').value;
+            let campoLinkImagem = document.getElementById('link-imagem').value;
+            let campoTextoPostagem =
+                document.getElementById('texto-postagem').value;
 
-        if (campoTitulo.trim().length < 5) {
-            displayMessage(
-                'O título da postagem deve ter pelo menos 5 caracteres.',
-                'warning'
-            );
-            return;
-        }
+            e.preventDefault();
 
-        if (campoNomeAutor.trim().length < 10) {
-            displayMessage(
-                'O nome do autor deve ter pelo menos 10 caracteres.',
-                'warning'
-            );
-            return;
-        }
+            if (!formularioPostagem.checkValidity()) {
+                displayMessage(
+                    'Preencha o formulário corretamente.',
+                    'warning'
+                );
+                return;
+            }
 
-        if (campoTextoPostagem.trim().length < 100) {
-            displayMessage(
-                'O texto da postagem deve ter pelo menos 100 caracteres.',
-                'warning'
-            );
-            return;
-        }
+            if (campoTitulo.trim().length < 5) {
+                displayMessage(
+                    'O título da postagem deve ter pelo menos 5 caracteres.',
+                    'warning'
+                );
+                return;
+            }
 
-        let postagem = {
-            title: campoTitulo,
-            author: campoNomeAutor,
-            content: campoTextoPostagem,
-            imageLink: campoLinkImagem,
-        };
+            if (campoNomeAutor.trim().length < 10) {
+                displayMessage(
+                    'O nome do autor deve ter pelo menos 10 caracteres.',
+                    'warning'
+                );
+                return;
+            }
 
-        createPost(postagem);
+            if (campoTextoPostagem.trim().length < 100) {
+                displayMessage(
+                    'O texto da postagem deve ter pelo menos 100 caracteres.',
+                    'warning'
+                );
+                return;
+            }
 
-        formularioPostagem.reset();
-    });
+            let postagem = {
+                title: campoTitulo,
+                author: campoNomeAutor,
+                content: campoTextoPostagem,
+                imageLink: campoLinkImagem,
+            };
+
+            createPost(postagem);
+
+            formularioPostagem.reset();
+        });
+    }
 }

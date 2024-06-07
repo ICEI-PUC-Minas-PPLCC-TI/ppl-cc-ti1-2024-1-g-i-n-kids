@@ -64,7 +64,7 @@ a:visited {
 /* === Button === */
 .button {
     background-color: var(--orange-color);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 0.7em 1.5em;
     transition: ease all 0.5s;
 }
@@ -72,6 +72,10 @@ a:visited {
 .button:hover {
     background-color: var(--white-color);
     color: var(--orange-color);
+}
+
+#modal {
+    opacity: 0.5;
 }
 
 /* === Header === */
@@ -118,6 +122,10 @@ header div,
 nav {
     display: flex;
     align-items: center;
+}
+
+header .ml {
+    margin-left: 0.5vw;
 }
 
 /* === Footer === */
@@ -203,6 +211,10 @@ ul li a:hover {
 @media only screen and (max-width: 1024px) {
     header {
         justify-content: space-between;
+    }
+
+    header .ml {
+        margin-left: 1.3vw;
     }
 
     header .nav_btn {

@@ -33,123 +33,140 @@
         />
     </head>
     <body>
-        <!-- === Header === -->
-        <header>
-            <a href="../../index.html">
-                <img
-                    src="../../assets/images/logo.png"
-                    alt="Logotipo da I&N  KIDS"
-                />
-            </a>
-            <nav>
-                <a href="../../index.html" onclick="showNavbar()">Home</a>
-                <a href="../postagens/postagens.html" onclick="showNavbar()"
-                    >Postagens</a
-                >
-                <a
-                    href="../postagens/criar-postagem.html"
-                    onclick="showNavbar()"
-                    >Criar postagem</a
-                >
-                <a
-                    href="../postagens/gerenciar-postagens.html"
-                    onclick="showNavbar()"
-                    >Gerenciar postagens</a
-                >
-                <button class="nav_btn nav_close_btn" onclick="showNavbar()">
-                    <span class="fa fa-times"></span>
-                </button>
-            </nav>
-            <button class="nav_btn" onclick="showNavbar()">
-                <span class="fa fa-bars"></span>
-            </button>
-        </header>
-        <!-- === Page Content === -->
-        <main>
-            <h2 id="titulo">Editar postagem</h2>
-            <div id="form-container">
-                <form>
-                    <div id="message" class="col-sm-10"></div>
-                    <input
-                        type="text"
-                        name="tituloPostagem"
-                        id="titulo-postagem"
-                        placeholder="Digite o título da postagem"
-                        required
+        <div id="modal">
+            <!-- === Header === -->
+            <header>
+                <a href="../../index.html">
+                    <img
+                        src="../../assets/images/logo.png"
+                        alt="Logotipo da I&N KIDS"
                     />
-                    <input
-                        type="text"
-                        name="nomeAutor"
-                        id="nome-autor"
-                        placeholder="Digite o nome do autor da postagem"
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="linkImagem"
-                        id="link-imagem"
-                        placeholder="Insira o link da imagem"
-                        required
-                    />
-                    <textarea
-                        name="textoPostagem"
-                        id="texto-postagem"
-                        placeholder="Digite o texto da postagem"
-                        required
-                    ></textarea>
-                    <button class="button" id="editar-Infos">
-                        Salvar informações
+                </a>
+                <nav>
+                    <a
+                        href="../postagens/criar-postagem.html"
+                        onclick="showNavbar()"
+                        >Criar postagem</a
+                    >
+                    <a
+                        href="../postagens/gerenciar-postagens.html"
+                        onclick="showNavbar()"
+                        >Gerenciar postagens</a
+                    >
+                    <a href="../rotina/rotina.html" onclick="showNavbar()"
+                        >Rotina</a
+                    >
+                    <a href="../usuario/editar-informacoes.html" onclick="showNavbar()"
+                        >Perfil <i class="fa-solid fa-user ml"></i></a
+                    >
+                    <a
+                        id="logout"
+                        href="../../index.html"
+                        onclick="showNavbar()"
+                        >Sair <i class="fa-solid fa-right-from-bracket ml"></i
+                    ></a>
+                    <button
+                        class="nav_btn nav_close_btn"
+                        onclick="showNavbar()"
+                    >
+                        <span class="fa fa-times"></span>
                     </button>
-                </form>
-            </div>
-        </main>
-        <!-- === Footer === -->
-        <footer>
-            <div class="footer-col">
-                <h4><a href="../../index.html">I&N KIDS</a></h4>
-                <p>
-                    Promovendo uma qualidade de vida superior para seus filhos,
-                    com uma rotina saudável e equilibrada.
-                </p>
-            </div>
-            <div class="footer-col">
-                <h4>Conheça nossa plataforma</h4>
-                <ul>
-                    <li><a href="../sobre/sobre-nos.html">Sobre nós</a></li>
-                    <li>
-                        <a href="../postagens/postagens.html">Ver postagens</a>
-                    </li>
-                    <li>
-                        <a href="../contato/contato.html">Entre em contato</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Siga-nos</h4>
-                <div class="links">
-                    <a
-                        href="https://web.facebook.com/pucminasoficial/"
-                        target="_blank"
-                        ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                        href="https://www.linkedin.com/school/pucminas/"
-                        target="_blank"
-                        ><i class="fab fa-linkedin-in"></i
-                    ></a>
-                    <a
-                        href="https://www.instagram.com/napucminas/"
-                        target="_blank"
-                        ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a
-                        href="https://twitter.com/pucminasoficial"
-                        target="_blank"
-                        ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
+                </nav>
+                <button class="nav_btn" onclick="showNavbar()">
+                    <span class="fa fa-bars"></span>
+                </button>
+            </header>
+            <!-- === Page Content === -->
+            <main>
+                <h2 id="titulo">Editar postagem</h2>
+                <div id="form-container">
+                    <form>
+                        <div id="message" class="col-sm-10"></div>
+                        <input
+                            type="text"
+                            name="tituloPostagem"
+                            id="titulo-postagem"
+                            placeholder="Digite o título da postagem"
+                            required
+                        />
+                        <input
+                            type="text"
+                            name="nomeAutor"
+                            id="nome-autor"
+                            placeholder="Digite o nome do autor da postagem"
+                            required
+                        />
+                        <input
+                            type="text"
+                            name="linkImagem"
+                            id="link-imagem"
+                            placeholder="Insira o link da imagem"
+                            required
+                        />
+                        <textarea
+                            name="textoPostagem"
+                            id="texto-postagem"
+                            placeholder="Digite o texto da postagem"
+                            required
+                        ></textarea>
+                        <button class="button" id="editar-Infos">
+                            Salvar informações
+                        </button>
+                    </form>
                 </div>
-            </div>
-        </footer>
+            </main>
+            <!-- === Footer === -->
+            <footer>
+                <div class="footer-col">
+                    <h4><a href="../../index.html">I&N KIDS</a></h4>
+                    <p>
+                        Promovendo uma qualidade de vida superior para seus
+                        filhos, com uma rotina saudável e equilibrada.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Conheça nossa plataforma</h4>
+                    <ul>
+                        <li><a href="../sobre/sobre-nos.html">Sobre nós</a></li>
+                        <li>
+                            <a href="../postagens/postagens.html"
+                                >Ver postagens</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../contato/contato.html"
+                                >Entre em contato</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Siga-nos</h4>
+                    <div class="links">
+                        <a
+                            href="https://web.facebook.com/pucminasoficial/"
+                            target="_blank"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a
+                            href="https://www.linkedin.com/school/pucminas/"
+                            target="_blank"
+                            ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                        <a
+                            href="https://www.instagram.com/napucminas/"
+                            target="_blank"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a
+                            href="https://twitter.com/pucminasoficial"
+                            target="_blank"
+                            ><i class="fa-brands fa-x-twitter"></i
+                        ></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
         <!-- === Bootstrap === -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -157,6 +174,7 @@
         <script src="../../assets/js/jquery/jquery-3.7.1.min.js"></script>
         <!-- === JS Files === -->
         <script src="../../assets/js/menu.js"></script>
+        <script src="../../assets/js/logout.js"></script>
         <script src="../../assets/js/postagens/mascaras-formulario/mascaras-postagem.js"></script>
         <script src="../../assets/js/mensagem-aviso.js"></script>
         <script src="../../assets/js/postagens/conexao/conexao-postagens.js"></script>

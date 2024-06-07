@@ -1,35 +1,48 @@
-function init() {
-    let formularioTarefa = document.querySelector('form');
-    let btnCadastrarTarefa = document.getElementById('btnSalvarTarefa');
+let userId = localStorage.getItem('userId');
+let modal = document.getElementById('modal');
 
-    btnCadastrarTarefa.addEventListener('click', (e) => {
-        let tituloTarefa = document.getElementById('tituloTarefa').value;
-        let diaDaSemana = document.getElementById('diaDaSemana').value;
-        let horaTarefa = document.getElementById('horaTarefa').value;
+if (!userId) {
+    alert('Acesso restrito. Por favor, faça login para continuar.');
+    window.location.replace('../usuario/login.html');
+} else {
+    modal.style.opacity = 1;
 
-        e.preventDefault();
+    function init() {
+        let formularioTarefa = document.querySelector('form');
+        let btnCadastrarTarefa = document.getElementById('btnSalvarTarefa');
 
-        if (!formularioTarefa.checkValidity()) {
-            displayMessage('Preencha o formulário corretamente.', 'warning');
-            return;
-        }
+        btnCadastrarTarefa.addEventListener('click', (e) => {
+            let tituloTarefa = document.getElementById('tituloTarefa').value;
+            let diaDaSemana = document.getElementById('diaDaSemana').value;
+            let horaTarefa = document.getElementById('horaTarefa').value;
 
-        if (tituloTarefa.trim() < 5) {
-            displayMessage(
-                'O título da tarefa deve ter pelo menos 5 caracteres.',
-                'warning'
-            );
-            return;
-        }
+            e.preventDefault();
 
-        const tarefa = {
-            title: tituloTarefa,
-            weekDay: diaDaSemana,
-            time: horaTarefa,
-        };
+            if (!formularioTarefa.checkValidity()) {
+                displayMessage(
+                    'Preencha o formulário corretamente.',
+                    'warning'
+                );
+                return;
+            }
 
-        createTask(tarefa);
+            if (tituloTarefa.trim() < 5) {
+                displayMessage(
+                    'O título da tarefa deve ter pelo menos 5 caracteres.',
+                    'warning'
+                );
+                return;
+            }
 
-        formularioTarefa.reset();
-    });
+            const tarefa = {
+                title: tituloTarefa,
+                weekDay: diaDaSemana,
+                time: horaTarefa,
+            };
+
+            createTask(tarefa);
+
+            formularioTarefa.reset();
+        });
+    }
 }
