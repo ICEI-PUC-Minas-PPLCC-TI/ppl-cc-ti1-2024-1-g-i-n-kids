@@ -33,109 +33,126 @@
         />
     </head>
     <body>
-        <!-- === Header === -->
-        <header>
-            <a href="../../index.html">
-                <img
-                    src="../../assets/images/logo.png"
-                    alt="Logotipo da I&N KIDS"
-                />
-            </a>
-            <nav>
-                <a href="../../index.html" onclick="showNavbar()">Home</a>
-                <a href="../postagens/postagens.html" onclick="showNavbar()"
-                    >Postagens</a
-                >
-                <a href="../rotina/rotina.html" onclick="showNavbar()"
-                    >Rotina</a
-                >
-                <a href="../usuario/login.html" onclick="showNavbar()">Login</a>
-                <a href="../usuario/cadastro.html" onclick="showNavbar()"
-                    >Cadastro</a
-                >
-                <a href="../contato/contato.html" onclick="showNavbar()"
-                    >Contato</a
-                >
-                <button class="nav_btn nav_close_btn" onclick="showNavbar()">
-                    <span class="fa fa-times"></span>
+        <div id="modal">
+            <!-- === Header === -->
+            <header>
+                <a href="../../index.html">
+                    <img
+                        src="../../assets/images/logo.png"
+                        alt="Logotipo da I&N KIDS"
+                    />
+                </a>
+                <nav>
+                    <a
+                        href="../postagens/criar-postagem.html"
+                        onclick="showNavbar()"
+                        >Criar postagem</a
+                    >
+                    <a
+                        href="../postagens/gerenciar-postagens.html"
+                        onclick="showNavbar()"
+                        >Gerenciar postagens</a
+                    >
+                    <a href="../rotina/rotina.html" onclick="showNavbar()"
+                        >Rotina</a
+                    >
+                    <a href="../usuario/editar-informacoes.html" onclick="showNavbar()"
+                        >Perfil <i class="fa-solid fa-user ml"></i></a
+                    >
+                    <a
+                        id="logout"
+                        href="../../index.html"
+                        onclick="showNavbar()"
+                        >Sair <i class="fa-solid fa-right-from-bracket ml"></i
+                    ></a>
+                    <button
+                        class="nav_btn nav_close_btn"
+                        onclick="showNavbar()"
+                    >
+                        <span class="fa fa-times"></span>
+                    </button>
+                </nav>
+                <button class="nav_btn" onclick="showNavbar()">
+                    <span class="fa fa-bars"></span>
                 </button>
-            </nav>
-            <button class="nav_btn" onclick="showNavbar()">
-                <span class="fa fa-bars"></span>
-            </button>
-        </header>
-        <!-- === Page Content === -->
-        <main>
-            <h3 id="titulo">Rotina</h3>
-            <div id="message" class="col-sm-10"></div>
-            <table id="tableTarefas">
-                <tr>
-                    <th class="infoRotina">HORÁRIO</th>
-                    <th class="dia">DOMINGO</th>
-                    <th class="dia">SEGUNDA</th>
-                    <th class="dia">TERÇA</th>
-                    <th class="dia">QUARTA</th>
-                    <th class="dia">QUINTA</th>
-                    <th class="dia">SEXTA</th>
-                    <th class="dia">SÁBADO</th>
-                    <th class="editar">
-                        <a href="editar-rotina.html" class="link-editar">
-                            <button type="button" class="btn btn-editar">
-                                Editar
-                            </button>
-                        </a>
-                    </th>
-                </tr>
-                <!-- Linhas com as tarefas serão inseridas aqui pelo JavaScript -->
-            </table>
-        </main>
-        <!-- === Footer === -->
-        <footer>
-            <div class="footer-col">
-                <h4><a href="../../index.html">I&N KIDS</a></h4>
-                <p>
-                    Promovendo uma qualidade de vida superior para seus filhos,
-                    com uma rotina saudável e equilibrada.
-                </p>
-            </div>
-            <div class="footer-col">
-                <h4>Conheça nossa plataforma</h4>
-                <ul>
-                    <li><a href="../sobre/sobre-nos.html">Sobre nós</a></li>
-                    <li>
-                        <a href="../postagens/postagens.html">Ver postagens</a>
-                    </li>
-                    <li>
-                        <a href="../contato/contato.html">Entre em contato</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Siga-nos</h4>
-                <div class="links">
-                    <a
-                        href="https://web.facebook.com/pucminasoficial/"
-                        target="_blank"
-                        ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                        href="https://www.linkedin.com/school/pucminas/"
-                        target="_blank"
-                        ><i class="fab fa-linkedin-in"></i
-                    ></a>
-                    <a
-                        href="https://www.instagram.com/napucminas/"
-                        target="_blank"
-                        ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a
-                        href="https://twitter.com/pucminasoficial"
-                        target="_blank"
-                        ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
+            </header>
+            <!-- === Page Content === -->
+            <main>
+                <h3 id="titulo">Rotina</h3>
+                <div id="message" class="col-sm-10"></div>
+                <table id="tableTarefas">
+                    <tr>
+                        <th class="infoRotina">HORÁRIO</th>
+                        <th class="dia">DOMINGO</th>
+                        <th class="dia">SEGUNDA</th>
+                        <th class="dia">TERÇA</th>
+                        <th class="dia">QUARTA</th>
+                        <th class="dia">QUINTA</th>
+                        <th class="dia">SEXTA</th>
+                        <th class="dia">SÁBADO</th>
+                        <th class="editar">
+                            <a href="editar-rotina.html" class="link-editar">
+                                <button type="button" class="btn btn-editar">
+                                    Editar
+                                </button>
+                            </a>
+                        </th>
+                    </tr>
+                    <!-- Linhas com as tarefas serão inseridas aqui pelo JavaScript -->
+                </table>
+            </main>
+            <!-- === Footer === -->
+            <footer>
+                <div class="footer-col">
+                    <h4><a href="../../index.html">I&N KIDS</a></h4>
+                    <p>
+                        Promovendo uma qualidade de vida superior para seus
+                        filhos, com uma rotina saudável e equilibrada.
+                    </p>
                 </div>
-            </div>
-        </footer>
+                <div class="footer-col">
+                    <h4>Conheça nossa plataforma</h4>
+                    <ul>
+                        <li><a href="../sobre/sobre-nos.html">Sobre nós</a></li>
+                        <li>
+                            <a href="../postagens/postagens.html"
+                                >Ver postagens</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../contato/contato.html"
+                                >Entre em contato</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Siga-nos</h4>
+                    <div class="links">
+                        <a
+                            href="https://web.facebook.com/pucminasoficial/"
+                            target="_blank"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a
+                            href="https://www.linkedin.com/school/pucminas/"
+                            target="_blank"
+                            ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                        <a
+                            href="https://www.instagram.com/napucminas/"
+                            target="_blank"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a
+                            href="https://twitter.com/pucminasoficial"
+                            target="_blank"
+                            ><i class="fa-brands fa-x-twitter"></i
+                        ></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
         <!-- === Bootstrap === -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -143,6 +160,7 @@
         <script src="../../assets/js/jquery/jquery-3.7.1.min.js"></script>
         <!-- === JS Files === -->
         <script src="../../assets/js/menu.js"></script>
+        <script src="../../assets/js/logout.js"></script>
         <script src="../../assets/js/mensagem-aviso.js"></script>
         <script src="../../assets/js/rotina/conexao/conexao-tarefas.js"></script>
         <script src="../../assets/js/rotina/exibir-rotina.js"></script>
