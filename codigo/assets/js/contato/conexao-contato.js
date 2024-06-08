@@ -1,7 +1,7 @@
-const apiUrl = 'https://iandn-kids-server.vercel.app/contacts/';
+const contactRouteUrl = 'https://iandn-kids-server.vercel.app/contacts/';
 
 function createContact(contact, updateFunction) {
-    fetch(apiUrl, {
+    fetch(contactRouteUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

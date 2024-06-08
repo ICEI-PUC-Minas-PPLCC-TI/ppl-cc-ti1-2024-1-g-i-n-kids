@@ -1,7 +1,7 @@
-const apiUrl = 'https://iandn-kids-server.vercel.app/users';
+const userRouteUrl = 'https://iandn-kids-server.vercel.app/users';
 
 function findAllUsers(processData) {
-    fetch(apiUrl, {
+    fetch(userRouteUrl, {
         headers: {
             Authorization: 'Bearer gPqH84KLJz5SjcP',
         },
@@ -20,7 +20,7 @@ function findAllUsers(processData) {
 }
 
 function findUserById(userId, processData) {
-    fetch(`${apiUrl}/search/${userId}`, {
+    fetch(`${userRouteUrl}/search/${userId}`, {
         headers: {
             Authorization: 'Bearer gPqH84KLJz5SjcP',
         },
@@ -39,7 +39,7 @@ function findUserById(userId, processData) {
 }
 
 function createUser(user, updateFunction) {
-    fetch(apiUrl, {
+    fetch(userRouteUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ function createUser(user, updateFunction) {
 }
 
 function updateUser(id, user, updateFunction) {
-    fetch(`${apiUrl}/${id}`, {
+    fetch(`${userRouteUrl}/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ function updateUser(id, user, updateFunction) {
 }
 
 function deleteUser(id, updateFunction) {
-    fetch(`${apiUrl}/${id}`, {
+    fetch(`${userRouteUrl}/${id}`, {
         method: 'DELETE',
         headers: {
             Authorization: 'Bearer gPqH84KLJz5SjcP',
