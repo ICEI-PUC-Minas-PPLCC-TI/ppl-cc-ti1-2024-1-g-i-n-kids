@@ -12,10 +12,14 @@ if (!userId) {
         let btnCadastrarPostagem = document.getElementById(
             'btnCadastrarPostagem'
         );
+        let campoNomeAutor = document.getElementById('nome-autor');
+
+        findUserById(userId, (user) => {
+            campoNomeAutor.value = user.name;
+        });
 
         btnCadastrarPostagem.addEventListener('click', (e) => {
             let campoTitulo = document.getElementById('titulo-postagem').value;
-            let campoNomeAutor = document.getElementById('nome-autor').value;
             let campoLinkImagem = document.getElementById('link-imagem').value;
             let campoTextoPostagem =
                 document.getElementById('texto-postagem').value;
@@ -38,9 +42,18 @@ if (!userId) {
                 return;
             }
 
-            if (campoNomeAutor.trim().length < 10) {
+            if (campoNomeAutor.value.trim().length < 10) {
                 displayMessage(
                     'O nome do autor deve ter pelo menos 10 caracteres.',
+                    'warning'
+                );
+                return;
+            }
+
+            const regex = /\.(jpeg|jpg|png|gif)(\?.*)?$/i;
+            if (!regex.test(campoLinkImagem)) {
+                displayMessage(
+                    'Por favor, insira um link de imagem válido.',
                     'warning'
                 );
                 return;
@@ -56,9 +69,10 @@ if (!userId) {
 
             let postagem = {
                 title: campoTitulo,
-                author: campoNomeAutor,
+                author: campoNomeAutor.value,
                 content: campoTextoPostagem,
                 imageLink: campoLinkImagem,
+                userId: userId,
             };
 
             createPost(postagem);
@@ -66,4 +80,6 @@ if (!userId) {
             formularioPostagem.reset();
         });
     }
+
+    init();
 }

@@ -1,7 +1,7 @@
-const apiUrl = 'https://iandn-kids-server.vercel.app/tasks';
+const taskRouteUrl = 'https://iandn-kids-server.vercel.app/tasks';
 
 function findAllTasks(processData) {
-    fetch(apiUrl, {
+    fetch(taskRouteUrl, {
         headers: {
             Authorization: 'Bearer gPqH84KLJz5SjcP',
         },
@@ -17,7 +17,7 @@ function findAllTasks(processData) {
 }
 
 function createTask(task, updateFunction) {
-    fetch(apiUrl, {
+    fetch(taskRouteUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ function createTask(task, updateFunction) {
 }
 
 function deleteTask(id, updateFunction) {
-    fetch(`${apiUrl}/${id}`, {
+    fetch(`${taskRouteUrl}/${id}`, {
         method: 'DELETE',
         headers: {
             Authorization: 'Bearer gPqH84KLJz5SjcP',

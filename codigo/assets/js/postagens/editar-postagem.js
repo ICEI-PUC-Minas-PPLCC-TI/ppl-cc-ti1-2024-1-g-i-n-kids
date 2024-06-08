@@ -78,6 +78,7 @@ if (!userId) {
                 author: campoNomeAutor,
                 content: campoTextoPostagem,
                 imageLink: campoLinkImagem,
+                userId: userId
             };
 
             updatePost(editPostId, postagem, () => {
