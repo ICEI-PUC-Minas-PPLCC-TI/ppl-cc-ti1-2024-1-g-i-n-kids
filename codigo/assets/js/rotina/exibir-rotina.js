@@ -15,7 +15,11 @@ if (!userId) {
     });
 
     function listTarefas() {
-        const grupoHorastarefas = ordenaArrayTarefas(db);
+        const tarefasPeloUserId = db.filter((task) => {
+            return task.userId == userId;
+        });
+
+        const grupoHorastarefas = ordenaArrayTarefas(tarefasPeloUserId);
 
         let tableTarefas = document.getElementById('tableTarefas');
 
@@ -24,6 +28,7 @@ if (!userId) {
             const horaCell = linhatarefas.insertCell();
             horaCell.className = 'infoRotina';
             horaCell.innerHTML = tarefas[0].time;
+
             for (let index = 0; index < 7; index++) {
                 const tarefa = tarefas.find((t) => t.weekDay === index);
 
