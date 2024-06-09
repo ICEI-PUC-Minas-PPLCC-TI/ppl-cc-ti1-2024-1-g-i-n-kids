@@ -13,6 +13,31 @@ main #titulo {
     align-items: start;
 }
 
+#site-topo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 2rem 2rem 30rem;
+    gap: 120px;
+}
+
+.searchform {
+    display: flex;
+}
+
+#site-topo input {
+    width: 17vw;
+    margin-right: 1em;
+    border-radius: 10px;
+    padding: 0.7em 1em;
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+main .site-topo #titulo {
+    text-align: center;
+}
+
 main table {
     display: flex;
     justify-content: space-around;
@@ -57,7 +82,7 @@ main table tr td:not(.infoRotina) {
 main table tr .tarefas {
     display: flex;
     justify-content: start;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     padding: 15px 15px;
     border: solid 1px #e0e0e0;
     background-color: var(--white-color);
@@ -78,7 +103,12 @@ main table tr .tarefas .excluir i {
 
 /* === Media Queries === */
 
-@media only screen and (max-width: 1165px) {
+@media only screen and (max-width: 1237px) {
+    #site-topo {
+        gap: 20px;
+        padding: 4em 2rem 2rem 22rem;
+    }
+
     main table {
         font-size: 0.7rem;
     }
@@ -117,7 +147,13 @@ main table tr .tarefas .excluir i {
     }
 }
 
-@media only screen and (max-width: 893px) {
+@media only screen and (max-width: 973px) {
+    #site-topo {
+        flex-direction: column;
+        gap: 20px;
+        padding: 4em 2rem 2rem 2rem;
+    }
+
     main table {
         font-size: 0.6rem;
     }

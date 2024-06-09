@@ -15,13 +15,23 @@ if (!userId) {
     });
 
     function listTarefas() {
-        const tarefasPeloUserId = db.filter((task) => {
-            return task.userId == userId;
+        let filtroTarefa = document
+            .getElementById('filtro-tarefa')
+            .value.toLowerCase();
+
+        const tableTarefas = document.querySelector('#tableTarefas > tbody');
+
+        const tarefasFiltradas = db.filter((task) => {
+            return (
+                task.userId == userId &&
+                task.title.toLowerCase().includes(filtroTarefa)
+            );
         });
+        const grupoHorastarefas = ordenaArrayTarefas(tarefasFiltradas);
 
-        const grupoHorastarefas = ordenaArrayTarefas(tarefasPeloUserId);
-
-        let tableTarefas = document.getElementById('tableTarefas');
+        while (tableTarefas.rows.length > 1) {
+            tableTarefas.deleteRow(1);
+        }
 
         grupoHorastarefas.map((tarefas) => {
             const linhatarefas = tableTarefas.insertRow();
@@ -41,7 +51,7 @@ if (!userId) {
                 }
 
                 adicionarCell.innerHTML += `
-                    <p>${tarefa.title}</p>
+            <p>${tarefa.title}</p>
                `;
             }
         });
@@ -117,4 +127,11 @@ if (!userId) {
 
         return gruposHoras;
     }
+
+    document
+        .getElementById('search-form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+            listTarefas();
+        });
 }
