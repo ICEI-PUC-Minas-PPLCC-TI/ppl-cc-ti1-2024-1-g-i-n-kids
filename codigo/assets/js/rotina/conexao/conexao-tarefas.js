@@ -16,6 +16,25 @@ function findAllTasks(processData) {
         });
 }
 
+function findTaskById(taskId, processData) {
+    fetch(`${taskRouteUrl}/search/${taskId}`, {
+        headers: {
+            Authorization: 'Bearer gPqH84KLJz5SjcP',
+        },
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            processData(data.Post);
+        })
+        .catch((error) => {
+            console.error(
+                'Erro ao encontrar postagem cadastrada na API:',
+                error
+            );
+            displayMessage('Erro ao ler postagem', 'danger');
+        });
+}
+
 function createTask(task, updateFunction) {
     fetch(taskRouteUrl, {
         method: 'POST',

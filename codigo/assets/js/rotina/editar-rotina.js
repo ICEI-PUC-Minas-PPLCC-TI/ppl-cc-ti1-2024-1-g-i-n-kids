@@ -15,7 +15,11 @@ if (!userId) {
     });
 
     function listTarefas() {
-        const grupoHorastarefas = ordenaArrayTarefas(db);
+        const tarefasPeloUserId = db.filter((task) => {
+            return task.userId == userId;
+        });
+
+        const grupoHorastarefas = ordenaArrayTarefas(tarefasPeloUserId);
 
         let tableTarefas = document.getElementById('tableTarefas');
 
