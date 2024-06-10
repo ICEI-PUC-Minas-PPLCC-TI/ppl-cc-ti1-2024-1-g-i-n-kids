@@ -58,10 +58,15 @@ main #formulario textarea {
     flex-wrap: wrap;
 }
 
-.social-icons img {
+.contact-section .social-icons i {
     width: 20px;
-    height: auto;
-    margin-right: 10px;
+    margin: 0 0.5vw;
+    color: #828282;
+    transition: ease all 0.5s;
+}
+
+.contact-section .social-icons i:hover {
+    color: var(--black-color);
 }
 
 /* === Media Queries === */

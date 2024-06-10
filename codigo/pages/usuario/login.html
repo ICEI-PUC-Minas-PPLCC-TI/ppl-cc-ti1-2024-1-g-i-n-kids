@@ -50,10 +50,14 @@
                     onclick="showNavbar()"
                     >Sobre</a
                 >
-                <a href="../../pages/contato/contato.html" onclick="showNavbar()"
+                <a
+                    href="../../pages/contato/contato.html"
+                    onclick="showNavbar()"
                     >Contato</a
                 >
-                <a href="../../pages/usuario/cadastro.html" onclick="showNavbar()"
+                <a
+                    href="../../pages/usuario/cadastro.html"
+                    onclick="showNavbar()"
                     >Cadastro <i class="fa-solid fa-user ml"></i
                 ></a>
                 <a href="../../pages/usuario/login.html" onclick="showNavbar()"
@@ -77,7 +81,7 @@
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="Digite seu email"
+                        placeholder="Digite seu e-mail"
                         required
                     />
                     <div class="div-senha">
@@ -90,11 +94,13 @@
                         />
                         <i class="fa fa-eye" id="togglePassword"></i>
                     </div>
+                    <a href="./redefinir-senha.html" id="esqueceu-senha">
+                        Esqueceu sua senha?
+                    </a>
                     <button class="button" id="botao-login">Entrar</button>
                 </form>
-                <p id="texto-termos">
-                    <a href="#">Termos de Serviço</a> e
-                    <a href="">Politica de Privacidade</a>.
+                <p id="texto-infos">
+                    Não possui uma conta? <a href="./cadastro.html">Cadastre-se</a>.
                 </p>
             </div>
         </main>

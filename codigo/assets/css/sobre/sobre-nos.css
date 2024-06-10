@@ -148,6 +148,10 @@ footer {
     main #sobre-nos #conteudo #texto {
         font-size: 14px;
     }
+
+    main #sobre-nos #imagem-sobre img {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -157,11 +161,5 @@ footer {
 
     main #equipe #integrantes-equipe .integrante img {
         height: 120px;
-    }
-}
-
-@media screen and (max-width: 367px) {
-    main #sobre-nos #imagem-sobre img {
-        width: 80%;
     }
 }
