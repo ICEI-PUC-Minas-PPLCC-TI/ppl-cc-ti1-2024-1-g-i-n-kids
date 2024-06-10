@@ -62,17 +62,17 @@ main #formulario form .div-senha i {
     color: var(--orange-color);
 }
 
-main #texto-termos {
+main #texto-infos {
     font-size: 0.9em;
-    margin-top: 4vh;
+    margin-top: 6vh;
     text-align: center;
 }
 
-main #texto-termos a {
+main #texto-infos a {
     color: #b46c00;
 }
 
-main #texto-termos a:hover {
+main #texto-infos a:hover {
     text-decoration: underline;
 }
 
@@ -96,8 +96,8 @@ main #texto-termos a:hover {
         font-size: 14px;
     }
 
-    main #texto-termos {
-        font-size: 0.8em;
+    main #texto-infos {
+        font-size: 0.85em;
     }
 }
 
@@ -113,19 +113,11 @@ main #texto-termos a:hover {
     main #formulario form input {
         width: 60vw;
     }
-
-    main #texto-termos {
-        font-size: 0.75em;
-    }
 }
 
 @media screen and (max-width: 452px) {
     main #formulario {
         width: 85vw;
-    }
-
-    main #formulario #titulo-formulario {
-        font-size: 1.2em;
     }
 
     main #formulario form input {
@@ -135,10 +127,6 @@ main #texto-termos a:hover {
 
     main #formulario form .button {
         width: 55%;
-    }
-
-    main #texto-termos {
-        font-size: 0.7em;
     }
 }
 

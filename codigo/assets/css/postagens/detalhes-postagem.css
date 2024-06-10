@@ -38,7 +38,7 @@ main #content #descricao {
 }
 
 main #content #descricao p {
-    margin-bottom: 1em; /* Adiciona espaço entre os parágrafos */
+    margin-bottom: 1em;
 }
 
 main #content #mais {
@@ -60,3 +60,50 @@ main #content #ver-mais:hover {
 }
 
 /* === Media Queries === */
+@media screen and (max-width: 1070px) {
+    main #titulo {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    main #titulo {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 651px) {
+    main #content {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 546px) {
+    main #titulo {
+        font-size: 20px;
+    }
+
+    main #content #autor {
+        font-size: 15px;
+    }
+
+    main #content #descricao{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 441px) {
+    main #content {
+        max-width: 75%;
+    }
+
+    main #titulo {
+        margin: 8vh 4vw 0 4vw;
+    }
+}
+
+@media screen and (max-width: 322px) {
+    main #titulo {
+        font-size: 19px;
+    }
+}

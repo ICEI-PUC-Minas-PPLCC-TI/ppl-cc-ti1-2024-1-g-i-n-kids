@@ -41,6 +41,10 @@ main #content p {
     text-shadow: 2px 2px 4px var(--white-color);
 }
 
+main #content .button {
+    font-size: 16px;
+}
+
 /* === Footer === */
 footer {
     margin-top: 0;
@@ -48,8 +52,16 @@ footer {
 
 /* === Media Queries === */
 @media screen and (max-width: 779px) {
+    main #content h1 {
+        font-size: 40px;
+    }
+
     main #content p {
         font-size: 16px;
+    }
+
+    main #content .button {
+        font-size: 15px;
     }
 }
 
@@ -60,5 +72,15 @@ footer {
 
     .button {
         height: 6vh;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    main #content p {
+        font-size: 14px;
+    }
+
+    main #content .button {
+        font-size: 13px;
     }
 }
