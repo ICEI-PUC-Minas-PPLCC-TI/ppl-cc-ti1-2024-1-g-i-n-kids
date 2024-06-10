@@ -51,7 +51,7 @@ main table tr td:not(.infoRotina) {
 main table tr .tarefas {
     display: flex;
     justify-content: start;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     padding: 15px 15px;
     border: solid 1px #e0e0e0;
     background-color: var(--white-color);
