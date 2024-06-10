@@ -15,15 +15,30 @@ if (!userId) {
     });
 
     function listTarefas() {
-        const grupoHorastarefas = ordenaArrayTarefas(db);
+        let filtroTarefa = document
+            .getElementById('filtro-tarefa')
+            .value.toLowerCase();
 
-        let tableTarefas = document.getElementById('tableTarefas');
+        const tableTarefas = document.querySelector('#tableTarefas > tbody');
+
+        const tarefasFiltradas = db.filter((task) => {
+            return (
+                task.userId == userId &&
+                task.title.toLowerCase().includes(filtroTarefa)
+            );
+        });
+        const grupoHorastarefas = ordenaArrayTarefas(tarefasFiltradas);
+
+        while (tableTarefas.rows.length > 1) {
+            tableTarefas.deleteRow(1);
+        }
 
         grupoHorastarefas.map((tarefas) => {
             const linhatarefas = tableTarefas.insertRow();
             const horaCell = linhatarefas.insertCell();
             horaCell.className = 'infoRotina';
             horaCell.innerHTML = tarefas[0].time;
+
             for (let index = 0; index < 7; index++) {
                 const tarefa = tarefas.find((t) => t.weekDay === index);
 
@@ -36,7 +51,7 @@ if (!userId) {
                 }
 
                 adicionarCell.innerHTML += `
-                    <p>${tarefa.title}</p>
+            <p>${tarefa.title}</p>
                `;
             }
         });
@@ -112,4 +127,11 @@ if (!userId) {
 
         return gruposHoras;
     }
+
+    document
+        .getElementById('search-form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+            listTarefas();
+        });
 }

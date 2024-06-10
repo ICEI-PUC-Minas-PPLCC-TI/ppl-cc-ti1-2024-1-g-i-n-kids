@@ -38,6 +38,7 @@ if (!userId) {
                 title: tituloTarefa,
                 weekDay: diaDaSemana,
                 time: horaTarefa,
+                userId: userId
             };
 
             createTask(tarefa);
