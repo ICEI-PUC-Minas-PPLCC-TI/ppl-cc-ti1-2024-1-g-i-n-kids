@@ -78,6 +78,29 @@ if (!userId) {
             createPost(postagem);
 
             formularioPostagem.reset();
+
+            findAllUsers((users) => {
+                findAllPosts((posts) => {
+                    let novaPostagem = posts.find(
+                        (post) =>
+                            post.title === campoTitulo &&
+                            post.content === campoTextoPostagem &&
+                            post.userId === userId
+                    );
+
+                    if (novaPostagem) {
+                        users.forEach((user) => {
+                            enviarEmailNovaPublicacao(
+                                user.email,
+                                user.name,
+                                novaPostagem._id,
+                                novaPostagem.title,
+                                novaPostagem.author
+                            );
+                        });
+                    }
+                });
+            });
         });
     }
 
