@@ -62,6 +62,10 @@ main #formulario form .div-senha i {
     color: var(--orange-color);
 }
 
+main #formulario form .div-senha input {
+    padding-right: 4vw;
+}
+
 main #texto-infos {
     font-size: 0.9em;
     margin-top: 6vh;
@@ -87,6 +91,12 @@ main #texto-infos a:hover {
     }
 }
 
+@media screen and (max-width: 1098px) {
+    main #formulario form .div-senha input {
+        padding-right: 5vw;
+    }
+}
+
 @media screen and (max-width: 823px) {
     main #formulario #titulo-formulario {
         font-size: 1.5em;
@@ -101,6 +111,12 @@ main #texto-infos a:hover {
     }
 }
 
+@media screen and (max-width: 765px) {
+    main #formulario form .div-senha input {
+        padding-right: 7vw;
+    }
+}
+
 @media screen and (max-width: 676px) {
     main #formulario {
         width: 75vw;
@@ -112,6 +128,10 @@ main #texto-infos a:hover {
 
     main #formulario form input {
         width: 60vw;
+    }
+
+    main #formulario form .div-senha input {
+        padding-right: 8.5vw;
     }
 }
 
@@ -128,6 +148,10 @@ main #texto-infos a:hover {
     main #formulario form .button {
         width: 55%;
     }
+
+    main #formulario form .div-senha input {
+        padding-right: 12vw;
+    }
 }
 
 @media screen and (max-width: 384px) {
@@ -137,5 +161,9 @@ main #texto-infos a:hover {
 
     main #formulario form .button {
         font-size: 13px;
+    }
+
+    main #formulario form .div-senha input {
+        padding-right: 14vw;
     }
 }
