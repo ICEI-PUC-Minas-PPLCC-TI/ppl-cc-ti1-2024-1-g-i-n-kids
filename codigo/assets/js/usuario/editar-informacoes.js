@@ -97,7 +97,7 @@ if (!userId) {
                 return;
             }
 
-            var encryptedPassword = CryptoJS.SHA256(campoSenha).toString();
+            let encryptedPassword = CryptoJS.SHA256(campoSenha).toString();
 
             let usuario = {
                 name: campoNome,
