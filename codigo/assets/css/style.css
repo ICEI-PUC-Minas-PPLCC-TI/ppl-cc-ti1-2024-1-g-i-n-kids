@@ -66,6 +66,7 @@ a:visited {
     background-color: var(--orange-color);
     border-radius: 10px;
     padding: 0.7em 1.5em;
+    color: var(--black-color);
     transition: ease all 0.5s;
 }
 

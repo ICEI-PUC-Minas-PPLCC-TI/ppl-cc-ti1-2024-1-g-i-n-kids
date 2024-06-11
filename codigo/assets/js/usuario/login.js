@@ -31,7 +31,7 @@ if (userId) {
             const usuarioEncontrado = db.find(
                 (usuario) =>
                     usuario.email === campoEmail &&
-                    usuario.password === campoSenha
+                    usuario.password === CryptoJS.SHA256(campoSenha).toString()
             );
 
             if (usuarioEncontrado) {

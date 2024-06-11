@@ -97,11 +97,13 @@ if (!userId) {
                 return;
             }
 
+            let encryptedPassword = CryptoJS.SHA256(campoSenha).toString();
+
             let usuario = {
                 name: campoNome,
                 phone: campoTelefone,
                 email: campoEmail,
-                password: campoSenha,
+                password: encryptedPassword,
             };
 
             updateUser(userId, usuario);

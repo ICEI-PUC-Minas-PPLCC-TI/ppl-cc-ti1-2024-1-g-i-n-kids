@@ -57,6 +57,10 @@ main #formulario form .div-senha i {
     color: var(--orange-color);
 }
 
+main #formulario form .div-senha input {
+    padding-right: 4vw;
+}
+
 main #formulario form .button {
     font-size: 15px;
     width: 60%;
@@ -85,6 +89,10 @@ main #excluir-conta:hover {
     main #formulario form input {
         width: 40vw;
     }
+
+    main #formulario form .div-senha input {
+        padding-right: 5vw;
+    }
 }
 
 @media screen and (max-width: 823px) {
@@ -101,6 +109,12 @@ main #excluir-conta:hover {
     }
 }
 
+@media screen and (max-width: 765px) {
+    main #formulario form .div-senha input {
+        padding-right: 7vw;
+    }
+}
+
 @media screen and (max-width: 676px) {
     main #formulario {
         width: 75vw;
@@ -112,6 +126,10 @@ main #excluir-conta:hover {
 
     main #formulario form input {
         width: 60vw;
+    }
+
+    main #formulario form .div-senha input {
+        padding-right: 8.5vw;
     }
 
     main #excluir-conta {
@@ -133,6 +151,10 @@ main #excluir-conta:hover {
         width: 65vw;
     }
 
+    main #formulario form .div-senha input {
+        padding-right: 12vw;
+    }
+
     main #formulario form .button {
         width: 70%;
     }
@@ -145,6 +167,10 @@ main #excluir-conta:hover {
 @media screen and (max-width: 384px) {
     main #formulario form input {
         font-size: 13px;
+    }
+
+    main #formulario form .div-senha input {
+        padding-right: 14vw;
     }
 
     main #formulario form .button {
