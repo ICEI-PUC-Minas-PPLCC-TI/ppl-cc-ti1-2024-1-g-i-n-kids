@@ -39,5 +39,7 @@ function init() {
         createContact(contatos);
 
         formularioContatos.reset();
+
+        enviarEmailConfirmacaoContato(campoEmail, campoNome, campoMensagem);
     });
 }

@@ -24,7 +24,7 @@ function enviarEmailNovaPublicacao(
         .send(serviceID, templateID, emailContent)
         .then((res) => {
             console.log(
-                'E-mail com informações da potagem enviado aos usuários.'
+                'E-mail com informações da postagem enviado aos usuários.'
             );
         })
         .catch();
