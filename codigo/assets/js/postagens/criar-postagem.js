@@ -50,15 +50,6 @@ if (!userId) {
                 return;
             }
 
-            const regex = /\.(jpeg|jpg|png|gif)(\?.*)?$/i;
-            if (!regex.test(campoLinkImagem)) {
-                displayMessage(
-                    'Por favor, insira um link de imagem válido.',
-                    'warning'
-                );
-                return;
-            }
-
             if (campoTextoPostagem.trim().length < 100) {
                 displayMessage(
                     'O texto da postagem deve ter pelo menos 100 caracteres.',

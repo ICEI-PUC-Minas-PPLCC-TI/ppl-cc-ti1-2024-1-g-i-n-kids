@@ -109,6 +109,8 @@ if (userId) {
             createUser(usuario);
 
             formularioCadastro.reset();
+
+            enviarEmailCriacaoConta(campoEmail, campoNome, campoTelefone);
         });
     }
 }

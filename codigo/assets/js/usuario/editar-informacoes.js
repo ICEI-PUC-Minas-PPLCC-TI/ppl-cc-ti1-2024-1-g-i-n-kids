@@ -118,12 +118,23 @@ if (!userId) {
                 'Informações do usuário alteradas com sucesso.',
                 'success'
             );
+
+            enviarEmailAtualizacaoConta(
+                campoEmail,
+                usuario.name,
+                usuario.phone
+            );
         });
 
         btnExcluirConta.addEventListener('click', () => {
+            let campoNome = document.getElementById('nome').value;
+            let campoEmail = document.getElementById('email').value;
+
             deleteUser(userId, () => {
+                enviarEmailExclusaoConta(campoEmail, campoNome);
                 localStorage.removeItem('userId');
                 alert('Conta excluída com sucesso.');
+
                 window.location.replace('../../index.html');
             });
         });
