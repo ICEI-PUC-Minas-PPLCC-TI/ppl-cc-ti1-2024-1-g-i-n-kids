@@ -1,0 +1,28 @@
+{
+    "name": "iandn-kids-server",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "tsx watch ./src/index.ts",
+        "format": "prettier --write ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@types/dotenv": "^8.2.0",
+        "@types/express": "^4.17.21",
+        "@types/mongoose": "^5.11.97",
+        "@types/node": "^20.12.12",
+        "prettier": "^3.2.5",
+        "tsx": "^4.10.5",
+        "typescript": "^5.4.5"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "mongoose": "^8.4.0",
+        "zod": "^3.23.8"
+    }
+}
