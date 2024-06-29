@@ -13,9 +13,8 @@ findAllUsers((data) => {
 
 function verificarUsuario() {
     let formularioRedefinirSenha = document.querySelector('form');
-    let botaoRedefinirSenha = document.getElementById('botao-redefinir-senha');
 
-    botaoRedefinirSenha.addEventListener('click', (e) => {
+    formularioRedefinirSenha.addEventListener('submit', (e) => {
         e.preventDefault();
 
         let campoEmail = document.getElementById('email').value;

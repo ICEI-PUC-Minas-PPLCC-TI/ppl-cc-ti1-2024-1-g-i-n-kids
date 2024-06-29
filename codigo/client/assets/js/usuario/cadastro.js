@@ -13,17 +13,16 @@ findAllUsers((data) => {
 
 function init() {
     let formularioCadastro = document.querySelector('form');
-    let botaoCadastro = document.getElementById('botao-cadastro');
 
-    botaoCadastro.addEventListener('click', (e) => {
+    formularioCadastro.addEventListener('submit', (e) => {
+        e.preventDefault();
+
         let campoNome = document.getElementById('nome').value;
         let campoTelefone = document.getElementById('telefone').value;
         let campoEmail = document.getElementById('email').value;
         let campoPassword = document.getElementById('password').value;
         let campoConfirmPassword =
             document.getElementById('confirm-password').value;
-
-        e.preventDefault();
 
         if (!formularioCadastro.checkValidity()) {
             displayMessage('Preencha o formulário corretamente.', 'warning');
@@ -100,8 +99,6 @@ function init() {
         };
 
         createUser(usuario);
-
-        formularioCadastro.reset();
 
         enviarEmailCriacaoConta(campoEmail, campoNome, campoTelefone);
     });

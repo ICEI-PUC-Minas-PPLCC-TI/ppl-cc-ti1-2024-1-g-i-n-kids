@@ -13,9 +13,8 @@ findAllUsers((data) => {
 
 function verificarUsuario() {
     let formularioLogin = document.querySelector('form');
-    let botaoLogin = document.getElementById('botao-login');
 
-    botaoLogin.addEventListener('click', (e) => {
+    formularioLogin.addEventListener('submit', (e) => {
         e.preventDefault();
 
         let campoEmail = document.getElementById('email').value;
