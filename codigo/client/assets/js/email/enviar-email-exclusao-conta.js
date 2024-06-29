@@ -11,10 +11,5 @@ function enviarEmailExclusaoConta(userEmail, username) {
     let serviceID = 'service_fhaa9vs';
     let templateID = 'template_ktjq9t6';
 
-    emailjs
-        .send(serviceID, templateID, emailContent)
-        .then((res) => {
-            console.log('E-mail com confirmação de exclusão de conta enviado.');
-        })
-        .catch();
+    emailjs.send(serviceID, templateID, emailContent);
 }

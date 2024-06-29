@@ -12,13 +12,5 @@ function enviarEmailRedefinicaoSenha(userEmail, username, temporaryPassword) {
     let serviceID = 'service_1o6b0xx';
     let templateID = 'template_7dqkgv9';
 
-    emailjs
-        .send(serviceID, templateID, emailContent)
-        .then((res) => {
-            displayMessage(
-                'E-mail com informações sobre a redefinição de senha enviado.',
-                'success'
-            );
-        })
-        .catch();
+    emailjs.send(serviceID, templateID, emailContent);
 }
