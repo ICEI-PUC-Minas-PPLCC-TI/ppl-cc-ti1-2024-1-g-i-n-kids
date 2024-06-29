@@ -75,10 +75,6 @@ a:visited {
     color: var(--orange-color);
 }
 
-#modal {
-    opacity: 0.5;
-}
-
 /* === Header === */
 header {
     position: sticky;
