@@ -1,35 +1,39 @@
 let userId = localStorage.getItem('userId');
-let modal = document.getElementById('modal');
 
 if (!userId) {
-    alert('Acesso restrito. Por favor, faça login para continuar.');
-    window.location.replace('../usuario/login.html');
-} else {
-    modal.style.opacity = 1;
-
-    var db = [];
-
-    findAllPosts((data) => {
-        db = data;
-        listPosts();
+    Swal.fire({
+        title: 'Acesso restrito',
+        text: 'Por favor, faça login para continuar.',
+        icon: 'warning',
+        confirmButtonColor: '#d6bdff',
+    }).then(() => {
+        window.location.replace('../usuario/login.html');
     });
+}
 
-    function listPosts() {
-        let divPostagens = document.querySelector('#container #postagens');
-        let mensagemAviso = document.querySelector('main #container h5');
+var db = [];
 
-        divPostagens.innerHTML = '';
-        mensagemAviso.innerHTML = '';
+findAllPosts((data) => {
+    db = data;
+    listPosts();
+});
 
-        let userHasPosts = false;
+function listPosts() {
+    let divPostagens = document.querySelector('#container #postagens');
+    let mensagemAviso = document.querySelector('main #container h5');
 
-        if (db.length > 0) {
-            for (let i = 0; i < db.length; i++) {
-                const post = db[i];
+    divPostagens.innerHTML = '';
+    mensagemAviso.innerHTML = '';
 
-                if (post.userId == userId) {
-                    userHasPosts = true;
-                    divPostagens.innerHTML += `
+    let userHasPosts = false;
+
+    if (db.length > 0) {
+        for (let i = 0; i < db.length; i++) {
+            const post = db[i];
+
+            if (post.userId == userId) {
+                userHasPosts = true;
+                divPostagens.innerHTML += `
                         <div class="card" style="width: 18rem;" data-id="${post._id}">
                             <h3 class="card-title">${post.title}</h3>
                             <img class="card-img-top" src="${post.imageLink}" alt="Imagem da postagem">
@@ -41,37 +45,36 @@ if (!userId) {
                             </div>
                         </div>
                     `;
-                }
             }
         }
-
-        if (!userHasPosts) {
-            mensagemAviso.innerHTML = 'Você ainda não fez nenhuma postagem';
-        }
-
-        init();
     }
 
-    function init() {
-        let btnDelete = document.getElementsByClassName('delete');
-        let btnEdit = document.getElementsByClassName('edit');
+    if (!userHasPosts) {
+        mensagemAviso.innerHTML = 'Você ainda não fez nenhuma postagem';
+    }
 
-        for (let i = 0; i < btnDelete.length; i++) {
-            btnDelete[i].addEventListener('click', function () {
-                let card = this.closest('.card');
-                let cardId = card.dataset.id;
+    init();
+}
 
-                deletePost(cardId);
-            });
-        }
+function init() {
+    let btnDelete = document.getElementsByClassName('delete');
+    let btnEdit = document.getElementsByClassName('edit');
 
-        for (let i = 0; i < btnEdit.length; i++) {
-            btnEdit[i].addEventListener('click', function () {
-                let card = this.closest('.card');
-                let cardId = card.dataset.id;
+    for (let i = 0; i < btnDelete.length; i++) {
+        btnDelete[i].addEventListener('click', function () {
+            let card = this.closest('.card');
+            let cardId = card.dataset.id;
 
-                localStorage.setItem('editPostId', cardId);
-            });
-        }
+            deletePost(cardId);
+        });
+    }
+
+    for (let i = 0; i < btnEdit.length; i++) {
+        btnEdit[i].addEventListener('click', function () {
+            let card = this.closest('.card');
+            let cardId = card.dataset.id;
+
+            localStorage.setItem('editPostId', cardId);
+        });
     }
 }

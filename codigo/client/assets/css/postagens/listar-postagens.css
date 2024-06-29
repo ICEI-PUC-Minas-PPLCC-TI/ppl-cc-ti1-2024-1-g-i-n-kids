@@ -33,9 +33,10 @@ main h5 {
 .card {
     width: 288px;
     margin: 20px;
-    border: 1 px solid #e8e7e7;
+    border: 1px solid #e8e7e7;
     margin: 5vh auto 0 auto;
     transition: ease all 0.5s;
+    cursor: pointer;
 }
 
 .card:hover {
