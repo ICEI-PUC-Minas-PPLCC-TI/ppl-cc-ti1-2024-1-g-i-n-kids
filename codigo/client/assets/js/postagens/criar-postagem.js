@@ -76,7 +76,7 @@ function init() {
 
         formularioPostagem.reset();
 
-        findAllUsers((users) => {
+        findUserById(userId, (user) => {
             findAllPosts((posts) => {
                 let novaPostagem = posts.find(
                     (post) =>
@@ -86,15 +86,13 @@ function init() {
                 );
 
                 if (novaPostagem) {
-                    users.forEach((user) => {
-                        enviarEmailNovaPublicacao(
-                            user.email,
-                            user.name,
-                            novaPostagem._id,
-                            novaPostagem.title,
-                            novaPostagem.author
-                        );
-                    });
+                    enviarEmailNovaPublicacao(
+                        user.email,
+                        user.name,
+                        novaPostagem._id,
+                        novaPostagem.title,
+                        novaPostagem.author
+                    );
                 }
             });
         });
