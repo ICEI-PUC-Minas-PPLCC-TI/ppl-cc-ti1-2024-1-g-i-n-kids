@@ -18,13 +18,22 @@ function displayPostDetails(post) {
 
     divpostagens.innerHTML = '';
 
-    if (post) {
-        const content = post.content
-            .split('\n')
-            .map((paragraph) => `<p>${paragraph}</p>`)
-            .join('');
-
+    if (!post) {
         divpostagens.innerHTML = `
+            <h2 id="warning">Postagem não encontrada</h2>
+            <p id="message">Desculpe, mas a postagem que você está procurando não existe ou foi excluída recentemente.</p>
+            <a href="./postagens.html"><p id="voltar">Voltar para postagens</p></a>
+        `;
+
+        return;
+    }
+
+    const content = post.content
+        .split('\n')
+        .map((paragraph) => `<p>${paragraph}</p>`)
+        .join('');
+
+    divpostagens.innerHTML = `
             <h2 id="titulo">${post.title}</h2>
             <section id="content">
                 <img src="${post.imageLink}" alt="Imagem da postagem">
@@ -37,5 +46,4 @@ function displayPostDetails(post) {
                 </div>
             </section>
         `;
-    }
 }

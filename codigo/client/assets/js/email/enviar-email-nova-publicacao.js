@@ -20,12 +20,5 @@ function enviarEmailNovaPublicacao(
     let serviceID = 'service_jlia9in';
     let templateID = 'template_5k15c8b';
 
-    emailjs
-        .send(serviceID, templateID, emailContent)
-        .then((res) => {
-            console.log(
-                'E-mail com informações da postagem enviado aos usuários.'
-            );
-        })
-        .catch();
+    emailjs.send(serviceID, templateID, emailContent);
 }
