@@ -34,6 +34,11 @@ a:visited {
     color: var(--black-color);
 }
 
+::selection{
+    background-color: var(--blue-color);
+    color: var(--black-color);
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }

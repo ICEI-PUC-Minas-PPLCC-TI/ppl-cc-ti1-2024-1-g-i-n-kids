@@ -43,7 +43,6 @@ export const createTaskService = async (taskData: TaskInterface) => {
         return createdTask;
     } catch (error) {
         console.error(error);
-        throw new Error('Error creating task.');
     }
 };
 
@@ -61,7 +60,6 @@ export const updateTaskService = async (
         return updatedTask;
     } catch (error) {
         console.error(error);
-        throw new Error('Error updating task data.');
     }
 };
 

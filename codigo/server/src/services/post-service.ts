@@ -43,7 +43,6 @@ export const createPostService = async (postData: PostInterface) => {
         return createdPost;
     } catch (error) {
         console.error(error);
-        throw new Error('Error creating post.');
     }
 };
 
@@ -61,7 +60,6 @@ export const updatePostService = async (
         return updatedPost;
     } catch (error) {
         console.error(error);
-        throw new Error('Error updating post data.');
     }
 };
 

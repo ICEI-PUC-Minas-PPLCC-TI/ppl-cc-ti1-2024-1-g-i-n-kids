@@ -24,13 +24,13 @@ function listTarefas() {
         .value.toLowerCase();
 
     const tableTarefas = document.querySelector('#tableTarefas > tbody');
-
     const tarefasFiltradas = db.filter((task) => {
         return (
             task.userId == userId &&
             task.title.toLowerCase().includes(filtroTarefa)
         );
     });
+
     const grupoHorastarefas = ordenaArrayTarefas(tarefasFiltradas);
 
     while (tableTarefas.rows.length > 1) {
@@ -40,13 +40,14 @@ function listTarefas() {
     grupoHorastarefas.map((tarefas) => {
         const linhatarefas = tableTarefas.insertRow();
         const horaCell = linhatarefas.insertCell();
+
         horaCell.className = 'infoRotina';
         horaCell.innerHTML = tarefas[0].time;
 
         for (let index = 0; index < 7; index++) {
             const tarefa = tarefas.find((t) => t.weekDay === index);
-
             const adicionarCell = linhatarefas.insertCell(index + 1);
+
             adicionarCell.className = 'tarefas';
 
             if (!tarefa) {
@@ -55,8 +56,8 @@ function listTarefas() {
             }
 
             adicionarCell.innerHTML += `
-            <p>${tarefa.title}</p>
-               `;
+                                            <p>${tarefa.title}</p>
+                                        `;
         }
     });
 }

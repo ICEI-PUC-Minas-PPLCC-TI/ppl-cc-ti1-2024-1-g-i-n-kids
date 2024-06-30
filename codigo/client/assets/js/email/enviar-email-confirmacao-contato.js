@@ -13,12 +13,5 @@ function enviarEmailConfirmacaoContato(userEmail, username, message) {
     let serviceID = 'service_1o6b0xx';
     let templateID = 'template_krb6flw';
 
-    emailjs
-        .send(serviceID, templateID, emailContent)
-        .then((res) => {
-            console.log(
-                'E-mail com informações sobre a redefinição de senha enviado.'
-            );
-        })
-        .catch();
+    emailjs.send(serviceID, templateID, emailContent);
 }

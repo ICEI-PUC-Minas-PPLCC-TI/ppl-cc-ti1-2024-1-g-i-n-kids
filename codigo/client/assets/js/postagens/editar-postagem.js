@@ -13,8 +13,6 @@ if (!userId) {
 
 window.onload = function () {
     let editPostId = localStorage.getItem('editPostId');
-
-    let btnEditar = document.getElementById('editar-Infos');
     let formularioEdicao = document.querySelector('form');
 
     if (editPostId) {
@@ -35,14 +33,14 @@ window.onload = function () {
         });
     }
 
-    btnEditar.addEventListener('click', (e) => {
+    formularioEdicao.addEventListener('submit', (e) => {
+        e.preventDefault();
+
         let campoTitulo = document.getElementById('titulo-postagem').value;
         let campoNomeAutor = document.getElementById('nome-autor').value;
         let campoLinkImagem = document.getElementById('link-imagem').value;
         let campoTextoPostagem =
             document.getElementById('texto-postagem').value;
-
-        e.preventDefault();
 
         if (!formularioEdicao.checkValidity()) {
             displayMessage('Preencha todos os campos corretamente!', 'warning');
@@ -60,6 +58,14 @@ window.onload = function () {
         if (campoNomeAutor.trim().length < 10) {
             displayMessage(
                 'O nome do autor deve ter pelo menos 10 caracteres.',
+                'warning'
+            );
+            return;
+        }
+
+        if (!isValidURL(campoLinkImagem)) {
+            displayMessage(
+                'O link da imagem deve ser uma URL válida.',
                 'warning'
             );
             return;

@@ -9,6 +9,24 @@ main #titulo {
     text-align: center;
 }
 
+main #warning {
+    margin: 8vh 0 2vh 0;
+    color: var(--orange-color);
+}
+
+main #message {
+    text-align: center;
+}
+
+main #voltar {
+    font-size: 14px;
+    margin-top: 6vh;
+    text-transform: uppercase;
+    color: var(--orange-color);
+    text-align: center;
+    cursor: pointer;
+}
+
 main #content {
     max-width: 50%;
     min-height: 80vh;
@@ -55,7 +73,8 @@ main #content #ver-mais {
     cursor: pointer;
 }
 
-main #content #ver-mais:hover {
+main #content #ver-mais:hover,
+main #voltar:hover {
     text-decoration: underline;
 }
 
@@ -79,15 +98,25 @@ main #content #ver-mais:hover {
 }
 
 @media screen and (max-width: 546px) {
-    main #titulo {
+    main #titulo,
+    main #warning {
         font-size: 20px;
+    }
+
+    main #message {
+        font-size: 14px;
+        margin: 0 4vw;
+    }
+
+    main #voltar {
+        font-size: 12px;
     }
 
     main #content #autor {
         font-size: 15px;
     }
 
-    main #content #descricao{
+    main #content #descricao {
         font-size: 15px;
     }
 }

@@ -1,6 +1,6 @@
 function gerarSenhaAleatoria() {
     const caracteres =
-        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}|:<>?-=[];,./';
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}|:?-=[];/';
     const comprimentoSenha = 10;
     let senha = '';
 

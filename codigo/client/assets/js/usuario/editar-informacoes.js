@@ -12,7 +12,6 @@ if (!userId) {
 }
 
 window.onload = function () {
-    let btnEditarDadosUsuario = document.getElementById('editar-Infos');
     let btnExcluirConta = document.getElementById('excluir-conta');
     let formularioEdicaoUsuario = document.querySelector('form');
 
@@ -28,7 +27,7 @@ window.onload = function () {
         });
     }
 
-    btnEditarDadosUsuario.addEventListener('click', (e) => {
+    formularioEdicaoUsuario.addEventListener('submit', (e) => {
         e.preventDefault();
 
         let campoNome = document.getElementById('nome').value;

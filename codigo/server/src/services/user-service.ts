@@ -43,7 +43,6 @@ export const createUserService = async (userData: UserInterface) => {
         return createdUser;
     } catch (error) {
         console.error(error);
-        throw new Error('Error creating user.');
     }
 };
 
@@ -61,7 +60,6 @@ export const updateUserService = async (
         return updatedUser;
     } catch (error) {
         console.error(error);
-        throw new Error('Error updating user data.');
     }
 };
 

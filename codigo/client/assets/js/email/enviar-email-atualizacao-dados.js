@@ -13,10 +13,5 @@ function enviarEmailAtualizacaoConta(userEmail, username, userPhone) {
     let serviceID = 'service_fhaa9vs';
     let templateID = 'template_o0m9mja';
 
-    emailjs
-        .send(serviceID, templateID, emailContent)
-        .then((res) => {
-            console.log('E-mail com confirmação de edição de conta enviado.');
-        })
-        .catch();
+    emailjs.send(serviceID, templateID, emailContent);
 }

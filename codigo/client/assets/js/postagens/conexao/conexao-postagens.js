@@ -24,7 +24,14 @@ function findPostById(postId, processData) {
     })
         .then((response) => response.json())
         .then((data) => {
-            processData(data.Post);
+            if (
+                data.message ==
+                'The provided ID is not valid for displaying the post.'
+            ) {
+                processData(null);
+            } else {
+                processData(data.Post);
+            }
         })
         .catch((error) => {
             console.error(
@@ -32,6 +39,7 @@ function findPostById(postId, processData) {
                 error
             );
             displayMessage('Erro ao ler postagem', 'danger');
+            processData(null);
         });
 }
 

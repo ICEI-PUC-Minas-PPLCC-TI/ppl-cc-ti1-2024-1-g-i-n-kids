@@ -1,15 +1,14 @@
 function init() {
-    let formularioContatos = document.querySelector('form');
-    let btnCadastrarContatos = document.getElementById('btnCadastrarContato');
+    let formularioContato = document.querySelector('form');
 
-    btnCadastrarContatos.addEventListener('click', (e) => {
+    formularioContato.addEventListener('submit', (e) => {
+        e.preventDefault();
+
         let campoNome = document.getElementById('nome').value;
         let campoEmail = document.getElementById('email').value;
         let campoMensagem = document.getElementById('mensagem').value;
 
-        e.preventDefault();
-
-        if (!formularioContatos.checkValidity()) {
+        if (!formularioContato.checkValidity()) {
             displayMessage('Preencha o formulário corretamente.', 'warning');
             return;
         }
@@ -37,8 +36,6 @@ function init() {
         };
 
         createContact(contatos);
-
-        formularioContatos.reset();
 
         enviarEmailConfirmacaoContato(campoEmail, campoNome, campoMensagem);
     });
