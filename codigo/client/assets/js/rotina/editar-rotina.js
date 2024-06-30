@@ -30,12 +30,14 @@ function listTarefas() {
     grupoHorastarefas.map((tarefas, index_array) => {
         const linhatarefas = tableTarefas.insertRow();
         const horaCell = linhatarefas.insertCell();
+
         horaCell.className = 'infoRotina';
         horaCell.innerHTML = tarefas[0].time;
+
         for (let index = 0; index < 7; index++) {
             const tarefa = tarefas.find((t) => t.weekDay === index);
-
             const adicionarCell = linhatarefas.insertCell(index + 1);
+
             adicionarCell.className = 'tarefas';
 
             if (!tarefa) {
@@ -44,27 +46,29 @@ function listTarefas() {
             }
 
             adicionarCell.innerHTML += `
-                    <button class="excluir" id=${tarefa._id}>
-                         <i class="fa-solid fa-trash" style="color: #d80032;"></i>
-                    </button>
-                    <p>${tarefa.title}</p>
-               `;
+                                            <button class="excluir" id=${tarefa._id}>
+                                                <i class="fa-solid fa-trash" style="color: #d80032;"></i>
+                                            </button>
+                                            <p>${tarefa.title}</p>
+                                        `;
         }
     });
 
     const linhaButtons = tableTarefas.insertRow();
-
     const buttonCell = linhaButtons.insertCell(0);
+
     buttonCell.className = 'infoRotina';
 
     for (let i = 1; i <= 7; i++) {
         const adicionarCell = linhaButtons.insertCell(i);
+
         adicionarCell.className = 'adicionar';
+
         adicionarCell.innerHTML = `
-                <button onclick="window.location.href = './criar-tarefa.html'">
-                    <img src="../../assets/images/rotina/botao.png" alt="botão para adicionar tarefa">
-                </button>
-            `;
+                                        <button onclick="window.location.href = './criar-tarefa.html'">
+                                            <img src="../../assets/images/rotina/botao.png" alt="botão para adicionar tarefa">
+                                        </button>
+                                    `;
     }
     init();
 }

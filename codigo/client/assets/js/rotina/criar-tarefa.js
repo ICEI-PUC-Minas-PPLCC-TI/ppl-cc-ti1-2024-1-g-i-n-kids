@@ -13,14 +13,13 @@ if (!userId) {
 
 function init() {
     let formularioTarefa = document.querySelector('form');
-    let btnCadastrarTarefa = document.getElementById('btnSalvarTarefa');
 
-    btnCadastrarTarefa.addEventListener('click', (e) => {
+    formularioTarefa.addEventListener('submit', (e) => {
+        e.preventDefault();
+
         let tituloTarefa = document.getElementById('tituloTarefa').value;
         let diaDaSemana = document.getElementById('diaDaSemana').value;
         let horaTarefa = document.getElementById('horaTarefa').value;
-
-        e.preventDefault();
 
         if (!formularioTarefa.checkValidity()) {
             displayMessage('Preencha o formulário corretamente.', 'warning');
