@@ -52,6 +52,10 @@ main #formulario textarea {
     padding-left: 15px;
 }
 
+main #formulario textarea{
+    resize: none;
+}
+
 .contact-section .social-icons {
     display: flex;
     margin-top: 20px;
