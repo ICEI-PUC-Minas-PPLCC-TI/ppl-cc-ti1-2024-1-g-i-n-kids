@@ -43,7 +43,6 @@ export const createContactService = async (contactData: ContactInterface) => {
         return createdContact;
     } catch (error) {
         console.error(error);
-        throw new Error('Error creating contact.');
     }
 };
 
@@ -64,7 +63,6 @@ export const updateContactService = async (
         return updatedContact;
     } catch (error) {
         console.error(error);
-        throw new Error('Error updating contact data.');
     }
 };
 
