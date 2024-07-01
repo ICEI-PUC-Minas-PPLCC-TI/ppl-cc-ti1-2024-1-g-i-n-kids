@@ -26,7 +26,7 @@ function init() {
             return;
         }
 
-        if (tituloTarefa.trim() < 5) {
+        if (tituloTarefa.trim().length < 5) {
             displayMessage(
                 'O título da tarefa deve ter pelo menos 5 caracteres.',
                 'warning'
