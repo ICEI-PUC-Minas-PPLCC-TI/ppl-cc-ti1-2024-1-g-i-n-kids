@@ -16,7 +16,7 @@ O template para o site é estruturado e permite que a equipe evolua a documenta�
 
 # Orientações gerais
 
-Esta seção traz explicações breves sobre o conjunto de artefatos que precisam ser incluídos na documentação do projeto com uma conjunto de links importantes para que se entenda como criar cada coisa. 
+Esta seção traz explicações breves sobre o conjunto de artefatos que precisam ser incluídos na documentação do projeto com uma conjunto de links importantes para que se entenda como criar cada coisa.
 
 ## Problema
 
@@ -31,11 +31,11 @@ Dessa forma, a dificuldade em encontrar recursos confiáveis que ajudem os pais 
 O principal foco deste projeto é desenvolver um software que solucione o problema enfrentado pelos pais em equilibrar o tempo de seus filhos entre telas e atividades recreativas, além de promover momentos de qualidade em família.
 
 A plataforma concentra seus esforços nas seguintes questões:
-Centralização de informações relevantes: Concentrar informações úteis para os pais em um único lugar, oferecendo orientações sobre como equilibrar o tempo de tela das crianças, sugerindo atividades ao ar livre e promovendo momentos significativos em família.
+Centralização de informações relevantes: Concentra informações úteis para os pais em um único lugar, oferece orientações sobre como equilibrar o tempo de tela das crianças, sugere atividades ao ar livre e promove momentos significativos em família.
 
-Otimização da organização das rotinas familiares: Desenvolver ferramentas que auxiliem os pais na organização e planejamento de suas rotinas familiares. Isso incluirá a criação de cronogramas adaptáveis que permitam a inclusão de tempo para atividades ao ar livre, momentos de qualidade em família e redução do tempo de tela das crianças.
+Otimização da organização das rotinas familiares: Desenvolve ferramentas que auxiliam os pais na organização e planejamento de suas rotinas familiares, incluindo a criação de cronogramas adaptáveis que permitem a inclusão de tempo para atividades ao ar livre, momentos de qualidade em família e redução do tempo de tela das crianças.
 
-Esses objetivos específicos irão direcionar o desenvolvimento da plataforma, visando fornecer soluções práticas e eficazes para os desafios enfrentados pelos pais na criação de um ambiente equilibrado para seus filhos.
+Esses objetivos específicos direcionam o desenvolvimento da plataforma, fornecendo soluções práticas e eficazes para os desafios enfrentados pelos pais na criação de um ambiente equilibrado para seus filhos.
 
 ## Justificativa
 
@@ -54,7 +54,6 @@ Famílias multigeracionais: incluem membros de diferentes idades, como avós, qu
 
 A maioria dos usuários possui alguma experiência básica com tecnologia, como navegar na internet e usar aplicativos em smartphones ou tablets. A aplicação será intuitiva e de fácil acesso, atendendo também aos usuários com menos experiência tecnológica.
 
-
 ## Personas
 
 ![persona](https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20241-3-i-n-kids/assets/96635074/ad5964f9-1552-442d-a6c2-a2636729d270)
@@ -63,90 +62,85 @@ A maioria dos usuários possui alguma experiência básica com tecnologia, como 
 
 ![historia-de-usuário](https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20241-3-i-n-kids/assets/96635074/dad9a497-9cb4-4ea1-80a1-39b78ee07047)
 
-
 ## Requisitos
 
 Os requisitos de um projeto são classificados em dois grupos:
 
-- [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
-  correspondem a uma funcionalidade que deve estar presente na plataforma.
-  Ex: 
+-   [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
+    correspondem a uma funcionalidade que deve estar presente na plataforma.
+    Ex:
 
- ID	     Descrição do Requisito	      Prioridade
+ID Descrição do Requisito Prioridade
 
-RF-001	O sistema deve permitir o cadastro de usuário	ALTA
+RF-001 O sistema deve permitir o cadastro de usuário ALTA
 
-RF-002	O sistema deve permitir o login de usuários cadastrados	ALTA
+RF-002 O sistema deve permitir o login de usuários cadastrados ALTA
 
-RF-003	O sistema deve permitir a atualização dos dados de um usuário cadastrado	MÉDIA
+RF-003 O sistema deve permitir a atualização dos dados de um usuário cadastrado MÉDIA
 
-RF-004	O sistema deve permitir a exclusão de usuários cadastrados	MÉDIA
+RF-004 O sistema deve permitir a exclusão de usuários cadastrados MÉDIA
 
+RF-005 O sistema deve permitir a criação de postagens por um usuário cadastrado ALTA
 
-RF-005	O sistema deve permitir a criação de postagens por um usuário cadastrado	ALTA
+RF-006 O sistema deve permitir a atualização dos dados das postagens criadas por um usuário cadastrado MÉDIA
 
-RF-006	O sistema deve permitir a atualização dos dados das postagens criadas por um usuário cadastrado	MÉDIA
+RF-007 O sistema deve permitir a exclusão das postagens criadas por um usuário cadastrado MÉDIA
 
-RF-007	O sistema deve permitir a exclusão das postagens criadas por um usuário cadastrado	MÉDIA
+RF-008 O sistema deve permitir a exibição de todas as postagens cadastradas ALTA
 
-RF-008	O sistema deve permitir a exibição de todas as postagens cadastradas	ALTA
+RF-009 O sistema deve permitir a filtragem das postagens cadastradas por nome BAIXA
 
-RF-009	O sistema deve permitir a filtragem das postagens cadastradas por nome	BAIXA
+RF-010 O sistema deve permitir contactar os desenvolvedores do processo BAIXA
 
-RF-010	O sistema deve permitir contactar os desenvolvedores do processo	BAIXA
+RF-011 O sistema deve permitir que o usuário cadastrado monte a rotina do seu filho ALTA
 
-RF-011	O sistema deve permitir que o usuário cadastrado monte a rotina do seu filho	ALTA
+RF-012 O sistema deve permitir a criação das tarefas da rotina pelo usuário cadastrado ALTA
 
-RF-012	O sistema deve permitir a criação das tarefas da rotina pelo usuário cadastrado	ALTA
+RF-013 O sistema deve permitir a atualização das tarefas da rotina criada pelo usuário cadastrado MÉDIA
 
-RF-013	O sistema deve permitir a atualização das tarefas da rotina criada pelo usuário cadastrado	MÉDIA
+RF-014 O sistema deve permitir a exclusão das tarefas da rotina criada pelo usuário cadastrado MÉDIA
 
-RF-014	O sistema deve permitir a exclusão das tarefas da rotina criada pelo usuário cadastrado	MÉDIA
+RF-015 O sistema deve permitir a filtragem das tarefas da rotina pelo nome BAIXA
 
-RF-015	O sistema deve permitir a filtragem das tarefas da rotina pelo nome	BAIXA
+RF-016 O sistema deve permitir a visualização de informações sobre a empresa BAIXA
 
-RF-016	O sistema deve permitir a visualização de informações sobre a empresa	BAIXA
+RF-017 O sistema deve permitir que o usuário navegue facilmente entre as telas através de um menu ALTA
 
-RF-017	O sistema deve permitir que o usuário navegue facilmente entre as telas através de um menu	ALTA
+RF-018 O sistema deve permitir que os usuários autenticados acessem apenas suas informações cadastradas MÉDIA
 
-RF-018	O sistema deve permitir que os usuários autenticados acessem apenas suas informações cadastradas	MÉDIA
+RF-019 O sistema deve permitir que os usuários cadastrados recebam notificações por e-mail quando uma nova atividade for cadastrada BAIXA
 
-RF-019	O sistema deve permitir que os usuários cadastrados recebam notificações por e-mail quando uma nova atividade for cadastrada	BAIXA
+RF-020 O sistema deve fornecer um botão de "Voltar ao topo" em todas as páginas para facilitar a navegação do usuário
 
-RF-020	O sistema deve fornecer um botão de "Voltar ao topo" em todas as páginas para facilitar a navegação do usuário
+-   [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
+    correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro.
+    Ex:
 
-- [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro.
-  Ex: 
+ID Descrição do Requisito Prioridade
 
-ID	Descrição do Requisito	Prioridade
+RNF-001 O sistema deve ser responsivo, adequando a diversos tamanhos de telas ALTA
 
-RNF-001	O sistema deve ser responsivo, adequando a diversos tamanhos de telas	ALTA
+RNF-002 O sistema deve ser compatível com diversos navegadores MÉDIA
 
-RNF-002	O sistema deve ser compatível com diversos navegadores	MÉDIA
+RNF-003 O sistema deve ser acessível para diversos perfis de usuários (permitindo que pessoas com deficiências possam ter acesso) ALTA
 
-RNF-003	O sistema deve ser acessível para diversos perfis de usuários (permitindo que pessoas com deficiências possam ter acesso)	ALTA
+RNF-004 O sistema deve ter um SEO que facilite a busca da página na web BAIXA
 
-RNF-004	O sistema deve ter um SEO que facilite a busca da página na web	BAIXA
+RNF-005 O sistema deve conter uma boa consistência visual MÉDIA
 
-RNF-005	O sistema deve conter uma boa consistência visual	MÉDIA
+RNF-006 O sistema deve possuir uma navegação de fácil acesso, aumentando a inclusão diversas de faixas etárias ALTA
 
-RNF-006	O sistema deve possuir uma navegação de fácil acesso, aumentando a inclusão diversas de faixas etárias	ALTA
+RNF-007 O sistema deve ser otimizado, facilitando o carregamento da página MÉDIA
 
-RNF-007	O sistema deve ser otimizado, facilitando o carregamento da página	MÉDIA
-
-RNF-008	O sistema deve ser modular, com facilidade de manter e atualizar o código	ALTA
+RNF-008 O sistema deve ser modular, com facilidade de manter e atualizar o código ALTA
 
 ## User Flow
 
 ![screen-flow](https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20241-3-i-n-kids/assets/96635074/ea52f2b2-2b0f-4aa4-9764-c0e3f52d8034)
 
-
 ## Wireframes
 
 Para acessar o wireframe da I&N KIDS, [clique aqui](https://www.figma.com/file/VYJuUgPqb4IjK8J1MbaY9Y/I%26N-Kids---Wireframe?type=design&node-id=0%3A1&mode=design&t=gQdlTpqRGvfZo1w2-1).
-
-
 
 ## Gestão de Projetos
 
@@ -155,12 +149,13 @@ O grupo da I&N KIDS é composto por sete (7) membros distribuídos da seguinte f
 Scrum Master: Julia Rodrigues Cronenberger
 Product Owner: Artur Bomtempo Colen
 Desenvolvedores:
-- Artur Bomtempo Colen;
-- Daniella Emily Cornelio da Silva;
-- Davi Gonçalves Ayres Lanna;
-- Leticia Paulinelli Costa Marini;
-- Lucas Alves Berão;
-- Pedro Henrique Félix Dos Santos
+
+-   Artur Bomtempo Colen;
+-   Daniella Emily Cornelio da Silva;
+-   Davi Gonçalves Ayres Lanna;
+-   Leticia Paulinelli Costa Marini;
+-   Lucas Alves Berão;
+-   Pedro Henrique Félix Dos Santos
 
 O principal responsável pela documentação do projeto foi Artur Bomtempo. Assim, além de escrever parte do conteúdo presente neste documento, também foi responsável por receber e compilar neste arquivo (TIDocs) partes da documentação escritas por Julia Cronenberger, Pedro Félix e Letícia Paulinelli.
 
