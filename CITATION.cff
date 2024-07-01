@@ -1,65 +1,28 @@
-<<<<<<< HEAD
-cff-version: 1.0.1
+cff-version: 1.0.0
 message: Please cite this software using these metadata.
-title: 
+title: I&N Kids
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
+  - family-names: Bomtempo Colen
+    given-names: Artur
+  - family-names: Cornélio da Silva
+    given-names: Daniella Emily
+  - family-names: Gonçalves Ayres Lanna
+    given-names: Davi
+  - family-names: Rodrigues Cronenberger
+    given-names: Julia
+  - family-names: Paulinelli Costa Marini
+    given-names: Letícia
+  - family-names: Alves Berão
+    given-names: Lucas
+  - family-names: Félix dos Santos
+    given-names: Pedro Henrique
 keywords:
-  - 
-  - 
-repository-code: 
+  - educação
+  - desenvolvimento
+  - pedagogia
+  - programação
+  - crianças
+repository-code: https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20241-3-i-n-kids
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
-=======
-cff-version: 1.0.1
-message: Please cite this software using these metadata.
-title: 
-authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-keywords:
-  - 
-  - 
-repository-code: 
-license: CC-BY-4.0
-version: 1.0.0
-date-released: 2022-07-14
->>>>>>> 576e4073eb686b7caee5801aac8f95491eb4d605
+date-released: 2024-06-30
