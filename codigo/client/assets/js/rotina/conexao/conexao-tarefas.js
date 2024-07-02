@@ -12,7 +12,7 @@ function findAllTasks(processData) {
         })
         .catch((error) => {
             console.error('Erro ao encontrar tarefas na API:', error);
-            displayMessage('Erro ao encontrar tarefas', 'danger');
+            displayMessage('Erro ao encontrar tarefas.', 'danger');
         });
 }
 
@@ -31,7 +31,7 @@ function findTaskById(taskId, processData) {
                 'Erro ao encontrar postagem cadastrada na API:',
                 error
             );
-            displayMessage('Erro ao ler postagem', 'danger');
+            displayMessage('Erro ao ler postagem.', 'danger');
         });
 }
 
@@ -46,7 +46,7 @@ function createTask(task, updateFunction) {
     })
         .then((response) => response.json())
         .then((data) => {
-            displayMessage('Tarefa criada com sucesso', 'success');
+            displayMessage('Tarefa criada com sucesso.', 'success');
 
             if (updateFunction) {
                 updateFunction();
@@ -54,7 +54,7 @@ function createTask(task, updateFunction) {
         })
         .catch((error) => {
             console.error('Erro ao criar tarefa na API:', error);
-            displayMessage('Erro ao criar tarefa', 'danger');
+            displayMessage('Erro ao criar tarefa.', 'danger');
         });
 }
 
@@ -67,7 +67,7 @@ function deleteTask(id, updateFunction) {
     })
         .then((response) => response.json())
         .then((data) => {
-            displayMessage('Tarefa removida com sucesso', 'primary');
+            displayMessage('Tarefa removida com sucesso.', 'primary');
 
             if (updateFunction) {
                 updateFunction();
@@ -75,6 +75,6 @@ function deleteTask(id, updateFunction) {
         })
         .catch((error) => {
             console.error('Erro ao remover tarefa da API:', error);
-            displayMessage('Erro ao remover tarefa', 'danger');
+            displayMessage('Erro ao remover tarefa.', 'danger');
         });
 }

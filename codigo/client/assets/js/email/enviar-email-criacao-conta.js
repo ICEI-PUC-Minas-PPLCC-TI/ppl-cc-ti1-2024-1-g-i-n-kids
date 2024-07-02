@@ -1,6 +1,6 @@
 function enviarEmailCriacaoConta(userEmail, username, userPhone) {
     (function () {
-        emailjs.init('OUSPzANe0foT3a_36');
+        emailjs.init('V28D34g63Iod_3W8u');
     })();
 
     let emailContent = {
@@ -10,8 +10,8 @@ function enviarEmailCriacaoConta(userEmail, username, userPhone) {
         userEmail: userEmail,
     };
 
-    let serviceID = 'service_jlia9in';
-    let templateID = 'template_li0x34j';
+    let serviceID = 'service_aj1zzk3';
+    let templateID = 'template_ryxvvr9';
 
     emailjs.send(serviceID, templateID, emailContent);
 }

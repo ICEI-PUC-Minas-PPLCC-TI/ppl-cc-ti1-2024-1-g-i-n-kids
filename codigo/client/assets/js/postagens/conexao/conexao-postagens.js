@@ -12,7 +12,7 @@ function findAllPosts(processData) {
         })
         .catch((error) => {
             console.error('Erro ao ler postagens cadastradas na API:', error);
-            displayMessage('Erro ao ler postagens', 'danger');
+            displayMessage('Erro ao ler postagens.', 'danger');
         });
 }
 
@@ -38,7 +38,7 @@ function findPostById(postId, processData) {
                 'Erro ao encontrar postagem cadastrada na API:',
                 error
             );
-            displayMessage('Erro ao ler postagem', 'danger');
+            displayMessage('Erro ao ler postagem.', 'danger');
             processData(null);
         });
 }
@@ -54,7 +54,7 @@ function createPost(post, updateFunction) {
     })
         .then((response) => response.json())
         .then((data) => {
-            displayMessage('Postagem criada com sucesso', 'success');
+            displayMessage('Postagem criada com sucesso.', 'success');
 
             if (updateFunction) {
                 updateFunction();
@@ -62,7 +62,7 @@ function createPost(post, updateFunction) {
         })
         .catch((error) => {
             console.error('Erro ao criar postagem na API:', error);
-            displayMessage('Erro ao criar postagem', 'danger');
+            displayMessage('Erro ao criar postagem.', 'danger');
         });
 }
 
@@ -83,7 +83,7 @@ function updatePost(id, post, updateFunction) {
         })
         .catch((error) => {
             console.error('Erro ao atualizar postagem da API:', error);
-            displayMessage('Erro ao atualizar postagem', 'danger');
+            displayMessage('Erro ao atualizar postagem.', 'danger');
         });
 }
 

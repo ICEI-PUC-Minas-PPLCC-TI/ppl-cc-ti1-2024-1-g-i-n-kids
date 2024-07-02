@@ -6,7 +6,7 @@ function enviarEmailNovaPublicacao(
     postAuthor
 ) {
     (function () {
-        emailjs.init('OUSPzANe0foT3a_36');
+        emailjs.init('V28D34g63Iod_3W8u');
     })();
 
     let emailContent = {
@@ -17,8 +17,8 @@ function enviarEmailNovaPublicacao(
         postAuthor: postAuthor,
     };
 
-    let serviceID = 'service_jlia9in';
-    let templateID = 'template_5k15c8b';
+    let serviceID = 'service_aj1zzk3';
+    let templateID = 'template_dwl2bmj';
 
     emailjs.send(serviceID, templateID, emailContent);
 }

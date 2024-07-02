@@ -15,7 +15,7 @@ function findAllUsers(processData) {
                 'Erro ao encontrar usuários cadastrados na API:',
                 error
             );
-            displayMessage('Erro ao encontrar usuários cadastrados', 'danger');
+            displayMessage('Erro ao encontrar usuários cadastrados.', 'danger');
         });
 }
 
@@ -34,7 +34,7 @@ function findUserById(userId, processData) {
                 'Erro ao encontrar usuário cadastrado na API:',
                 error
             );
-            displayMessage('Erro ao encontrar usuário', 'danger');
+            displayMessage('Erro ao encontrar usuário.', 'danger');
         });
 }
 
@@ -49,14 +49,14 @@ function createUser(user, updateFunction) {
     })
         .then((response) => response.json())
         .then((data) => {
-            displayMessage('Usuário cadastrado com sucesso', 'success');
+            displayMessage('Usuário cadastrado com sucesso.', 'success');
             if (updateFunction) {
                 updateFunction();
             }
         })
         .catch((error) => {
             console.error('Erro ao cadastrar usuário na API:', error);
-            displayMessage('Erro ao cadastrar usuário', 'danger');
+            displayMessage('Erro ao cadastrar usuário.', 'danger');
         });
 }
 
@@ -77,7 +77,7 @@ function updateUser(id, user, updateFunction) {
         })
         .catch((error) => {
             console.error('Erro ao alterar dados do usuário da API:', error);
-            displayMessage('Erro ao alterar dados do usuário', 'danger');
+            displayMessage('Erro ao alterar dados do usuário.', 'danger');
         });
 }
 
@@ -90,13 +90,13 @@ function deleteUser(id, updateFunction) {
     })
         .then((response) => response.json())
         .then((data) => {
-            displayMessage('Conta excluída com sucesso', 'success');
+            displayMessage('Conta excluída com sucesso.', 'success');
             if (updateFunction) {
                 updateFunction();
             }
         })
         .catch((error) => {
             console.error('Erro ao excluir conta da API:', error);
-            displayMessage('Erro ao remover conta', 'danger');
+            displayMessage('Erro ao remover conta.', 'danger');
         });
 }

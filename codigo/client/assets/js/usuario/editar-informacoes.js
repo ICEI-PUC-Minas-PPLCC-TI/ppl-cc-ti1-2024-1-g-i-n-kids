@@ -22,7 +22,7 @@ window.onload = function () {
                 document.getElementById('telefone').value = usuario.phone;
                 document.getElementById('email').value = usuario.email;
             } else {
-                displayMessage('Usuário não encontrado', 'danger');
+                displayMessage('Usuário não encontrado.', 'danger');
             }
         });
     }
@@ -38,7 +38,7 @@ window.onload = function () {
             document.getElementById('confirm-password').value;
 
         if (!formularioEdicaoUsuario.checkValidity()) {
-            displayMessage('Preencha todos os campos corretamente!', 'warning');
+            displayMessage('Preencha todos os campos corretamente.', 'warning');
             return;
         }
 

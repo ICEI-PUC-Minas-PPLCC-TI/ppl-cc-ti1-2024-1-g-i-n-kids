@@ -43,7 +43,7 @@ window.onload = function () {
             document.getElementById('texto-postagem').value;
 
         if (!formularioEdicao.checkValidity()) {
-            displayMessage('Preencha todos os campos corretamente!', 'warning');
+            displayMessage('Preencha todos os campos corretamente.', 'warning');
             return;
         }
 

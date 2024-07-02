@@ -12,7 +12,7 @@ function createContact(contact, updateFunction) {
         .then((response) => response.json())
         .then((data) => {
             displayMessage(
-                'Solicitação de contato enviada com sucesso',
+                'Solicitação de contato enviada com sucesso.',
                 'success'
             );
 
@@ -25,6 +25,6 @@ function createContact(contact, updateFunction) {
                 'Erro ao enviar solicitação de contato para a API:',
                 error
             );
-            displayMessage('Erro ao enviar solicitação de contato', 'danger');
+            displayMessage('Erro ao enviar solicitação de contato.', 'danger');
         });
 }
