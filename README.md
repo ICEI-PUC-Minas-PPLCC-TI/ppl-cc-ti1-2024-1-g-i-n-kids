@@ -28,3 +28,7 @@ Este projeto tem como propósito fornecer aos pais recursos e orientações prá
 ### Testar a API do projeto
 
 Você pode acessar o código-fonte da API a partir [deste repositório](https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20241-3-i-n-kids), basta ir na pasta `codigo` e depois abrir a pasta `server` e, caso deseja testá-la, abra o [link do projeto hospedado](https://iandn-kids.vercel.app/) e teste-o (a API já está incorporada ao front-end do projeto, não precisa rodá-la separadamente).
+
+### Apresentação do projeto
+
+Você pode acessar o vídeo de apresentação do projeto I&N Kids [clicando aqui](https://youtu.be/yJhFq_B2A1A).
